@@ -1,0 +1,17 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jhydra.core.scripting.lexicon;
+
+/**
+ *
+ * @author jantic
+ */
+public interface INameValue {
+    Boolean matchesName(String name);
+    Boolean matchesValue(String value);
+    String getName();
+    String getValue();
+    INameValue copy();
+}

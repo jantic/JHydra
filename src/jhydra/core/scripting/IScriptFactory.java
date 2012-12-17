@@ -4,12 +4,16 @@
  */
 package jhydra.core.scripting;
 
+import jhydra.core.scripting.lexicon.IValueMap;
+import jhydra.core.uinav.IMasterNavigator;
+
 /**
  *
  * @author jantic
  */
 public interface IScriptFactory {
 
-    IBaseScript getScript(String name) throws Exception;
-    
+    IScript getScript(String name, IValueMap valueMap, IMasterNavigator navigator) 
+            throws CompileErrorException, ScriptNotExistException, 
+                ScriptOutputLoadingException, ScriptInputLoadingException;  
 }

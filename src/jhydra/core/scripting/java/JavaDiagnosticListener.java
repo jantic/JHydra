@@ -14,7 +14,7 @@ import javax.tools.JavaFileObject;
  * @author jantic
  */
 public class JavaDiagnosticListener implements javax.tools.DiagnosticListener<JavaFileObject> {
-    final List<Diagnostic> reportedDiagnostics = new ArrayList<Diagnostic>();
+    final List<Diagnostic> reportedDiagnostics = new ArrayList<>();
 
     @Override
     public void report(Diagnostic<? extends JavaFileObject> diagnostic) {

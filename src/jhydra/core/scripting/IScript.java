@@ -4,10 +4,16 @@
  */
 package jhydra.core.scripting;
 
+import jhydra.core.FatalException;
+import jhydra.core.RecoverableException;
+import jhydra.core.scripting.lexicon.ILexicon;
+
 /**
  *
  * @author jantic
  */
 public interface IScript {
-    public void execute() throws Exception;
+    public void registerVariables(ILexicon registry);
+    public void execute() throws RecoverableException, FatalException;
+    public String getName();
 }

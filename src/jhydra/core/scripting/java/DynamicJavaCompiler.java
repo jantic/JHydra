@@ -2,6 +2,7 @@ package jhydra.core.scripting.java;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
@@ -15,32 +16,80 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import jhydra.core.scripting.CompileErrorException;
 import jhydra.core.scripting.FileCompileErrorReport;
-import jhydra.core.scripting.IBaseScript;
-import jhydra.core.scripting.IDynamicCompiler;
+import jhydra.core.scripting.IScript;
+import jhydra.core.scripting.IScriptCompiler;
+import jhydra.core.scripting.scriptinfo.IScriptInfo;
+import jhydra.core.scripting.ScriptInputLoadingException;
+import jhydra.core.scripting.ScriptNotExistException;
+import jhydra.core.scripting.ScriptOutputLoadingException;
+import jhydra.core.scripting.ScriptType;
 import org.apache.commons.io.IOUtils;
 
 
 //Package access only
-class DynamicJavaCompiler implements IDynamicCompiler {
+class DynamicJavaCompiler implements IScriptCompiler {
     private final String classOutputFolder = "temp";
     
     @Override
-    public IBaseScript getScript(String fileName, String className) throws Exception{   
-        compile(fileName, className);
-        final File file = new File(classOutputFolder);
-        final URL url = file.toURI().toURL(); 
-        final URL[] urls = new URL[]{url};
-        final ClassLoader loader = new URLClassLoader(urls);
-        final Class thisClass = loader.loadClass(className);
-        return (IBaseScript)thisClass.newInstance();
+    public IScript getCompiledScript(IScriptInfo scriptInfo) 
+            throws CompileErrorException, ScriptOutputLoadingException, ScriptNotExistException, ScriptInputLoadingException{
+        
+        final String filePath = scriptInfo.getFilePath();
+        final String className = scriptInfo.getClassName();
+               
+        if(!fileExists(filePath)){
+            throw new ScriptNotExistException(className);
+        }
+        
+        final ScriptType scriptType = scriptInfo.getType();
+        
+        if(scriptType!=ScriptType.JAVA){
+            final String message = "File attempted for java compilation is not a java file!  File path:  " + filePath;
+            throw new ScriptInputLoadingException(filePath, className, message);
+        }
+            
+        compile(filePath, className);
+        return getScriptFromCompileOutput(className);
     }
     
-    @Override
-    public void compile(String fileName, String className) throws Exception{
-        final JavaFileObject file = getJavaFileObject(className, fileName);        
-        final List<Diagnostic> diagnostics = compile(Arrays.asList(file));
-        evaluateDiagnostics(fileName, diagnostics);
+    private IScript getScriptFromCompileOutput(String className) throws ScriptOutputLoadingException{
+        try{
+            final File file = new File(classOutputFolder);
+            final URL url = file.toURI().toURL(); 
+            final URL[] urls = new URL[]{url};
+            final ClassLoader loader = new URLClassLoader(urls);
+            final Class thisClass = loader.loadClass(className);
+            return (IScript)thisClass.newInstance();
+        }
+        catch(MalformedURLException | ClassNotFoundException | 
+                InstantiationException | IllegalAccessException e){
+            throw new ScriptOutputLoadingException(className, e);
+        }
+    }
+    
+    private void compile(String fileName, String className) throws CompileErrorException, ScriptInputLoadingException{
+        try{
+            final JavaFileObject file = getJavaFileObject(className, fileName);        
+            final List<Diagnostic> diagnostics = compile(Arrays.asList(file));
+            evaluateDiagnostics(fileName, diagnostics);
+        }
+        catch(CompileErrorException e){
+            throw e;
+        }
+        catch(Exception e){
+            throw new ScriptInputLoadingException(fileName, className, e);
+        }
     }  
+    
+    private Boolean fileExists(String fileName){
+        try{
+            final File file = new File(fileName);
+            return file.isFile();
+        }
+        catch(Exception e){
+            return false;
+        }
+    }
 
     private void evaluateDiagnostics(String fileName, List<Diagnostic> diagnostics) throws CompileErrorException{
         for(Diagnostic diagnostic : diagnostics){
@@ -48,7 +97,8 @@ class DynamicJavaCompiler implements IDynamicCompiler {
                 final FileCompileErrorReport report = new FileCompileErrorReport(fileName, diagnostics);
                 final List<FileCompileErrorReport> reports = new ArrayList<>();
                 reports.add(report);
-                throw new CompileErrorException(reports);
+                final String message = "Java compiler found error(s) in script.";
+                throw new CompileErrorException(message, reports);
             }
         }
     }

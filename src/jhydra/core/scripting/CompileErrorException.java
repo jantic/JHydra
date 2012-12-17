@@ -5,15 +5,17 @@
 package jhydra.core.scripting;
 
 import java.util.List;
+import jhydra.core.FatalException;
 
 /**
  *
  * @author jantic
  */
-public class CompileErrorException extends Exception{
+public class CompileErrorException extends FatalException{
     private final List<FileCompileErrorReport> reports;
     
-    public CompileErrorException(List<FileCompileErrorReport> reports){
+    public CompileErrorException(String message, List<FileCompileErrorReport> reports){
+        super(message);
         this.reports = reports;
     }
     

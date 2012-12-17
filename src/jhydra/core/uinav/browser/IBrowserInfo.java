@@ -2,13 +2,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.scripting;
+package jhydra.core.uinav.browser;
 
 /**
  *
  * @author jantic
  */
-public interface IBaseScript extends IScript{
-
-    void setValueMap(IValueMap valueMap);   
+public interface IBrowserInfo {
+    BrowserType getBrowserType();
+    Double getVersion();
 }
