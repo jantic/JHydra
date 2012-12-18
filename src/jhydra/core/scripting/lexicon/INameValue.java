@@ -14,4 +14,5 @@ public interface INameValue {
     String getName();
     String getValue();
     INameValue copy();
+    INameValue copyWithNewValue(String value);
 }

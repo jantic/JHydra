@@ -11,7 +11,7 @@ import java.util.List;
  * @author jantic
  */
 public interface ILexicon {
-    List<String> getAllKeys();
-    String getDefaultValue(String key);
+    List<INameValue> getAllNameDefaultValuePairs();
     void registerVariable(String variableName, String defaultValue);
+    String getFilePath();
 }
