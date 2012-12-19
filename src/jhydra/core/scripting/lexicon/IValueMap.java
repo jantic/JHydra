@@ -10,10 +10,10 @@ package jhydra.core.scripting.lexicon;
  */
 public interface IValueMap {
 
-    String getValue(String name) throws NameNotInLexiconException;
+    String getValue(String name) throws NameNotInLexiconException, NameNotValidException;
 
     boolean hasValue(String name);
 
-    void setValue(String name, String value) throws NameNotInLexiconException;
+    void setValue(String name, String value) throws NameNotInLexiconException, NameNotValidException;
     
 }

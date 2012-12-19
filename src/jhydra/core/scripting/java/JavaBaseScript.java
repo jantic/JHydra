@@ -8,15 +8,12 @@ import jhydra.core.FatalException;
 import jhydra.core.RecoverableException;
 import jhydra.core.config.IConfig;
 import jhydra.core.logging.ILog;
-import jhydra.core.scripting.CompileErrorException;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptFactory;
-import jhydra.core.scripting.ScriptInputLoadingException;
-import jhydra.core.scripting.ScriptNotExistException;
-import jhydra.core.scripting.ScriptOutputLoadingException;
 import jhydra.core.scripting.lexicon.ILexicon;
 import jhydra.core.scripting.lexicon.IValueMap;
 import jhydra.core.scripting.lexicon.NameNotInLexiconException;
+import jhydra.core.scripting.lexicon.NameNotValidException;
 import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.uinav.selenium.IExtendedSelenium;
 
@@ -77,11 +74,11 @@ public class JavaBaseScript implements IScript{
         script.execute();
     }
     
-    protected String getValue(String variableName) throws NameNotInLexiconException {
+    protected String getValue(String variableName) throws NameNotInLexiconException, NameNotValidException {
         return this.valueMap.getValue(variableName);
     }
 
-    protected void setValue(String variableName, String value) throws NameNotInLexiconException {
+    protected void setValue(String variableName, String value) throws NameNotInLexiconException, NameNotValidException {
         this.valueMap.setValue(variableName, value);
     }
 }

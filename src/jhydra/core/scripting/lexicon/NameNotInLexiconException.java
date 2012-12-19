@@ -13,17 +13,17 @@ import jhydra.core.config.IConfig;
  */
 public class NameNotInLexiconException extends FatalException{
     private final String name;
-    private final ILexicon lexicon;
+    private final String lexiconPath;
     
-    public NameNotInLexiconException(String name, ILexicon lexicon){
+    public NameNotInLexiconException(String name, String lexiconPath){
         super("");
         this.name = name;
-        this.lexicon = lexicon;
+        this.lexiconPath = lexiconPath;
     }
     
     @Override
     public String getMessage(){
        return "Lexicon name not found: " + name + 
-               ".  Name must be declared in Lexicon file, found here: " + lexicon.getFilePath();
+               ".  Name must be declared in Lexicon file, found here: " + lexiconPath;
     }
 }

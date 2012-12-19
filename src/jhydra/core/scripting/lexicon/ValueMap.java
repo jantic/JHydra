@@ -4,6 +4,7 @@
  */
 package jhydra.core.scripting.lexicon;
 
+import jhydra.core.properties.INameValue;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ public class ValueMap implements IValueMap {
     }
     
     @Override
-    public String getValue(String name) throws  NameNotInLexiconException{
+    public String getValue(String name) throws  NameNotInLexiconException, NameNotValidException{
         validateName(name);
         final String key = generateKey(name);
         return map.get(key).getValue();
@@ -35,7 +36,7 @@ public class ValueMap implements IValueMap {
     }
     
     @Override
-    public void setValue(String name, String value) throws  NameNotInLexiconException{
+    public void setValue(String name, String value) throws  NameNotInLexiconException, NameNotValidException{
         validateName(name);
         final String key = generateKey(name);
         final INameValue oldPair = map.get(key);
@@ -57,17 +58,14 @@ public class ValueMap implements IValueMap {
         map.put(key, pair);
     }
     
-    private void validateName(String name) throws  NameNotInLexiconException{
-        if(name == null){
-            final String message = "Value name must not be null!";
-            throw new NameNotInLexiconException(message, this.lexicon);
-        }
+    private void validateName(String name) throws  NameNotInLexiconException, NameNotValidException{
+        lexicon.validateName(name); 
         
         final String key = generateKey(name);
         
         if(!map.containsKey(key)){
             final String message = "Value named '" + name + "' could not be found!";
-            throw new NameNotInLexiconException(message, this.lexicon);
+            throw new NameNotInLexiconException(message, this.lexicon.getFilePath());
         }
 
     }
