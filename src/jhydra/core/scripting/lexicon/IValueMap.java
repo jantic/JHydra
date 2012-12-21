@@ -4,6 +4,8 @@
  */
 package jhydra.core.scripting.lexicon;
 
+import jhydra.core.properties.NameNotValidException;
+
 /**
  *
  * @author jantic

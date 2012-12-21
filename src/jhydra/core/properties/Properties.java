@@ -16,19 +16,19 @@ import org.apache.commons.io.FileUtils;
  *
  * @author jantic
  */
-public class JHydraProperties {
+public class Properties implements IProperties {
     private static final String SEPARATOR = "=";
     private final Map<String,INameValue> keyValues;
     private final String filepath;
     
-    public JHydraProperties(String filepath) throws IOException, DuplicatedKeyException{
+    public Properties(String filepath) throws IOException, DuplicatedKeyException, NameNotValidException{
         this.filepath = filepath;
         this.keyValues = load(filepath);
     }
     
-    public List<String> stringPropertyNames(){
-        final List<String> names = new ArrayList();
-        
+    @Override
+    public List<String> getAllPropertyNames(){
+        final List<String> names = new ArrayList();        
         final List<INameValue> pairs = new ArrayList(keyValues.values());
         
         for(INameValue pair : pairs){
@@ -38,22 +38,28 @@ public class JHydraProperties {
         return names;
     }
     
-    public String getProperty(String name){
+
+    @Override
+    public String getProperty(String name) throws NameNotInPropertiesFileException{
         final String key = generateKey(name);
+        if(!keyValues.containsKey(key)){
+            throw new NameNotInPropertiesFileException(name, this.filepath);
+        }
         return keyValues.get(key).getValue();
     }
     
+    @Override
     public Boolean hasProperty(String name){
         final String key = generateKey(name);
         return keyValues.containsKey(key);
     }
     
-    private Map load(String filepath) throws IOException, DuplicatedKeyException{
+    private Map load(String filepath) throws IOException, DuplicatedKeyException, NameNotValidException{
         final File file = new File(filepath);
         return load(file);
     }
     
-    private Map<String,INameValue> load(File file) throws IOException, DuplicatedKeyException{
+    private Map<String,INameValue> load(File file) throws IOException, DuplicatedKeyException, NameNotValidException{
         if(!file.isFile()){
             throw new IOException("File not found at:  " + file.getAbsolutePath());
         }
@@ -72,7 +78,7 @@ public class JHydraProperties {
                 throw new DuplicatedKeyException(name, filepath);
             }
             
-            final INameValue pair = new NameValue(name, value);            
+            final INameValue pair = NameValue.getInstance(name, value);            
             mapping.put(key, pair);
         }
         

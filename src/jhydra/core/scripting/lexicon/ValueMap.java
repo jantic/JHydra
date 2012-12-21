@@ -4,10 +4,13 @@
  */
 package jhydra.core.scripting.lexicon;
 
-import jhydra.core.properties.INameValue;
+import jhydra.core.properties.NameNotValidException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import jhydra.core.properties.INameValue;
+import jhydra.core.properties.INameValueValidator;
+import jhydra.core.properties.NameValueValidator;
 
 /**
  *
@@ -15,6 +18,7 @@ import java.util.Map;
  */
 public class ValueMap implements IValueMap {
     private final ILexicon lexicon;
+    private final INameValueValidator nameValueValidator = new NameValueValidator();
     private final Map<String,INameValue> map = new HashMap<>();
     
     public ValueMap(ILexicon lexicon){   
@@ -59,7 +63,7 @@ public class ValueMap implements IValueMap {
     }
     
     private void validateName(String name) throws  NameNotInLexiconException, NameNotValidException{
-        lexicon.validateName(name); 
+        nameValueValidator.validateName(name); 
         
         final String key = generateKey(name);
         

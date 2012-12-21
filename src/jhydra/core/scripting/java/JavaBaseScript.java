@@ -13,7 +13,7 @@ import jhydra.core.scripting.IScriptFactory;
 import jhydra.core.scripting.lexicon.ILexicon;
 import jhydra.core.scripting.lexicon.IValueMap;
 import jhydra.core.scripting.lexicon.NameNotInLexiconException;
-import jhydra.core.scripting.lexicon.NameNotValidException;
+import jhydra.core.properties.NameNotValidException;
 import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.uinav.selenium.IExtendedSelenium;
 

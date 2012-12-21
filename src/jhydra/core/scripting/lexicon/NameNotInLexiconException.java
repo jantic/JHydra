@@ -5,7 +5,6 @@
 package jhydra.core.scripting.lexicon;
 
 import jhydra.core.FatalException;
-import jhydra.core.config.IConfig;
 
 /**
  *

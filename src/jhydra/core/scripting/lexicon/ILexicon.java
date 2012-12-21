@@ -4,8 +4,9 @@
  */
 package jhydra.core.scripting.lexicon;
 
-import jhydra.core.properties.INameValue;
+import jhydra.core.properties.NameNotValidException;
 import java.util.List;
+import jhydra.core.properties.INameValue;
 
 /**
  *
@@ -17,5 +18,4 @@ public interface ILexicon {
     String getFilePath();
     INameValue getNameValue(String name) throws NameNotInLexiconException, NameNotValidException;
     Boolean hasNameValue(String name);
-    void validateName(String name) throws NameNotValidException;
 }

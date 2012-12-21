@@ -4,16 +4,13 @@
  */
 package jhydra.core.scripting.lexicon;
 
-import jhydra.core.properties.INameValue;
-import jhydra.core.properties.DuplicatedKeyException;
 import java.util.List;
 import jhydra.core.FatalException;
 import jhydra.core.config.IConfig;
-import org.junit.After;
-import org.junit.AfterClass;
+import jhydra.core.properties.DuplicatedKeyException;
+import jhydra.core.properties.INameValue;
+import jhydra.core.properties.NameNotValidException;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
 
@@ -117,25 +114,4 @@ public class LexiconTests {
         return config;
     }
     
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
 }

@@ -11,12 +11,20 @@ package jhydra.core.properties;
 public class NameValue implements INameValue{
     private final String name;
     private final String value;
+    
+    public static INameValue getInstance(String name, String value) throws NameNotValidException{
+        final INameValueValidator nameValueValidator = new NameValueValidator();
+        nameValueValidator.validateName(name);
+        return new NameValue(name, value);
+    } 
 
-    public NameValue(String name, String value) {
+    private NameValue(String name, String value){
         this.name = name;
-        this.value = value;
+        this.value = value == null ? "" : value;
     }
 
+    //We want this to be forgiving, so that users don't waste their time with
+    //capitalization errors in config, etc.
     @Override
     public Boolean matchesName(String name) {
         if(name==null){
@@ -25,12 +33,13 @@ public class NameValue implements INameValue{
         return this.name.trim().equalsIgnoreCase(name.trim());
     }
 
+    //We want this to be precise, so no trim/ignore case
     @Override
     public Boolean matchesValue(String value) {
         if(value==null){
-            return false;
+            return this.value.isEmpty();
         }
-        return this.value.trim().equalsIgnoreCase(value.trim());
+        return this.value.trim().equals(value);
     }
 
     @Override
@@ -44,7 +53,7 @@ public class NameValue implements INameValue{
     }
 
     @Override
-    public INameValue copy() {
+    public INameValue copy(){
         return new NameValue(this.name, this.value);
     }
     

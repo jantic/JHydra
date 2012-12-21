@@ -9,8 +9,6 @@ package jhydra.core.config;
  * @author jantic
  */
 public interface IConfig {
-    String getValue(String name);
-    Boolean hasKey(String name);
     String getProgramPath();
     String getProjectPath();
     String getScriptsPath();
