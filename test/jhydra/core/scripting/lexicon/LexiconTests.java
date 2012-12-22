@@ -9,6 +9,7 @@ import jhydra.core.FatalException;
 import jhydra.core.config.IConfig;
 import jhydra.core.properties.DuplicatedKeyException;
 import jhydra.core.properties.INameValue;
+import jhydra.core.properties.IProperties;
 import jhydra.core.properties.NameNotValidException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -98,6 +99,26 @@ public class LexiconTests {
         lexicon.getNameValue("Titley Title");
     }
     
+   @Test
+    public void specCharsValues_getNameValue_CorrectValue() throws FatalException{
+        final IConfig config = mock(IConfig.class);
+        when(config.getLexiconPath()).thenReturn("./test/test data/speccharvalues_lexicon.properties");
+        final ILexicon lexicon = new Lexicon(config);
+        final String expected = "!#$%^&*()-_}{][\\|/><.,;\"-+.:?=";
+        final String actual = lexicon.getNameValue("FirstName").getValue();
+        Assert.assertEquals(expected, actual);
+    }
+    
+   @Test
+    public void numericValues_getNameValue_CorrectValue() throws FatalException{
+        final IConfig config = mock(IConfig.class);
+        when(config.getLexiconPath()).thenReturn("./test/test data/speccharvalues_lexicon.properties");
+        final ILexicon lexicon = new Lexicon(config);
+        final String expected = "1234567890";
+        final String actual = lexicon.getNameValue("LastName").getValue();
+        Assert.assertEquals(expected, actual);
+    }
+    
     /***Tests on incorrectly configured lexicons****************************************/
     
     @Test(expected = DuplicatedKeyException.class)
@@ -105,6 +126,14 @@ public class LexiconTests {
     public void initialization_DupeKeyLexicon_DuplicatedKeyException() throws FatalException{
         final IConfig config = mock(IConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/dupekey_lexicon.properties");
+        new Lexicon(config);
+    }
+    
+    @Test(expected = NameNotValidException.class)
+    @SuppressWarnings("ResultOfObjectAllocationIgnored")
+    public void initialization_NameWithSpaces_NameNotValidException() throws FatalException{
+        final IConfig config = mock(IConfig.class);
+        when(config.getLexiconPath()).thenReturn("./test/test data/spacedname_lexicon.properties");
         new Lexicon(config);
     }
     

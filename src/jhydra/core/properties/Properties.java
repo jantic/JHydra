@@ -21,7 +21,9 @@ public class Properties implements IProperties {
     private final Map<String,INameValue> keyValues;
     private final String filepath;
     
-    public Properties(String filepath) throws IOException, DuplicatedKeyException, NameNotValidException{
+    public Properties(String filepath) 
+            throws DuplicatedKeyException, NameNotValidException, PropertiesFileNotFoundException, 
+            GeneralPropertiesFileException, PropertiesFileReadPermissionsException{
         this.filepath = filepath;
         this.keyValues = load(filepath);
     }
@@ -54,17 +56,29 @@ public class Properties implements IProperties {
         return keyValues.containsKey(key);
     }
     
-    private Map load(String filepath) throws IOException, DuplicatedKeyException, NameNotValidException{
+    private Map load(String filepath) 
+            throws DuplicatedKeyException, NameNotValidException, PropertiesFileNotFoundException, 
+            GeneralPropertiesFileException, PropertiesFileReadPermissionsException{
         final File file = new File(filepath);
         return load(file);
     }
     
-    private Map<String,INameValue> load(File file) throws IOException, DuplicatedKeyException, NameNotValidException{
+    private void validatePropertiesFile(File file) throws PropertiesFileNotFoundException, PropertiesFileReadPermissionsException{
         if(!file.isFile()){
-            throw new IOException("File not found at:  " + file.getAbsolutePath());
+            throw new PropertiesFileNotFoundException(file.getAbsolutePath());
         }
         
-        final List<String> lines =  FileUtils.readLines(file);
+        if(!file.canRead()){
+            throw new PropertiesFileReadPermissionsException(file.getAbsolutePath());
+        }
+    }
+    
+    private Map<String,INameValue> load(File file) 
+            throws DuplicatedKeyException, NameNotValidException, PropertiesFileNotFoundException, 
+            GeneralPropertiesFileException, PropertiesFileReadPermissionsException{
+        
+        validatePropertiesFile(file);    
+        final List<String> lines =  getFileContents(file);
         final Map<String,INameValue> mapping = new HashMap<>();
         
         for(String line : lines){
@@ -83,6 +97,15 @@ public class Properties implements IProperties {
         }
         
         return mapping;
+    }
+    
+    private List<String> getFileContents(File file) throws GeneralPropertiesFileException{
+        try {
+            return FileUtils.readLines(file);
+        } catch (IOException e) {
+            throw new GeneralPropertiesFileException(this.filepath, e);
+        }
+    
     }
     
     private String generateKey(String name){
