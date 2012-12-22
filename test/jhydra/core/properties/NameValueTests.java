@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.scripting.properties;
+package jhydra.core.properties;
 
 import jhydra.core.FatalException;
 import jhydra.core.properties.INameValue;

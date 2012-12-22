@@ -2,8 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.scripting.lexicon;
+package jhydra.core.lexicon;
 
+import jhydra.core.lexicon.ILexicon;
+import jhydra.core.lexicon.NameNotInLexiconException;
+import jhydra.core.lexicon.Lexicon;
 import java.util.List;
 import jhydra.core.FatalException;
 import jhydra.core.config.IConfig;

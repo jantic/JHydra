@@ -4,7 +4,7 @@
  */
 package jhydra.core.scripting;
 
-import jhydra.core.scripting.lexicon.IValueMap;
+import jhydra.core.valuemap.IValueMap;
 import jhydra.core.uinav.IMasterNavigator;
 
 /**

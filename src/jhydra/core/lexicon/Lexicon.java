@@ -2,9 +2,8 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.scripting.lexicon;
+package jhydra.core.lexicon;
 
-import jhydra.core.properties.NameNotValidException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,12 +12,16 @@ import java.util.List;
 import java.util.Map;
 import jhydra.core.config.IConfig;
 import jhydra.core.properties.DuplicatedKeyException;
+import jhydra.core.properties.GeneralPropertiesFileException;
 import jhydra.core.properties.INameValue;
 import jhydra.core.properties.INameValueValidator;
 import jhydra.core.properties.NameNotInPropertiesFileException;
-import jhydra.core.properties.Properties;
+import jhydra.core.properties.NameNotValidException;
 import jhydra.core.properties.NameValue;
 import jhydra.core.properties.NameValueValidator;
+import jhydra.core.properties.Properties;
+import jhydra.core.properties.PropertiesFileNotFoundException;
+import jhydra.core.properties.PropertiesFileReadPermissionsException;
 import org.apache.commons.io.FilenameUtils;
 
 /**
@@ -81,14 +84,19 @@ public class Lexicon implements ILexicon {
     }
     
     private void loadStaticRegistry() 
-            throws LexiconNotFoundException, LexiconFileTypeException, LexiconReadException, DuplicatedKeyException, NameNotValidException, NameNotInPropertiesFileException{
+            throws LexiconNotFoundException, LexiconFileTypeException, LexiconReadException, 
+            DuplicatedKeyException, NameNotValidException, NameNotInPropertiesFileException{
+        
         validateLexiconFile();
 
         try{
             final Properties properties = new Properties(this.getFilePath());
             parseAndWriteToStaticRegistry(properties);
         }
-        catch(IOException e){
+        catch(PropertiesFileNotFoundException e){
+            throw new LexiconNotFoundException(this.getFilePath(), e);
+        }
+        catch(PropertiesFileReadPermissionsException|GeneralPropertiesFileException e){
             throw new LexiconReadException(this.getFilePath(), e);
         }
     }

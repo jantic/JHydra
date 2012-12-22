@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.scripting.lexicon;
+package jhydra.core.valuemap;
 
 import jhydra.core.properties.NameNotValidException;
+import jhydra.core.lexicon.NameNotInLexiconException;
 
 /**
  *

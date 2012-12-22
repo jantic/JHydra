@@ -18,7 +18,7 @@ import jhydra.core.scripting.ScriptInputLoadingException;
 import jhydra.core.scripting.ScriptNotExistException;
 import jhydra.core.scripting.ScriptOutputLoadingException;
 import jhydra.core.scripting.ScriptType;
-import jhydra.core.scripting.lexicon.IValueMap;
+import jhydra.core.valuemap.IValueMap;
 import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import jhydra.core.scripting.scriptinfo.IScriptInfoFactory;
 import jhydra.core.scripting.scriptinfo.ScriptInfoFactory;

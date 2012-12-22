@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.scripting.lexicon;
+package jhydra.core.valuemap;
 
 import jhydra.core.properties.NameNotValidException;
 import java.util.HashMap;
@@ -11,6 +11,8 @@ import java.util.Map;
 import jhydra.core.properties.INameValue;
 import jhydra.core.properties.INameValueValidator;
 import jhydra.core.properties.NameValueValidator;
+import jhydra.core.lexicon.ILexicon;
+import jhydra.core.lexicon.NameNotInLexiconException;
 
 /**
  *

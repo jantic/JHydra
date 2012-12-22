@@ -6,7 +6,7 @@ package jhydra.core.scripting;
 
 import jhydra.core.FatalException;
 import jhydra.core.RecoverableException;
-import jhydra.core.scripting.lexicon.ILexicon;
+import jhydra.core.lexicon.ILexicon;
 
 /**
  *

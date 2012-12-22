@@ -8,7 +8,7 @@ import jhydra.core.FatalException;
 import jhydra.core.RecoverableException;
 import jhydra.core.config.IConfig;
 import jhydra.core.logging.ILog;
-import jhydra.core.scripting.lexicon.ILexicon;
+import jhydra.core.lexicon.ILexicon;
 
 /**
  *
