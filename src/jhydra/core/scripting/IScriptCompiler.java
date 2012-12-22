@@ -11,6 +11,6 @@ import jhydra.core.scripting.scriptinfo.IScriptInfo;
  * @author jantic
  */
 public interface IScriptCompiler {
-    IScript getCompiledScript(IScriptInfo scriptInfo) 
+    IBaseScript getCompiledScript(IScriptInfo scriptInfo) 
         throws CompileErrorException, ScriptOutputLoadingException, ScriptNotExistException, ScriptInputLoadingException;  
 }

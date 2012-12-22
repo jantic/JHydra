@@ -16,22 +16,24 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import jhydra.core.scripting.CompileErrorException;
 import jhydra.core.scripting.FileCompileErrorReport;
+import jhydra.core.scripting.IBaseScript;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptCompiler;
-import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import jhydra.core.scripting.ScriptInputLoadingException;
 import jhydra.core.scripting.ScriptNotExistException;
 import jhydra.core.scripting.ScriptOutputLoadingException;
 import jhydra.core.scripting.ScriptType;
+import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import org.apache.commons.io.IOUtils;
 
 
 //Package access only
 class DynamicJavaCompiler implements IScriptCompiler {
+    //TODO:  Get this into config
     private final String classOutputFolder = "temp";
     
     @Override
-    public IScript getCompiledScript(IScriptInfo scriptInfo) 
+    public IBaseScript getCompiledScript(IScriptInfo scriptInfo) 
             throws CompileErrorException, ScriptOutputLoadingException, ScriptNotExistException, ScriptInputLoadingException{
         
         final String filePath = scriptInfo.getFilePath();
@@ -49,17 +51,17 @@ class DynamicJavaCompiler implements IScriptCompiler {
         }
             
         compile(filePath, className);
-        return getScriptFromCompileOutput(className);
+        return getScriptFromCompileOutput(className);      
     }
     
-    private IScript getScriptFromCompileOutput(String className) throws ScriptOutputLoadingException{
+    private IBaseScript getScriptFromCompileOutput(String className) throws ScriptOutputLoadingException{
         try{
             final File file = new File(classOutputFolder);
             final URL url = file.toURI().toURL(); 
             final URL[] urls = new URL[]{url};
             final ClassLoader loader = new URLClassLoader(urls);
             final Class thisClass = loader.loadClass(className);
-            return (IScript)thisClass.newInstance();
+            return (IBaseScript)thisClass.newInstance();
         }
         catch(MalformedURLException | ClassNotFoundException | 
                 InstantiationException | IllegalAccessException e){

@@ -10,6 +10,7 @@ import java.util.Map;
 import jhydra.core.config.IConfig;
 import jhydra.core.logging.ILog;
 import jhydra.core.scripting.CompileErrorException;
+import jhydra.core.scripting.IBaseScript;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptCompiler;
 import jhydra.core.scripting.IScriptFactory;
@@ -18,12 +19,12 @@ import jhydra.core.scripting.ScriptInputLoadingException;
 import jhydra.core.scripting.ScriptNotExistException;
 import jhydra.core.scripting.ScriptOutputLoadingException;
 import jhydra.core.scripting.ScriptType;
-import jhydra.core.valuemap.IValueMap;
 import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import jhydra.core.scripting.scriptinfo.IScriptInfoFactory;
 import jhydra.core.scripting.scriptinfo.ScriptInfoFactory;
 import jhydra.core.scripting.scriptinfo.ScriptInfoLoadException;
 import jhydra.core.uinav.IMasterNavigator;
+import jhydra.core.valuemap.IValueMap;
 
 
 /**
@@ -34,11 +35,13 @@ public class JavaFileScriptFactory implements IScriptFactory {
     private final IConfig config;
     private final ILog log;
     private final IScriptInfoFactory scriptInfoFactory;
+    private final IScriptFactory masterScriptFactory;
     private final Map<String,IScriptInfo> nameToScriptInfo = new HashMap<>();
     
-    public JavaFileScriptFactory(IConfig config, ILog log) throws ScriptInfoLoadException{
+    public JavaFileScriptFactory(IConfig config, ILog log, IScriptFactory masterScriptFactory) throws ScriptInfoLoadException{
         this.config = config;
         this.log = log;
+        this.masterScriptFactory = masterScriptFactory;
         this.scriptInfoFactory = new ScriptInfoFactory();
         loadAllScriptInfos();
     }
@@ -49,8 +52,17 @@ public class JavaFileScriptFactory implements IScriptFactory {
                 ScriptOutputLoadingException, ScriptInputLoadingException{
         final IScriptInfo scriptInfo = getScriptInfo(name);
         final IScriptCompiler compiler = new DynamicJavaCompiler();
-        final IScript rawScript = compiler.getCompiledScript(scriptInfo);
-        return new RobustScript(rawScript, config, log);
+        final IBaseScript baseScript = compiler.getCompiledScript(scriptInfo);
+        initializeBaseScript(baseScript, valueMap, navigator);
+        return new RobustScript(baseScript, config, log);
+    }
+    
+    private void initializeBaseScript(IBaseScript baseScript, IValueMap valueMap, IMasterNavigator masterNavigator){
+        baseScript.setConfig(this.config);
+        baseScript.setLog(this.log);
+        baseScript.setScriptFactory(masterScriptFactory);
+        baseScript.setValueMap(valueMap);
+        baseScript.setNavigator(masterNavigator);
     }
     
     private IScriptInfo getScriptInfo(String name) throws ScriptNotExistException{

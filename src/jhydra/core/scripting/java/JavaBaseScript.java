@@ -7,43 +7,59 @@ package jhydra.core.scripting.java;
 import jhydra.core.FatalException;
 import jhydra.core.RecoverableException;
 import jhydra.core.config.IConfig;
+import jhydra.core.lexicon.ILexicon;
+import jhydra.core.lexicon.NameNotInLexiconException;
 import jhydra.core.logging.ILog;
+import jhydra.core.properties.NameNotValidException;
+import jhydra.core.scripting.IBaseScript;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptFactory;
-import jhydra.core.lexicon.ILexicon;
-import jhydra.core.valuemap.IValueMap;
-import jhydra.core.lexicon.NameNotInLexiconException;
-import jhydra.core.properties.NameNotValidException;
 import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.uinav.selenium.IExtendedSelenium;
+import jhydra.core.valuemap.IValueMap;
 
 /**
  *
  * @author jantic
  */
-public class JavaBaseScript implements IScript{
-    private final IMasterNavigator navigator;
-    private final IValueMap valueMap;
-    private final IScriptFactory scriptFactory;
-    private final IConfig config;
+public class JavaBaseScript implements IBaseScript{
+    private IMasterNavigator navigator;
+    private IValueMap valueMap;
+    private IScriptFactory scriptFactory;
+    private IConfig config;
     
     //The following are meant to be accessed as is by children scripts.  I just wish Java has C# style properties!
-    protected final IExtendedSelenium selenium;
-    protected final ILog log;
-    protected final Integer timeout;
+    protected IExtendedSelenium selenium;
+    protected ILog log;
+    protected Integer timeout;
 
-    public JavaBaseScript(IMasterNavigator navigator, IValueMap valueMap, ILog log, IScriptFactory scriptFactory, IConfig config) {
+    public JavaBaseScript(){
+
+    }
+    
+    //We need setters to keep the construction hidden from the scripts 
+    //(i.e. we just want them to deal with a default constructor).
+    public void setNavigator(IMasterNavigator navigator){
         this.navigator = navigator;
-        this.valueMap = valueMap;
-        this.scriptFactory = scriptFactory;
-        this.config = config;
-       
         this.selenium = navigator.getSelenium();
-        this.log = log;
+    }
+    
+    public void setValueMap(IValueMap valueMap){
+        this.valueMap = valueMap;
+    }
+    
+    public void setScriptFactory(IScriptFactory scriptFactory){
+        this.scriptFactory = scriptFactory;
+    }
+    
+    public void setConfig(IConfig config){
+        this.config = config;
         this.timeout = config.getScriptTimeout();
     }
     
-  
+    public void setLog(ILog log){
+        this.log = log;
+    }
 
     @Override
     public void registerVariables(ILexicon registry) {
