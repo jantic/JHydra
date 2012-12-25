@@ -6,16 +6,17 @@ package jhydra.core.scripting;
 
 import java.util.List;
 import javax.tools.Diagnostic;
+import javax.tools.JavaFileObject;
 
 /**
  *
  * @author jantic
  */
-public class FileCompileErrorReport {
+public class CompileErrorReport {
     private final List<Diagnostic> diagnostics;
     private final String fileName;
     
-    public FileCompileErrorReport(String fileName, List<Diagnostic> diagnostics){
+    public CompileErrorReport(String fileName, List<Diagnostic> diagnostics){
         this.fileName = fileName;
         this.diagnostics = diagnostics;
     }

@@ -12,14 +12,14 @@ import jhydra.core.FatalException;
  * @author jantic
  */
 public class CompileErrorException extends FatalException{
-    private final List<FileCompileErrorReport> reports;
+    private final List<CompileErrorReport> reports;
     
-    public CompileErrorException(String message, List<FileCompileErrorReport> reports){
+    public CompileErrorException(String message, List<CompileErrorReport> reports){
         super(message);
         this.reports = reports;
     }
     
-    public List<FileCompileErrorReport> getAllReports(){
+    public List<CompileErrorReport> getAllReports(){
         return this.reports;
     }
 }

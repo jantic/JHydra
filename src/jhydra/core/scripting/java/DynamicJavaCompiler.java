@@ -2,6 +2,7 @@ package jhydra.core.scripting.java;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -10,12 +11,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import javax.tools.Diagnostic;
+import javax.tools.DiagnosticCollector;
 import javax.tools.JavaCompiler;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import jhydra.core.scripting.CompileErrorException;
-import jhydra.core.scripting.FileCompileErrorReport;
+import jhydra.core.scripting.CompileErrorReport;
 import jhydra.core.scripting.IBaseScript;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptCompiler;
@@ -93,28 +95,42 @@ class DynamicJavaCompiler implements IScriptCompiler {
         }
     }
 
-    private void evaluateDiagnostics(String fileName, List<Diagnostic> diagnostics) throws CompileErrorException{
+    private void evaluateDiagnostics(String fileName, List<Diagnostic> diagnostics) 
+            throws CompileErrorException{
+        final List<CompileErrorReport> reports = new ArrayList<>();
+        if(diagnostics.size() > 0){
+            final CompileErrorReport report = new CompileErrorReport(fileName, diagnostics);
+            reports.add(report);   
+        }
+        
         for(Diagnostic diagnostic : diagnostics){
             if(diagnostic.getKind() == Diagnostic.Kind.ERROR){
-                final FileCompileErrorReport report = new FileCompileErrorReport(fileName, diagnostics);
-                final List<FileCompileErrorReport> reports = new ArrayList<>();
-                reports.add(report);
-                final String message = "Java compiler found error(s) in script.";
+                final String message = "Java compiler found error(s) in script named " + fileName;
                 throw new CompileErrorException(message, reports);
             }
         }
+
     }
       
-    private List<Diagnostic> compile(Iterable<? extends JavaFileObject> files) throws CompileErrorException {
-        final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-        final JavaDiagnosticListener diagnosticListener = new JavaDiagnosticListener();
-        final StandardJavaFileManager fileManager = 
-                compiler.getStandardFileManager(diagnosticListener,Locale.ENGLISH,null);
-        final Iterable options = Arrays.asList("-d", classOutputFolder);
-        final JavaCompiler.CompilationTask task;
-        task = compiler.getTask(null, fileManager, diagnosticListener, options, null, files);
-        task.call();
-        return diagnosticListener.getAllDiagnostics();
+    private List<Diagnostic> compile(Iterable<? extends JavaFileObject> files) throws CompileErrorException, IOException {
+        StandardJavaFileManager fileManager = null;
+        
+        try{
+            final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+            final DiagnosticCollector diagnosticCollector = new DiagnosticCollector();
+            fileManager = compiler.getStandardFileManager(diagnosticCollector,Locale.ENGLISH,null);
+            final List<String> options = new ArrayList<>();
+            options.add("-d");
+            options.add(classOutputFolder);         
+            options.add("-verbose"); 
+            compiler.getTask(null, fileManager, diagnosticCollector, options, null, files).call();
+            return diagnosticCollector.getDiagnostics();
+        }
+        finally{
+            if(fileManager!=null){
+                fileManager.close();
+            }
+        }
     }
     
       
@@ -128,4 +144,5 @@ class DynamicJavaCompiler implements IScriptCompiler {
             return IOUtils.toString(inputStream);
         }
     }
+
 }

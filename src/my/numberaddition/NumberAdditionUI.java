@@ -11,8 +11,9 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.tools.Diagnostic;
+import javax.tools.JavaFileObject;
 import jhydra.core.scripting.CompileErrorException;
-import jhydra.core.scripting.FileCompileErrorReport;
+import jhydra.core.scripting.CompileErrorReport;
 
 /**
  *
@@ -230,17 +231,17 @@ public class NumberAdditionUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void updateCompilerErrors(List<FileCompileErrorReport> reports){
+    private void updateCompilerErrors(List<CompileErrorReport> reports){
         final CompilerErrorTableModel model = new CompilerErrorTableModel();
         
-        for (FileCompileErrorReport report : reports){
+        for (CompileErrorReport report : reports){
             addCompilerErrorsToTable(model, report);
         }
         
         this.compilerErrorsTable.setModel(model);
     }
     
-    private void addCompilerErrorsToTable(CompilerErrorTableModel model, FileCompileErrorReport report){
+    private void addCompilerErrorsToTable(CompilerErrorTableModel model, CompileErrorReport report){
         final List<Diagnostic> diagnostics = report.getDiagnostics();
         
         for(Diagnostic diagnostic : diagnostics){

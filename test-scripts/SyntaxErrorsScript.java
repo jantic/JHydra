@@ -6,13 +6,13 @@ import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.java.JavaBaseScript;
 
 
-public class NormalScript extends JavaBaseScript implements IScript{
+public class SyntaxErrorsScript extends JavaBaseScript implements IScript{
 
     @Override
     public void execute() throws FatalException {
         final BigDecimal num1 = new BigDecimal(getValue("num1"));
-        final BigDecimal num2 = new BigDecimal(getValue("num2"));
-        final BigDecimal sum = num1.add(num2);
-        setValue("sum", sum.toString());
+        final BigDecimal num2 = new BigDecima(getValue("num2"));
+        final BigDecimal sum = num1.add("1");
+        seValue("sum", sum.toString());
     }   
 }
