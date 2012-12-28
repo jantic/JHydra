@@ -4,18 +4,21 @@
  */
 package jhydra.core.scripting.java;
 
-import java.util.HashMap;
+import java.util.HashMap; 
 import java.util.List;
 import java.util.Map;
 import jhydra.core.config.IConfig;
 import jhydra.core.logging.ILog;
+import jhydra.core.scripting.ClassNotInScriptFileException;
 import jhydra.core.scripting.CompileErrorException;
 import jhydra.core.scripting.IBaseScript;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptCompiler;
 import jhydra.core.scripting.IScriptFactory;
+import jhydra.core.scripting.NonPublicScriptClassException;
 import jhydra.core.scripting.RobustScript;
 import jhydra.core.scripting.ScriptInputLoadingException;
+import jhydra.core.scripting.ScriptInstantiationException;
 import jhydra.core.scripting.ScriptNotExistException;
 import jhydra.core.scripting.ScriptOutputLoadingException;
 import jhydra.core.scripting.ScriptType;
@@ -48,8 +51,9 @@ public class JavaFileScriptFactory implements IScriptFactory {
     
     @Override
     public IScript getScript(String name, IValueMap valueMap, IMasterNavigator navigator)
-                throws CompileErrorException, ScriptNotExistException, 
-                ScriptOutputLoadingException, ScriptInputLoadingException{
+                throws CompileErrorException, ScriptNotExistException, ScriptOutputLoadingException, 
+                ScriptInputLoadingException, ClassNotInScriptFileException, NonPublicScriptClassException, 
+                ClassNotInScriptFileException, ScriptInstantiationException{
         final IScriptInfo scriptInfo = getScriptInfo(name);
         final IScriptCompiler compiler = new DynamicJavaCompiler();
         final IBaseScript baseScript = compiler.getCompiledScript(scriptInfo);

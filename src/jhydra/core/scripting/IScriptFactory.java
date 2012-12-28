@@ -4,8 +4,8 @@
  */
 package jhydra.core.scripting;
 
-import jhydra.core.valuemap.IValueMap;
 import jhydra.core.uinav.IMasterNavigator;
+import jhydra.core.valuemap.IValueMap;
 
 /**
  *
@@ -14,6 +14,6 @@ import jhydra.core.uinav.IMasterNavigator;
 public interface IScriptFactory {
 
     IScript getScript(String name, IValueMap valueMap, IMasterNavigator navigator) 
-            throws CompileErrorException, ScriptNotExistException, 
-                ScriptOutputLoadingException, ScriptInputLoadingException;  
+            throws CompileErrorException, ScriptNotExistException, ScriptOutputLoadingException, ScriptInputLoadingException, 
+            NonPublicScriptClassException, ClassNotInScriptFileException, ScriptInstantiationException;  
 }

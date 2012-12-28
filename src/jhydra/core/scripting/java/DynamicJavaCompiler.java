@@ -16,12 +16,14 @@ import javax.tools.JavaCompiler;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
+import jhydra.core.scripting.ClassNotInScriptFileException;
 import jhydra.core.scripting.CompileErrorException;
 import jhydra.core.scripting.CompileErrorReport;
 import jhydra.core.scripting.IBaseScript;
-import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptCompiler;
+import jhydra.core.scripting.NonPublicScriptClassException;
 import jhydra.core.scripting.ScriptInputLoadingException;
+import jhydra.core.scripting.ScriptInstantiationException;
 import jhydra.core.scripting.ScriptNotExistException;
 import jhydra.core.scripting.ScriptOutputLoadingException;
 import jhydra.core.scripting.ScriptType;
@@ -33,10 +35,12 @@ import org.apache.commons.io.IOUtils;
 class DynamicJavaCompiler implements IScriptCompiler {
     //TODO:  Get this into config
     private final String classOutputFolder = "temp";
-    
+     
     @Override
     public IBaseScript getCompiledScript(IScriptInfo scriptInfo) 
-            throws CompileErrorException, ScriptOutputLoadingException, ScriptNotExistException, ScriptInputLoadingException{
+            throws CompileErrorException, ScriptOutputLoadingException, ScriptNotExistException, 
+            ScriptInputLoadingException, NonPublicScriptClassException, ClassNotInScriptFileException,
+            ScriptInstantiationException{
         
         final String filePath = scriptInfo.getFilePath();
         final String className = scriptInfo.getClassName();
@@ -53,10 +57,11 @@ class DynamicJavaCompiler implements IScriptCompiler {
         }
             
         compile(filePath, className);
-        return getScriptFromCompileOutput(className);      
+        return getScriptFromCompileOutput(className, filePath);      
     }
     
-    private IBaseScript getScriptFromCompileOutput(String className) throws ScriptOutputLoadingException{
+    private IBaseScript getScriptFromCompileOutput(String className, String filePath) throws ScriptOutputLoadingException, 
+            NonPublicScriptClassException, ClassNotInScriptFileException, ScriptInstantiationException{
         try{
             final File file = new File(classOutputFolder);
             final URL url = file.toURI().toURL(); 
@@ -65,8 +70,16 @@ class DynamicJavaCompiler implements IScriptCompiler {
             final Class thisClass = loader.loadClass(className);
             return (IBaseScript)thisClass.newInstance();
         }
-        catch(MalformedURLException | ClassNotFoundException | 
-                InstantiationException | IllegalAccessException e){
+        catch(IllegalAccessException e){
+            throw new NonPublicScriptClassException(filePath, e);
+        }
+        catch(ClassNotFoundException e){
+            throw new ClassNotInScriptFileException(filePath, e);
+        }
+        catch(InstantiationException e){
+            throw new ScriptInstantiationException(filePath, e);
+        }
+        catch(MalformedURLException e){
             throw new ScriptOutputLoadingException(className, e);
         }
     }

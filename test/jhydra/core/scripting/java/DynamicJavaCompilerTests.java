@@ -4,6 +4,7 @@
  */
 package jhydra.core.scripting.java;
 
+import jhydra.core.scripting.NonPublicScriptClassException;
 import java.util.List;
 import java.util.Locale;
 import javax.tools.Diagnostic;
@@ -11,6 +12,7 @@ import jhydra.core.FatalException;
 import jhydra.core.RecoverableException;
 import jhydra.core.config.IConfig;
 import jhydra.core.logging.ILog;
+import jhydra.core.scripting.ClassNotInScriptFileException;
 import jhydra.core.scripting.CompileErrorException;
 import jhydra.core.scripting.CompileErrorReport;
 import jhydra.core.scripting.IBaseScript;
@@ -18,6 +20,9 @@ import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptCompiler;
 import jhydra.core.scripting.IScriptFactory;
 import jhydra.core.scripting.MasterScriptFactory;
+import jhydra.core.scripting.ScriptInputLoadingException;
+import jhydra.core.scripting.ScriptInstantiationException;
+import jhydra.core.scripting.ScriptNotExistException;
 import jhydra.core.scripting.ScriptType;
 import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import jhydra.core.uinav.IMasterNavigator;
@@ -40,7 +45,7 @@ public class DynamicJavaCompilerTests {
    
     @Test
     public void getCompiledScript_normalFile_getName_NormalScript() throws FatalException{
-        final IScript script = getCompiledScript("NormalScript");
+        final IScript script = getCompiledScript("NormalScript", ScriptType.JAVA);
         final String expected = "jhydra.scripts.NormalScript";
         final String actual = script.getName();
         Assert.assertEquals(expected, actual);
@@ -63,7 +68,7 @@ public class DynamicJavaCompilerTests {
             }
         }).when(valueMap).setValue(eq("sum"), anyString());
         
-        final IScript script = getInitializedScript("NormalScript", valueMap);
+        final IScript script = getInitializedScriptJava("NormalScript", valueMap);
         script.execute();
         final String expected = "11.0";
         final String actual = sum;
@@ -74,7 +79,7 @@ public class DynamicJavaCompilerTests {
     
     @Test(expected = CompileErrorException.class)
     public void getCompiledScript_syntaxErrorsScript_CompileErrorException() throws FatalException{
-        getCompiledScript("SyntaxErrorsScript");
+        getCompiledScriptJava("SyntaxErrorsScript");
     }
     
     @Test
@@ -82,7 +87,7 @@ public class DynamicJavaCompilerTests {
         final String expected = "cannot find symbol\n" +
             "  symbol:   class BigDecima\n" +
             "  location: class jhydra.scripts.SyntaxErrorsScript";
-        final String actual = getResultingDiagnostic("SyntaxErrorsScript", 0).getMessage(Locale.ENGLISH);
+        final String actual = getResultingDiagnosticJava("SyntaxErrorsScript", 0).getMessage(Locale.ENGLISH);
         Assert.assertEquals(expected, actual);
     }
 
@@ -90,14 +95,14 @@ public class DynamicJavaCompilerTests {
     @Test
     public void getCompiledScript_syntaxErrorsScript_firstError_correctLineNumber() throws FatalException{
         final long expected = 14;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 0).getLineNumber();
+        final long actual = getResultingDiagnosticJava("SyntaxErrorsScript", 0).getLineNumber();
         Assert.assertEquals(expected, actual);
     }
     
     @Test
     public void getCompiledScript_syntaxErrorsScript_firstError_correctColumnNumber() throws FatalException{
         final long expected = 37;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 0).getColumnNumber();
+        final long actual = getResultingDiagnosticJava("SyntaxErrorsScript", 0).getColumnNumber();
         Assert.assertEquals(expected, actual);
     } 
     
@@ -108,21 +113,21 @@ public class DynamicJavaCompilerTests {
             "      (actual and formal argument lists differ in length)\n" +
             "    method java.math.BigDecimal.add(java.math.BigDecimal) is not applicable\n" +
             "      (actual argument java.lang.String cannot be converted to java.math.BigDecimal by method invocation conversion)";
-        final String actual = getResultingDiagnostic("SyntaxErrorsScript", 1).getMessage(Locale.ENGLISH);
+        final String actual = getResultingDiagnosticJava("SyntaxErrorsScript", 1).getMessage(Locale.ENGLISH);
         Assert.assertEquals(expected, actual);
     }
     
     @Test
     public void getCompiledScript_syntaxErrorsScript_secondError_correctLineNumber() throws FatalException{
         final long expected = 15;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 1).getLineNumber();
+        final long actual = getResultingDiagnosticJava("SyntaxErrorsScript", 1).getLineNumber();
         Assert.assertEquals(expected, actual);
     }
     
     @Test
     public void getCompiledScript_syntaxErrorsScript_secondError_correctColumnNumber() throws FatalException{
         final long expected = 36;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 1).getColumnNumber();
+        final long actual = getResultingDiagnosticJava("SyntaxErrorsScript", 1).getColumnNumber();
         Assert.assertEquals(expected, actual);
     }
     
@@ -132,26 +137,70 @@ public class DynamicJavaCompilerTests {
         final String expected = "cannot find symbol\n" +
             "  symbol:   method seValue(java.lang.String,java.lang.String)\n" +
             "  location: class jhydra.scripts.SyntaxErrorsScript";
-        final String actual = getResultingDiagnostic("SyntaxErrorsScript", 2).getMessage(Locale.ENGLISH);
+        final String actual = getResultingDiagnosticJava("SyntaxErrorsScript", 2).getMessage(Locale.ENGLISH);
         Assert.assertEquals(expected, actual);
     }
     
     @Test
     public void getCompiledScript_syntaxErrorsScript_thirdError_correctLineNumber() throws FatalException{
         final long expected = 16;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 2).getLineNumber();
+        final long actual = getResultingDiagnosticJava("SyntaxErrorsScript", 2).getLineNumber();
         Assert.assertEquals(expected, actual);
     }
     
     @Test
     public void getCompiledScript_syntaxErrorsScript_thirdError_correctColumnNumber() throws FatalException{
         final long expected = 9;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 2).getColumnNumber();
+        final long actual = getResultingDiagnosticJava("SyntaxErrorsScript", 2).getColumnNumber();
         Assert.assertEquals(expected, actual);
     }
     
-    private IScript getInitializedScript(String name, IValueMap valueMap) throws FatalException{
-        final IBaseScript script = getCompiledScript(name);
+    /***Tests on attempting to compile script without public qualifier****************************************/
+    @Test(expected = NonPublicScriptClassException.class)
+    public void getCompiledScript_nonPublicScript_NonPublicScriptClassException() throws FatalException{
+        getCompiledScriptJava("NonPublicScript");
+    }
+    
+    /***Tests on attempting to compile script without class declaration****************************************/
+    @Test(expected = CompileErrorException.class)
+    public void getCompiledScript_noClassScript_CompileErrorException() throws FatalException{
+        getCompiledScriptJava("NoClassScript");
+    }
+    
+    /***Tests on attempting to compile script with just function body****************************************/
+    @Test(expected = CompileErrorException.class)
+    public void getCompiledScript_justFunctionBodyScript_CompileErrorException() throws FatalException{
+        getCompiledScriptJava("JustFunctionBodyScript");
+    }
+    
+    /***Tests on attempting to compile blank script file****************************************/
+    @Test(expected = ClassNotInScriptFileException.class)
+    public void getCompiledScript_blankScript_ClassNotInScriptFileException() throws FatalException{
+        getCompiledScriptJava("BlankScript"); 
+    }
+    
+    /***Tests on attempting to compile/instantiate abstract class script file****************************************/
+    @Test(expected = ScriptInstantiationException.class)
+    public void getCompiledScript_abstractScript_ScriptInstantiationException() throws FatalException{
+        getCompiledScriptJava("AbstractScript");
+    }
+    
+    
+    /***Tests on attempting to compile/instantiate nonexistent script file****************************************/
+    @Test(expected = ScriptNotExistException.class)
+    public void getCompiledScript_nonexistentScript_ScriptNotExistException() throws FatalException{
+        getCompiledScriptJava("DoesNotExistScript");
+    } 
+    
+    /***Tests on attempting to compile/instantiate non java script file****************************************/
+    @Test(expected = ScriptInputLoadingException.class)
+    public void getCompiledScript_nonJava_ScriptInputLoadingException() throws FatalException{
+        getCompiledScript("NonJava", ScriptType.JYTHON);
+    }
+    
+    /***PRIVATE************************************************************************/
+    private IScript getInitializedScriptJava(String name, IValueMap valueMap) throws FatalException{
+        final IBaseScript script = getCompiledScriptJava(name);
         final IConfig config = mock(IConfig.class);
         script.setConfig(config);
         final ILog log = mock(ILog.class);
@@ -164,19 +213,23 @@ public class DynamicJavaCompilerTests {
         return script;
     }
     
-    private IBaseScript getCompiledScript(String name) throws FatalException {
+    private IBaseScript getCompiledScript(String name, ScriptType scriptType) throws FatalException{
         final IScriptCompiler compiler = new DynamicJavaCompiler();
         final IScriptInfo scriptInfo = mock(IScriptInfo.class);
         when(scriptInfo.getClassName()).thenReturn("jhydra.scripts." + name);
-        when(scriptInfo.getFilePath()).thenReturn("./test-scripts/" + name +".java");
+        when(scriptInfo.getFilePath()).thenReturn("./test-scripts/" + name +"." + scriptType.getExtension());
         when(scriptInfo.getName()).thenReturn(name);
-        when(scriptInfo.getType()).thenReturn(ScriptType.JAVA);
+        when(scriptInfo.getType()).thenReturn(scriptType);
         return compiler.getCompiledScript(scriptInfo); 
     }
+    
+    private IBaseScript getCompiledScriptJava(String name) throws FatalException{
+        return getCompiledScript(name, ScriptType.JAVA); 
+    }
           
-    private Diagnostic getResultingDiagnostic(String scriptName, Integer diagnosticNum) throws FatalException{
+    private Diagnostic getResultingDiagnosticJava(String scriptName, Integer diagnosticNum) throws FatalException{
         try{
-            getCompiledScript(scriptName);
+            getCompiledScriptJava(scriptName);
         }
         catch(CompileErrorException e){
             final List<CompileErrorReport> reports = e.getAllReports();
