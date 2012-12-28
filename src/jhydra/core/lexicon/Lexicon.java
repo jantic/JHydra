@@ -45,7 +45,7 @@ public class Lexicon implements ILexicon {
     
     @Override
     public List<INameValue> getAllNameDefaultValuePairs() {
-        final List<INameValue> pairs = new ArrayList(this.staticRegistry.values());
+        final List<INameValue> pairs = new ArrayList<>(this.staticRegistry.values());
         return pairs;
     }
 

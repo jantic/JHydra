@@ -30,8 +30,8 @@ public class Properties implements IProperties {
     
     @Override
     public List<String> getAllPropertyNames(){
-        final List<String> names = new ArrayList();        
-        final List<INameValue> pairs = new ArrayList(keyValues.values());
+        final List<String> names = new ArrayList<>();        
+        final List<INameValue> pairs = new ArrayList<>(keyValues.values());
         
         for(INameValue pair : pairs){
             names.add(pair.getName());
@@ -56,7 +56,7 @@ public class Properties implements IProperties {
         return keyValues.containsKey(key);
     }
     
-    private Map load(String filepath) 
+    private Map<String,INameValue> load(String filepath) 
             throws DuplicatedKeyException, NameNotValidException, PropertiesFileNotFoundException, 
             GeneralPropertiesFileException, PropertiesFileReadPermissionsException{
         final File file = new File(filepath);

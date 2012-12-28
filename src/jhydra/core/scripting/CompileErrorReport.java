@@ -13,15 +13,15 @@ import javax.tools.JavaFileObject;
  * @author jantic
  */
 public class CompileErrorReport {
-    private final List<Diagnostic> diagnostics;
+    private final List<Diagnostic<? extends JavaFileObject>> diagnostics;
     private final String fileName;
     
-    public CompileErrorReport(String fileName, List<Diagnostic> diagnostics){
+    public CompileErrorReport(String fileName, List<Diagnostic<? extends JavaFileObject>> diagnostics){
         this.fileName = fileName;
         this.diagnostics = diagnostics;
     }
     
-    public List<Diagnostic> getDiagnostics(){
+    public List<Diagnostic<? extends JavaFileObject>> getDiagnostics(){
         return this.diagnostics;
     }
     

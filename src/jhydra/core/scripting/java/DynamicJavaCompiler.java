@@ -42,7 +42,7 @@ class DynamicJavaCompiler implements IScriptCompiler {
             ScriptInputLoadingException, NonPublicScriptClassException, ClassNotInScriptFileException,
             ScriptInstantiationException{
         
-        final String filePath = scriptInfo.getFilePath();
+        final String filePath = scriptInfo.getFilePath();  
         final String className = scriptInfo.getClassName();
                
         if(!fileExists(filePath)){
@@ -87,7 +87,7 @@ class DynamicJavaCompiler implements IScriptCompiler {
     private void compile(String fileName, String className) throws CompileErrorException, ScriptInputLoadingException{
         try{
             final JavaFileObject file = getJavaFileObject(className, fileName);        
-            final List<Diagnostic> diagnostics = compile(Arrays.asList(file));
+            final List<Diagnostic<? extends JavaFileObject>> diagnostics = compile(Arrays.asList(file));
             evaluateDiagnostics(fileName, diagnostics);
         }
         catch(CompileErrorException e){
@@ -108,7 +108,7 @@ class DynamicJavaCompiler implements IScriptCompiler {
         }
     }
 
-    private void evaluateDiagnostics(String fileName, List<Diagnostic> diagnostics) 
+    private void evaluateDiagnostics(String fileName, List<Diagnostic<? extends JavaFileObject>> diagnostics) 
             throws CompileErrorException{
         final List<CompileErrorReport> reports = new ArrayList<>();
         if(diagnostics.size() > 0){
@@ -125,24 +125,18 @@ class DynamicJavaCompiler implements IScriptCompiler {
 
     }
       
-    private List<Diagnostic> compile(Iterable<? extends JavaFileObject> files) throws CompileErrorException, IOException {
-        StandardJavaFileManager fileManager = null;
+    private List<Diagnostic<? extends JavaFileObject>> compile(Iterable<JavaFileObject> files) throws CompileErrorException, IOException {
+        final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+        final DiagnosticCollector<JavaFileObject> diagnosticCollector = new DiagnosticCollector<>();
         
-        try{
-            final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-            final DiagnosticCollector diagnosticCollector = new DiagnosticCollector();
-            fileManager = compiler.getStandardFileManager(diagnosticCollector,Locale.ENGLISH,null);
+        try(final StandardJavaFileManager fileManager = 
+                compiler.getStandardFileManager(diagnosticCollector,Locale.ENGLISH,null);){
             final List<String> options = new ArrayList<>();
             options.add("-d");
             options.add(classOutputFolder);         
             options.add("-verbose"); 
             compiler.getTask(null, fileManager, diagnosticCollector, options, null, files).call();
             return diagnosticCollector.getDiagnostics();
-        }
-        finally{
-            if(fileManager!=null){
-                fileManager.close();
-            }
         }
     }
     
