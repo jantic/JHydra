@@ -14,8 +14,8 @@ import javax.swing.table.AbstractTableModel;
  */
 public class CompilerErrorTableModel extends AbstractTableModel {
 
-    private final List<String> columnNames = new ArrayList();
-    private final List<List> data = new ArrayList();
+    private final List<String> columnNames = new ArrayList<>();
+    private final List<List> data = new ArrayList<>();
 
     {
         columnNames.add("File");
