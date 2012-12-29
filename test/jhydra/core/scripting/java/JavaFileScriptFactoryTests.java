@@ -7,15 +7,15 @@ package jhydra.core.scripting.java;
 import java.util.List;
 import java.util.Locale;
 import javax.tools.Diagnostic;
+import jhydra.core.config.IConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
-import jhydra.core.config.IConfig;
 import jhydra.core.logging.ILog;
-import jhydra.core.scripting.exceptions.ClassNotInScriptFileException;
-import jhydra.core.scripting.exceptions.CompileErrorException;
 import jhydra.core.scripting.CompileErrorReport;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptFactory;
+import jhydra.core.scripting.exceptions.ClassNotInScriptFileException;
+import jhydra.core.scripting.exceptions.CompileErrorException;
 import jhydra.core.scripting.exceptions.NonPublicScriptClassException;
 import jhydra.core.scripting.exceptions.ScriptInstantiationException;
 import jhydra.core.scripting.exceptions.ScriptNotExistException;
@@ -70,6 +70,7 @@ public class JavaFileScriptFactoryTests {
         final String actual = sum;
         Assert.assertEquals(expected, actual);
     }
+
     
     /***Tests on script with syntax errors ****************************************/
     
