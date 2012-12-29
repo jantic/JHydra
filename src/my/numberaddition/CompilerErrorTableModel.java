@@ -25,7 +25,7 @@ public class CompilerErrorTableModel extends AbstractTableModel {
     }
 
     public void addRow(String fileName, String message, String lineNumber, String columnNumber) {
-        final List<String> rowData = new ArrayList<String>();
+        final List<String> rowData = new ArrayList<>();
         rowData.add(fileName);
         rowData.add(message);
         rowData.add(lineNumber);

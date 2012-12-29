@@ -4,7 +4,8 @@
  */
 package jhydra.core.lexicon;
 
-import jhydra.core.properties.NameNotValidException;
+import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
+import jhydra.core.properties.exceptions.NameNotValidException;
 import java.util.List;
 import jhydra.core.properties.INameValue;
 

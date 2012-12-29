@@ -4,6 +4,7 @@
  */
 package jhydra.core.properties;
 
+import jhydra.core.properties.exceptions.NameNotInPropertiesFileException;
 import java.util.List;
 
 /**

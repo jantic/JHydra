@@ -5,7 +5,11 @@
 package jhydra.core.properties;
 
 import java.util.List;
-import jhydra.core.FatalException;
+import jhydra.core.exceptions.FatalException;
+import jhydra.core.properties.exceptions.DuplicatedKeyException;
+import jhydra.core.properties.exceptions.NameNotInPropertiesFileException;
+import jhydra.core.properties.exceptions.NameNotValidException;
+import jhydra.core.properties.exceptions.PropertiesFileNotFoundException;
 import org.junit.Assert;
 import org.junit.Test;
 

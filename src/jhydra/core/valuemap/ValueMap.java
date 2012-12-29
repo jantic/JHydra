@@ -4,7 +4,7 @@
  */
 package jhydra.core.valuemap;
 
-import jhydra.core.properties.NameNotValidException;
+import jhydra.core.properties.exceptions.NameNotValidException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import jhydra.core.properties.INameValue;
 import jhydra.core.properties.INameValueValidator;
 import jhydra.core.properties.NameValueValidator;
 import jhydra.core.lexicon.ILexicon;
-import jhydra.core.lexicon.NameNotInLexiconException;
+import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 
 /**
  *

@@ -4,6 +4,7 @@
  */
 package jhydra.core.scripting.scriptinfo;
 
+import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
@@ -44,14 +45,18 @@ public class ScriptInfoFactory implements IScriptInfoFactory {
         
         while(iter.hasNext()){
             final File file = (File) iter.next();
-            final String name = file.getName();
-            final String path = file.getAbsolutePath();
+            final String name = parseName(file.getName(), scriptType);
+            final String path = file.getAbsolutePath(); 
             final IScriptInfo scriptInfo = new ScriptInfo(name, scriptType, path);
             scriptInfos.add(scriptInfo);
         }   
         
         projectPathToScriptInfos.put(key, scriptInfos);       
         return scriptInfos;
+    }
+    
+    private String parseName(String fileName, ScriptType scriptType){
+        return fileName.replaceAll("\\." + scriptType.getExtension(), "");
     }
     
     private String generateKey(String projectPath){

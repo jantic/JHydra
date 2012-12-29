@@ -4,12 +4,12 @@
  */
 package jhydra.core.valuemap;
 
-import jhydra.core.FatalException;
 import jhydra.core.config.IConfig;
+import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.ILexicon;
 import jhydra.core.lexicon.Lexicon;
-import jhydra.core.lexicon.NameNotInLexiconException;
-import jhydra.core.properties.NameNotValidException;
+import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
+import jhydra.core.properties.exceptions.NameNotValidException;
 import org.junit.Assert;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
@@ -245,7 +245,7 @@ public class ValueMapTests {
     private ILexicon getMockedBasicLexicon() throws FatalException{
         return new Lexicon(getMockedBasicConfig());
     }
-    
+     
     private IConfig getMockedBasicConfig(){
         final IConfig config = mock(IConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/basic_lexicon.properties");

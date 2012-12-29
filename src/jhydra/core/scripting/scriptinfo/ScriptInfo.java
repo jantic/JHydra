@@ -5,7 +5,6 @@
 package jhydra.core.scripting.scriptinfo;
 
 import jhydra.core.scripting.ScriptType;
-import jhydra.core.scripting.scriptinfo.IScriptInfo;
 
 /**
  *

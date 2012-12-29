@@ -4,6 +4,7 @@
  */
 package jhydra.core.properties;
 
+import jhydra.core.properties.exceptions.NameNotValidException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

@@ -4,6 +4,12 @@
  */
 package jhydra.core.properties;
 
+import jhydra.core.properties.exceptions.NameNotValidException;
+import jhydra.core.properties.exceptions.GeneralPropertiesFileException;
+import jhydra.core.properties.exceptions.PropertiesFileNotFoundException;
+import jhydra.core.properties.exceptions.PropertiesFileReadPermissionsException;
+import jhydra.core.properties.exceptions.NameNotInPropertiesFileException;
+import jhydra.core.properties.exceptions.DuplicatedKeyException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;

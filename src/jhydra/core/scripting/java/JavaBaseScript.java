@@ -4,13 +4,13 @@
  */
 package jhydra.core.scripting.java;
 
-import jhydra.core.FatalException;
-import jhydra.core.RecoverableException;
+import jhydra.core.exceptions.FatalException;
+import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.config.IConfig;
 import jhydra.core.lexicon.ILexicon;
-import jhydra.core.lexicon.NameNotInLexiconException;
+import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 import jhydra.core.logging.ILog;
-import jhydra.core.properties.NameNotValidException;
+import jhydra.core.properties.exceptions.NameNotValidException;
 import jhydra.core.scripting.IBaseScript;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptFactory;
@@ -39,24 +39,29 @@ public class JavaBaseScript implements IBaseScript{
     
     //We need setters to keep the construction hidden from the scripts 
     //(i.e. we just want them to deal with a default constructor).
+    @Override
     public void setNavigator(IMasterNavigator navigator){
         this.navigator = navigator;
         this.selenium = navigator.getSelenium();
     }
     
+    @Override
     public void setValueMap(IValueMap valueMap){
         this.valueMap = valueMap;
     }
     
+    @Override
     public void setScriptFactory(IScriptFactory scriptFactory){
         this.scriptFactory = scriptFactory;
     }
     
+    @Override
     public void setConfig(IConfig config){
         this.config = config;
         this.timeout = config.getScriptTimeout();
     }
     
+    @Override
     public void setLog(ILog log){
         this.log = log;
     }

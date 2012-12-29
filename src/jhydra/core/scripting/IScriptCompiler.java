@@ -4,6 +4,8 @@
  */
 package jhydra.core.scripting;
 
+import jhydra.core.scripting.exceptions.CompileErrorException;
+import jhydra.core.scripting.exceptions.ScriptFatalException;
 import jhydra.core.scripting.scriptinfo.IScriptInfo;
 
 /**
@@ -11,8 +13,5 @@ import jhydra.core.scripting.scriptinfo.IScriptInfo;
  * @author jantic
  */
 public interface IScriptCompiler {
-    IBaseScript getCompiledScript(IScriptInfo scriptInfo) 
-        throws CompileErrorException, ScriptOutputLoadingException, ScriptNotExistException, 
-        ScriptInputLoadingException, NonPublicScriptClassException, ClassNotInScriptFileException, 
-        ScriptInstantiationException;  
+    IBaseScript getCompiledScript(IScriptInfo scriptInfo) throws ScriptFatalException, CompileErrorException;  
 }

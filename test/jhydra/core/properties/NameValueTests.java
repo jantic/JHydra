@@ -4,9 +4,9 @@
  */
 package jhydra.core.properties;
 
-import jhydra.core.FatalException;
+import jhydra.core.exceptions.FatalException;
 import jhydra.core.properties.INameValue;
-import jhydra.core.properties.NameNotValidException;
+import jhydra.core.properties.exceptions.NameNotValidException;
 import jhydra.core.properties.NameValue;
 import org.junit.Assert;
 import org.junit.Test;

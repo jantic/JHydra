@@ -4,8 +4,8 @@
  */
 package jhydra.core.valuemap;
 
-import jhydra.core.properties.NameNotValidException;
-import jhydra.core.lexicon.NameNotInLexiconException;
+import jhydra.core.properties.exceptions.NameNotValidException;
+import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 
 /**
  *

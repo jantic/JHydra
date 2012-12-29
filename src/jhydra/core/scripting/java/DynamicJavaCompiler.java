@@ -2,6 +2,7 @@ package jhydra.core.scripting.java;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -16,16 +17,17 @@ import javax.tools.JavaCompiler;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
-import jhydra.core.scripting.ClassNotInScriptFileException;
-import jhydra.core.scripting.CompileErrorException;
+import jhydra.core.scripting.exceptions.ClassNotInScriptFileException;
+import jhydra.core.scripting.exceptions.CompileErrorException;
 import jhydra.core.scripting.CompileErrorReport;
 import jhydra.core.scripting.IBaseScript;
 import jhydra.core.scripting.IScriptCompiler;
-import jhydra.core.scripting.NonPublicScriptClassException;
-import jhydra.core.scripting.ScriptInputLoadingException;
-import jhydra.core.scripting.ScriptInstantiationException;
-import jhydra.core.scripting.ScriptNotExistException;
-import jhydra.core.scripting.ScriptOutputLoadingException;
+import jhydra.core.scripting.exceptions.NonPublicScriptClassException;
+import jhydra.core.scripting.exceptions.ScriptFatalException;
+import jhydra.core.scripting.exceptions.ScriptInputLoadingException;
+import jhydra.core.scripting.exceptions.ScriptInstantiationException;
+import jhydra.core.scripting.exceptions.ScriptNotExistException;
+import jhydra.core.scripting.exceptions.ScriptOutputLoadingException;
 import jhydra.core.scripting.ScriptType;
 import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import org.apache.commons.io.IOUtils;
@@ -37,10 +39,7 @@ class DynamicJavaCompiler implements IScriptCompiler {
     private final String classOutputFolder = "temp";
      
     @Override
-    public IBaseScript getCompiledScript(IScriptInfo scriptInfo) 
-            throws CompileErrorException, ScriptOutputLoadingException, ScriptNotExistException, 
-            ScriptInputLoadingException, NonPublicScriptClassException, ClassNotInScriptFileException,
-            ScriptInstantiationException{
+    public IBaseScript getCompiledScript(IScriptInfo scriptInfo) throws ScriptFatalException, CompileErrorException{
         
         final String filePath = scriptInfo.getFilePath();  
         final String className = scriptInfo.getClassName();
@@ -60,8 +59,7 @@ class DynamicJavaCompiler implements IScriptCompiler {
         return getScriptFromCompileOutput(className, filePath);      
     }
     
-    private IBaseScript getScriptFromCompileOutput(String className, String filePath) throws ScriptOutputLoadingException, 
-            NonPublicScriptClassException, ClassNotInScriptFileException, ScriptInstantiationException{
+    private IBaseScript getScriptFromCompileOutput(String className, String filePath) throws ScriptFatalException{
         try{
             final File file = new File(classOutputFolder);
             final URL url = file.toURI().toURL(); 
@@ -84,7 +82,7 @@ class DynamicJavaCompiler implements IScriptCompiler {
         }
     }
     
-    private void compile(String fileName, String className) throws CompileErrorException, ScriptInputLoadingException{
+    private void compile(String fileName, String className) throws ScriptFatalException, CompileErrorException{
         try{
             final JavaFileObject file = getJavaFileObject(className, fileName);        
             final List<Diagnostic<? extends JavaFileObject>> diagnostics = compile(Arrays.asList(file));
@@ -125,7 +123,8 @@ class DynamicJavaCompiler implements IScriptCompiler {
 
     }
       
-    private List<Diagnostic<? extends JavaFileObject>> compile(Iterable<JavaFileObject> files) throws CompileErrorException, IOException {
+    private List<Diagnostic<? extends JavaFileObject>> compile(Iterable<JavaFileObject> files) 
+            throws CompileErrorException, IOException {
         final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         final DiagnosticCollector<JavaFileObject> diagnosticCollector = new DiagnosticCollector<>();
         
@@ -141,12 +140,12 @@ class DynamicJavaCompiler implements IScriptCompiler {
     }
     
       
-    private JavaFileObject getJavaFileObject(String className, String fileName) throws Exception{
+    private JavaFileObject getJavaFileObject(String className, String fileName) throws FileNotFoundException, IOException{
         final String sourceCode = loadSourceCode(fileName);       
         return new InMemoryJavaFileObject(className, sourceCode);
     }
     
-    private String loadSourceCode(String fileName) throws Exception{
+    private String loadSourceCode(String fileName) throws FileNotFoundException, IOException{
         try (FileInputStream inputStream = new FileInputStream(fileName)) {
             return IOUtils.toString(inputStream);
         }

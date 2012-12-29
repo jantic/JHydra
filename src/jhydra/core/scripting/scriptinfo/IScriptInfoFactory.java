@@ -4,6 +4,7 @@
  */
 package jhydra.core.scripting.scriptinfo;
 
+import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
 import java.util.List;
 import jhydra.core.config.IConfig;
 import jhydra.core.scripting.ScriptType;

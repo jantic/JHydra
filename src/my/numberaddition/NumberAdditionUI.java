@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
-import jhydra.core.scripting.CompileErrorException;
+import jhydra.core.scripting.exceptions.CompileErrorException;
 import jhydra.core.scripting.CompileErrorReport;
 
 /**
@@ -242,7 +242,7 @@ public class NumberAdditionUI extends javax.swing.JFrame {
     }
     
     private void addCompilerErrorsToTable(CompilerErrorTableModel model, CompileErrorReport report){
-        final List<Diagnostic> diagnostics = report.getDiagnostics();
+        final List<Diagnostic<? extends JavaFileObject>> diagnostics = report.getDiagnostics();
         
         for(Diagnostic diagnostic : diagnostics){
             addCompilerErrorToTable(model, report.getFileName(), diagnostic);

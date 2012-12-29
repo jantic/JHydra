@@ -4,6 +4,8 @@
  */
 package jhydra.core.properties;
 
+import jhydra.core.properties.exceptions.NameNotValidException;
+
 /**
  *
  * @author jantic

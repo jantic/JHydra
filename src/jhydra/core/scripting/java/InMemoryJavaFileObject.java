@@ -16,7 +16,7 @@ import javax.tools.SimpleJavaFileObject;
 public class InMemoryJavaFileObject  extends SimpleJavaFileObject{
     private String contents = null;
 
-    public InMemoryJavaFileObject(String className, String contents) throws Exception {
+    public InMemoryJavaFileObject(String className, String contents) {
         super(URI.create("string:///" + className.replace('.', '/')
                 + JavaFileObject.Kind.SOURCE.extension), JavaFileObject.Kind.SOURCE);
         this.contents = contents;

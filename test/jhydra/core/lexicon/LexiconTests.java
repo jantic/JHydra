@@ -4,12 +4,13 @@
  */
 package jhydra.core.lexicon;
 
+import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 import java.util.List;
-import jhydra.core.FatalException;
+import jhydra.core.exceptions.FatalException;
 import jhydra.core.config.IConfig;
-import jhydra.core.properties.DuplicatedKeyException;
+import jhydra.core.properties.exceptions.DuplicatedKeyException;
 import jhydra.core.properties.INameValue;
-import jhydra.core.properties.NameNotValidException;
+import jhydra.core.properties.exceptions.NameNotValidException;
 import org.junit.Assert;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
@@ -42,7 +43,7 @@ public class LexiconTests {
         Assert.assertEquals(expected, actual);
     }
     
-     @Test
+    @Test
     public void getDefaultValueOfVariable_FirstName_CaseInsensitive_Mr() throws FatalException{
         final ILexicon lexicon = new Lexicon(getMockedBasicConfig());
         final String expected = "Mr";

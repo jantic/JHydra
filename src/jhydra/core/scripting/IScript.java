@@ -4,8 +4,8 @@
  */
 package jhydra.core.scripting;
 
-import jhydra.core.FatalException;
-import jhydra.core.RecoverableException;
+import jhydra.core.exceptions.FatalException;
+import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.lexicon.ILexicon;
 
 /**

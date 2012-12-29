@@ -4,6 +4,10 @@
  */
 package jhydra.core.scripting;
 
+import jhydra.core.scripting.exceptions.CompileErrorException;
+import jhydra.core.scripting.exceptions.ScriptInputLoadingException;
+import jhydra.core.scripting.exceptions.ScriptNotExistException;
+import jhydra.core.scripting.exceptions.ScriptOutputLoadingException;
 import jhydra.core.valuemap.IValueMap;
 import jhydra.core.uinav.IMasterNavigator;
 

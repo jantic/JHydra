@@ -9,23 +9,19 @@ import java.util.List;
 import java.util.Map;
 import jhydra.core.config.IConfig;
 import jhydra.core.logging.ILog;
-import jhydra.core.scripting.ClassNotInScriptFileException;
-import jhydra.core.scripting.CompileErrorException;
+import jhydra.core.scripting.exceptions.CompileErrorException;
 import jhydra.core.scripting.IBaseScript;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptCompiler;
 import jhydra.core.scripting.IScriptFactory;
-import jhydra.core.scripting.NonPublicScriptClassException;
 import jhydra.core.scripting.RobustScript;
-import jhydra.core.scripting.ScriptInputLoadingException;
-import jhydra.core.scripting.ScriptInstantiationException;
-import jhydra.core.scripting.ScriptNotExistException;
-import jhydra.core.scripting.ScriptOutputLoadingException;
+import jhydra.core.scripting.exceptions.ScriptFatalException;
+import jhydra.core.scripting.exceptions.ScriptNotExistException;
 import jhydra.core.scripting.ScriptType;
 import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import jhydra.core.scripting.scriptinfo.IScriptInfoFactory;
 import jhydra.core.scripting.scriptinfo.ScriptInfoFactory;
-import jhydra.core.scripting.scriptinfo.ScriptInfoLoadException;
+import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
 import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.valuemap.IValueMap;
 
@@ -51,9 +47,7 @@ public class JavaFileScriptFactory implements IScriptFactory {
     
     @Override
     public IScript getScript(String name, IValueMap valueMap, IMasterNavigator navigator)
-                throws CompileErrorException, ScriptNotExistException, ScriptOutputLoadingException, 
-                ScriptInputLoadingException, ClassNotInScriptFileException, NonPublicScriptClassException, 
-                ClassNotInScriptFileException, ScriptInstantiationException{
+                throws ScriptFatalException, CompileErrorException{
         final IScriptInfo scriptInfo = getScriptInfo(name);
         final IScriptCompiler compiler = new DynamicJavaCompiler();
         final IBaseScript baseScript = compiler.getCompiledScript(scriptInfo);
@@ -83,7 +77,7 @@ public class JavaFileScriptFactory implements IScriptFactory {
         if(scriptName == null){
             return "";
         }
-        
+               
         return scriptName.trim().toLowerCase();
     }
 
