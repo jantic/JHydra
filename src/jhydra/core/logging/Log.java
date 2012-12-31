@@ -13,6 +13,7 @@ import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.PatternLayout;
+import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.rolling.FixedWindowRollingPolicy;
 import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy;
@@ -62,7 +63,7 @@ public class Log implements ILog{
 
     private Logger getConfiguredLogger(String logPath){
         final LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
-        final RollingFileAppender appender = getAppender(logPath, loggerContext);        
+        final RollingFileAppender<ILoggingEvent> appender = getAppender(logPath, loggerContext);        
         final Logger logbackLogger = loggerContext.getLogger(Log.class);
         logbackLogger.addAppender(appender);
         logbackLogger.setLevel(Level.DEBUG);
@@ -70,8 +71,8 @@ public class Log implements ILog{
         return logbackLogger;
     }
     
-    private RollingFileAppender getAppender(String logPath, LoggerContext loggerContext){
-        final RollingFileAppender appender = new RollingFileAppender();
+    private RollingFileAppender<ILoggingEvent> getAppender(String logPath, LoggerContext loggerContext){
+        final RollingFileAppender<ILoggingEvent> appender = new RollingFileAppender<>();
         appender.setContext(loggerContext);
         appender.setFile(logPath);
         appender.setAppend(true);
@@ -82,7 +83,7 @@ public class Log implements ILog{
         rollingPolicy.setFileNamePattern("rolling-log.%i.log");
         rollingPolicy.start();
         appender.setRollingPolicy(rollingPolicy);
-        final SizeBasedTriggeringPolicy triggeringPolicy = new SizeBasedTriggeringPolicy();
+        final SizeBasedTriggeringPolicy<ILoggingEvent> triggeringPolicy = new SizeBasedTriggeringPolicy<>();
         triggeringPolicy.setContext(loggerContext);
         triggeringPolicy.setMaxFileSize("30MB");
         triggeringPolicy.start();
