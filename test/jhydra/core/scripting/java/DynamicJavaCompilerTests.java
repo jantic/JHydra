@@ -51,7 +51,7 @@ public class DynamicJavaCompilerTests {
     @Test
     public void getCompiledScript_normalFile_getName_NormalScript() throws FatalException{
         final IScript script = getCompiledScript("NormalScript", GOODSCRIPTS, ScriptType.JAVA);
-        final String expected = "jhydra.scripts.NormalScript";
+        final String expected = "NormalScript";
         final String actual = script.getName();
         Assert.assertEquals(expected, actual);
     }

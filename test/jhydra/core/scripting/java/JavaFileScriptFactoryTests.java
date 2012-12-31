@@ -34,22 +34,173 @@ import org.mockito.stubbing.Answer;
  * @author jantic
  */
 public class JavaFileScriptFactoryTests { 
-    //Needed to verify sum set in script.
+    //Needed to verify sum set in NormalScript from project 1.
     private String sum = "";
+    //Needed to verify message in Proj2Script from project 2
+    private String message = "";
     
     /***Tests on script with no compiler errors****************************************/
    
     @Test
-    public void getScript_normalFile_getName_NormalScript() throws FatalException{
-        final IScript script = getScript("NormalScript");
-        final String expected = "jhydra.scripts.NormalScript";
+    public void getScript_proj1_normalScript_getName_NormalScript() throws FatalException{
+        final IScript script = getProj1Script("NormalScript");
+        final String expected = "NormalScript";
+        final String actual = script.getName();
+        Assert.assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void getScript_proj2_proj2Script_getName_Proj2Script() throws FatalException{
+        final IScript script = getProj2Script("Proj2Script");
+        final String expected = "Proj2Script";
         final String actual = script.getName();
         Assert.assertEquals(expected, actual);
     }
     
     
     @Test
-    public void getScript_normalFile_execute_Success() throws FatalException, RecoverableException{
+    public void getScript_proj1_normalScript_execute_Success() throws FatalException, RecoverableException{
+        final IScript script = getProj1Script("NormalScript");
+        script.execute();
+        final String expected = "11.0";
+        final String actual = sum;
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getScript_proj2_proj2Script_execute_Success() throws FatalException, RecoverableException{
+        final IScript script = getProj2Script("Proj2Script");
+        script.execute();
+        final String expected = "hello";
+        final String actual = message;
+        Assert.assertEquals(expected, actual);
+    }
+    
+    /***Tests on script with syntax errors ****************************************/
+    
+    @Test(expected = CompileErrorException.class)
+    public void getScript_proj1_syntaxErrorsScript_CompileErrorException() throws FatalException{
+        getProj1Script("SyntaxErrorsScript");
+    }
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_firstError_correctErrorMessage() throws FatalException{
+        final String expected = "cannot find symbol\n" +
+            "  symbol:   class BigDecima\n" +
+            "  location: class jhydra.scripts.SyntaxErrorsScript";
+        final String actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 0).getMessage(Locale.ENGLISH);
+        Assert.assertEquals(expected, actual);
+    }
+
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_firstError_correctLineNumber() throws FatalException{
+        final long expected = 14;
+        final long actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 0).getLineNumber();
+        Assert.assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_firstError_correctColumnNumber() throws FatalException{
+        final long expected = 37;
+        final long actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 0).getColumnNumber();
+        Assert.assertEquals(expected, actual);
+    } 
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_secondError_correctErrorMessage() throws FatalException{
+        final String expected = "no suitable method found for add(java.lang.String)\n" +
+            "    method java.math.BigDecimal.add(java.math.BigDecimal,java.math.MathContext) is not applicable\n" +
+            "      (actual and formal argument lists differ in length)\n" +
+            "    method java.math.BigDecimal.add(java.math.BigDecimal) is not applicable\n" +
+            "      (actual argument java.lang.String cannot be converted to java.math.BigDecimal by method invocation conversion)";
+        final String actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 1).getMessage(Locale.ENGLISH);
+        Assert.assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_secondError_correctLineNumber() throws FatalException{
+        final long expected = 15;
+        final long actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 1).getLineNumber();
+        Assert.assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_secondError_correctColumnNumber() throws FatalException{
+        final long expected = 36;
+        final long actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 1).getColumnNumber();
+        Assert.assertEquals(expected, actual);
+    }
+    
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_thirdError_correctErrorMessage() throws FatalException{
+        final String expected = "cannot find symbol\n" +
+            "  symbol:   method seValue(java.lang.String,java.lang.String)\n" +
+            "  location: class jhydra.scripts.SyntaxErrorsScript";
+        final String actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 2).getMessage(Locale.ENGLISH);
+        Assert.assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_thirdError_correctLineNumber() throws FatalException{
+        final long expected = 16;
+        final long actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 2).getLineNumber();
+        Assert.assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void getScript_proj1_syntaxErrorsScript_thirdError_correctColumnNumber() throws FatalException{
+        final long expected = 9;
+        final long actual = getResultingDiagnosticProj1("SyntaxErrorsScript", 2).getColumnNumber();
+        Assert.assertEquals(expected, actual);
+    }
+    
+    /***Tests on attempting to compile script without public qualifier****************************************/
+    @Test(expected = NonPublicScriptClassException.class)
+    public void getScript_proj1_nonPublicScript_NonPublicScriptClassException() throws FatalException{
+        getProj1Script("NonPublicScript");
+    }
+    
+    /***Tests on attempting to compile script without class declaration****************************************/
+    @Test(expected = CompileErrorException.class)
+    public void getScript_proj1_noClassScript_CompileErrorException() throws FatalException{
+        getProj1Script("NoClassScript");
+    }
+    
+    /***Tests on attempting to compile script with just function body****************************************/
+    @Test(expected = CompileErrorException.class)
+    public void getScript_proj1_justFunctionBodyScript_CompileErrorException() throws FatalException{
+        getProj1Script("JustFunctionBodyScript");
+    }
+    
+    /***Tests on attempting to compile blank script file****************************************/
+    @Test(expected = ClassNotInScriptFileException.class)
+    public void getScript_proj1_blankScript_ClassNotInScriptFileException() throws FatalException{
+        getProj1Script("BlankScript"); 
+    }
+    
+    /***Tests on attempting to compile/instantiate abstract class script file****************************************/
+    @Test(expected = ScriptInstantiationException.class)
+    public void getScript_proj1_abstractScript_ScriptInstantiationException() throws FatalException{
+        getProj1Script("AbstractScript");
+    }
+    
+    
+    /***Tests on attempting to compile/instantiate nonexistent script file****************************************/
+    @Test(expected = ScriptNotExistException.class)
+    public void getScript_proj1_nonexistentScript_ScriptNotExistException() throws FatalException{
+        getProj1Script("DoesNotExistScript");
+    } 
+    
+    /***Tests on attempting to compile/instantiate script that's not in this project, yet is present in the other****/
+    @Test(expected = ScriptNotExistException.class)
+    public void getScript_proj2_normalScript_ScriptNotExistException() throws FatalException{
+        getProj2Script("NormalScript");
+    }
+    
+    /***PRIVATE************************************************************************/    
+    private IScript getProj1Script(String name) throws FatalException{
         final IValueMap valueMap = mock(IValueMap.class);
         when(valueMap.getValue("num1")).thenReturn("5.0");
         when(valueMap.getValue("num2")).thenReturn("6.0");
@@ -63,144 +214,27 @@ public class JavaFileScriptFactoryTests {
                 return null;
             }
         }).when(valueMap).setValue(eq("sum"), anyString());
-        
-        final IScript script = getScript("NormalScript", valueMap);
-        script.execute();
-        final String expected = "11.0";
-        final String actual = sum;
-        Assert.assertEquals(expected, actual);
-    }
-
-    
-    /***Tests on script with syntax errors ****************************************/
-    
-    @Test(expected = CompileErrorException.class)
-    public void getScript_syntaxErrorsScript_CompileErrorException() throws FatalException{
-        getScript("SyntaxErrorsScript");
+        return getScript(name, valueMap, 1);
     }
     
-    @Test
-    public void getScript_syntaxErrorsScript_firstError_correctErrorMessage() throws FatalException{
-        final String expected = "cannot find symbol\n" +
-            "  symbol:   class BigDecima\n" +
-            "  location: class jhydra.scripts.SyntaxErrorsScript";
-        final String actual = getResultingDiagnostic("SyntaxErrorsScript", 0).getMessage(Locale.ENGLISH);
-        Assert.assertEquals(expected, actual);
-    }
-
-    
-    @Test
-    public void getScript_syntaxErrorsScript_firstError_correctLineNumber() throws FatalException{
-        final long expected = 14;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 0).getLineNumber();
-        Assert.assertEquals(expected, actual);
-    }
-    
-    @Test
-    public void getScript_syntaxErrorsScript_firstError_correctColumnNumber() throws FatalException{
-        final long expected = 37;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 0).getColumnNumber();
-        Assert.assertEquals(expected, actual);
-    } 
-    
-    @Test
-    public void getScript_syntaxErrorsScript_secondError_correctErrorMessage() throws FatalException{
-        final String expected = "no suitable method found for add(java.lang.String)\n" +
-            "    method java.math.BigDecimal.add(java.math.BigDecimal,java.math.MathContext) is not applicable\n" +
-            "      (actual and formal argument lists differ in length)\n" +
-            "    method java.math.BigDecimal.add(java.math.BigDecimal) is not applicable\n" +
-            "      (actual argument java.lang.String cannot be converted to java.math.BigDecimal by method invocation conversion)";
-        final String actual = getResultingDiagnostic("SyntaxErrorsScript", 1).getMessage(Locale.ENGLISH);
-        Assert.assertEquals(expected, actual);
-    }
-    
-    @Test
-    public void getScript_syntaxErrorsScript_secondError_correctLineNumber() throws FatalException{
-        final long expected = 15;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 1).getLineNumber();
-        Assert.assertEquals(expected, actual);
-    }
-    
-    @Test
-    public void getScript_syntaxErrorsScript_secondError_correctColumnNumber() throws FatalException{
-        final long expected = 36;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 1).getColumnNumber();
-        Assert.assertEquals(expected, actual);
-    }
-    
-    
-    @Test
-    public void getScript_syntaxErrorsScript_thirdError_correctErrorMessage() throws FatalException{
-        final String expected = "cannot find symbol\n" +
-            "  symbol:   method seValue(java.lang.String,java.lang.String)\n" +
-            "  location: class jhydra.scripts.SyntaxErrorsScript";
-        final String actual = getResultingDiagnostic("SyntaxErrorsScript", 2).getMessage(Locale.ENGLISH);
-        Assert.assertEquals(expected, actual);
-    }
-    
-    @Test
-    public void getScript_syntaxErrorsScript_thirdError_correctLineNumber() throws FatalException{
-        final long expected = 16;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 2).getLineNumber();
-        Assert.assertEquals(expected, actual);
-    }
-    
-    @Test
-    public void getScript_syntaxErrorsScript_thirdError_correctColumnNumber() throws FatalException{
-        final long expected = 9;
-        final long actual = getResultingDiagnostic("SyntaxErrorsScript", 2).getColumnNumber();
-        Assert.assertEquals(expected, actual);
-    }
-    
-    /***Tests on attempting to compile script without public qualifier****************************************/
-    @Test(expected = NonPublicScriptClassException.class)
-    public void getScript_nonPublicScript_NonPublicScriptClassException() throws FatalException{
-        getScript("NonPublicScript");
-    }
-    
-    /***Tests on attempting to compile script without class declaration****************************************/
-    @Test(expected = CompileErrorException.class)
-    public void getScript_noClassScript_CompileErrorException() throws FatalException{
-        getScript("NoClassScript");
-    }
-    
-    /***Tests on attempting to compile script with just function body****************************************/
-    @Test(expected = CompileErrorException.class)
-    public void getScript_justFunctionBodyScript_CompileErrorException() throws FatalException{
-        getScript("JustFunctionBodyScript");
-    }
-    
-    /***Tests on attempting to compile blank script file****************************************/
-    @Test(expected = ClassNotInScriptFileException.class)
-    public void getScript_blankScript_ClassNotInScriptFileException() throws FatalException{
-        getScript("BlankScript"); 
-    }
-    
-    /***Tests on attempting to compile/instantiate abstract class script file****************************************/
-    @Test(expected = ScriptInstantiationException.class)
-    public void getScript_abstractScript_ScriptInstantiationException() throws FatalException{
-        getScript("AbstractScript");
-    }
-    
-    
-    /***Tests on attempting to compile/instantiate nonexistent script file****************************************/
-    @Test(expected = ScriptNotExistException.class)
-    public void getScript_nonexistentScript_ScriptNotExistException() throws FatalException{
-        getScript("DoesNotExistScript");
-    } 
-    
-    /***PRIVATE************************************************************************/    
-    private IScript getScript(String name) throws FatalException{
+    private IScript getProj2Script(String name) throws FatalException{
         final IValueMap valueMap = mock(IValueMap.class);
-        when(valueMap.getValue("num1")).thenReturn("5.0");
-        when(valueMap.getValue("num2")).thenReturn("6.0");
-        return getScript(name, valueMap);
+        message = "";
+        doAnswer(new Answer<Object>() {
+            @Override
+            public Object answer(InvocationOnMock invocation) throws Throwable {
+                message = (String) invocation.getArguments()[1];
+                return null;
+            }
+        }).when(valueMap).setValue(eq("message"), anyString());
+        
+        return getScript(name, valueMap, 2);
     }
     
-    private IScript getScript(String name, IValueMap valueMap) throws FatalException{
+    private IScript getScript(String name, IValueMap valueMap, Integer projNum) throws FatalException{
         final IConfig config = mock(IConfig.class);
-        when(config.getScriptsPath()).thenReturn("./test-projects/project 1/scripts/");
-        when(config.getProjectPath()).thenReturn("./test-projects/project 1/");
+        when(config.getScriptsPath()).thenReturn("./test-projects/project " + projNum.toString() + "/scripts/");
+        when(config.getProjectPath()).thenReturn("./test-projects/project " + projNum.toString() + "/");
         when(config.getScriptMaxTries()).thenReturn(1);
         final ILog log = mock(ILog.class);
         final IScriptFactory masterScriptFactory = mock(IScriptFactory.class);
@@ -210,9 +244,9 @@ public class JavaFileScriptFactoryTests {
     }
 
           
-    private Diagnostic getResultingDiagnostic(String scriptName, Integer diagnosticNum) throws FatalException{
+    private Diagnostic getResultingDiagnosticProj1(String scriptName, Integer diagnosticNum) throws FatalException{
         try{
-            getScript(scriptName);
+            getProj1Script(scriptName);
         }
         catch(CompileErrorException e){
             final List<CompileErrorReport> reports = e.getAllReports();

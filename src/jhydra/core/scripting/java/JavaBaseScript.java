@@ -4,9 +4,9 @@
  */
 package jhydra.core.scripting.java;
 
+import jhydra.core.config.IConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
-import jhydra.core.config.IConfig;
 import jhydra.core.lexicon.ILexicon;
 import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 import jhydra.core.logging.ILog;
@@ -78,7 +78,7 @@ public class JavaBaseScript implements IBaseScript{
 
     @Override
     public String getName() {
-        return this.getClass().getName();
+        return this.getClass().getSimpleName();
     }
  
     protected void screenshot() {
