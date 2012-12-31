@@ -4,12 +4,12 @@
  */
 package jhydra.core.lexicon;
 
-import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 import java.util.List;
-import jhydra.core.exceptions.FatalException;
 import jhydra.core.config.IConfig;
-import jhydra.core.properties.exceptions.DuplicatedKeyException;
+import jhydra.core.exceptions.FatalException;
+import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 import jhydra.core.properties.INameValue;
+import jhydra.core.properties.exceptions.DuplicatedKeyException;
 import jhydra.core.properties.exceptions.NameNotValidException;
 import org.junit.Assert;
 import org.junit.Test;
