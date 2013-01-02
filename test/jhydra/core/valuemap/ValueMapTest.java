@@ -5,6 +5,7 @@
 package jhydra.core.valuemap;
 
 import jhydra.core.config.IConfig;
+import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.ILexicon;
 import jhydra.core.lexicon.Lexicon;
@@ -19,8 +20,8 @@ import static org.mockito.Mockito.*;
  *
  * @author jantic
  */
-public class ValueMapTests {
-    public ValueMapTests() {
+public class ValueMapTest {
+    public ValueMapTest() {
     }
     
     /***Tests using correctly configured lexicon, for getValue****************************************/ 
@@ -91,7 +92,7 @@ public class ValueMapTests {
     
    @Test
     public void specCharsValues_getValue_CorrectValue() throws FatalException{
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/speccharvalues_lexicon.properties");
         final ILexicon lexicon = new Lexicon(config);
         final IValueMap valueMap = new ValueMap(lexicon);
@@ -102,7 +103,7 @@ public class ValueMapTests {
     
    @Test
     public void numericValues_getValue_CorrectValue() throws FatalException{
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/speccharvalues_lexicon.properties");
         final ILexicon lexicon = new Lexicon(config);
         final IValueMap valueMap = new ValueMap(lexicon);
@@ -246,8 +247,8 @@ public class ValueMapTests {
         return new Lexicon(getMockedBasicConfig());
     }
      
-    private IConfig getMockedBasicConfig(){
-        final IConfig config = mock(IConfig.class);
+    private IProjectConfig getMockedBasicConfig(){
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/basic_lexicon.properties");
         return config;
     }

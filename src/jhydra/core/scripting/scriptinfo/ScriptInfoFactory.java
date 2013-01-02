@@ -4,16 +4,15 @@
  */
 package jhydra.core.scripting.scriptinfo;
 
-import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
 import java.io.File;
-import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import jhydra.core.config.IConfig;
+import jhydra.core.config.IProjectConfig;
 import jhydra.core.scripting.ScriptType;
+import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -24,7 +23,7 @@ public class ScriptInfoFactory implements IScriptInfoFactory {
     private static Map<String, List<IScriptInfo>> projectPathToScriptInfos = new HashMap<>();
     
     @Override
-    public List<IScriptInfo> getAllScriptInfosOfType(IConfig config, ScriptType scriptType) throws ScriptInfoLoadException{
+    public List<IScriptInfo> getAllScriptInfosOfType(IProjectConfig config, ScriptType scriptType) throws ScriptInfoLoadException{
         final String key = generateKey(config.getProjectPath());
         
         if(projectPathToScriptInfos.containsKey(key)){

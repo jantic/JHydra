@@ -4,12 +4,12 @@
  */
 package jhydra.core.scripting;
 
-import jhydra.core.scripting.exceptions.ScriptExecutionException;
+import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
-import jhydra.core.config.IConfig;
-import jhydra.core.logging.ILog;
 import jhydra.core.lexicon.ILexicon;
+import jhydra.core.logging.ILog;
+import jhydra.core.scripting.exceptions.ScriptExecutionException;
 
 /**
  *
@@ -23,10 +23,10 @@ import jhydra.core.lexicon.ILexicon;
 
 public class RobustScript implements IScript{
     private final IScript script;
-    private final IConfig config;
+    private final IProjectConfig config;
     private final ILog log;
     
-    public RobustScript(IScript script, IConfig config, ILog log){
+    public RobustScript(IScript script, IProjectConfig config, ILog log){
         this.script = script;
         this.config = config;
         this.log = log;

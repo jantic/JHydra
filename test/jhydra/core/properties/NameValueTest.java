@@ -15,7 +15,7 @@ import org.junit.Test;
  *
  * @author jantic
  */
-public class NameValueTests {
+public class NameValueTest {
     /***Tests on correctly instantiated NameValue****************************************/
    
     @Test

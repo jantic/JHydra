@@ -18,7 +18,7 @@ import ch.qos.logback.core.rolling.FixedWindowRollingPolicy;
 import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy;
 import java.io.File;
-import jhydra.core.config.IConfig;
+import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import org.slf4j.LoggerFactory;
 
@@ -31,7 +31,7 @@ public class Log implements ILog{
     private final Logger logger;
     
     //For project specific logging
-    public Log(IConfig config) throws FatalException{
+    public Log(IProjectConfig config) throws FatalException{
         logDirectory = config.getProjectPath() + relativeLogDirectory;
         final String logPath = logDirectory + logFileName;
         logger = getLogger(logPath);

@@ -7,7 +7,7 @@ package jhydra.core.scripting.java;
 import java.util.List;
 import java.util.Locale;
 import javax.tools.Diagnostic;
-import jhydra.core.config.IConfig;
+import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.logging.ILog;
@@ -29,8 +29,6 @@ import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.valuemap.IValueMap;
 import org.junit.Assert;
 import org.junit.Test;
-import static org.mockito.Matchers.anyString;
-import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.*;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
@@ -39,7 +37,7 @@ import org.mockito.stubbing.Answer;
  *
  * @author jantic
  */
-public class DynamicJavaCompilerTests {
+public class DynamicJavaCompilerTest {
     private final String GOODSCRIPTS = "Good Scripts/";
     private final String BADNONCOMPILING = "Bad Scripts/Non Compiling/";
     private final String BADCOMPILING = "Bad Scripts/Compiling/";
@@ -206,7 +204,7 @@ public class DynamicJavaCompilerTests {
     /***PRIVATE************************************************************************/
     private IScript getInitializedScriptJava(String name, String path, IValueMap valueMap) throws FatalException{
         final IBaseScript script = getCompiledScriptJava(name, path);
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         script.setConfig(config);
         final ILog log = mock(ILog.class);
         script.setLog(log);

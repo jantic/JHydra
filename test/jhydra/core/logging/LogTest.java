@@ -6,7 +6,7 @@ package jhydra.core.logging;
 
 import java.io.File;
 import java.io.IOException;
-import jhydra.core.config.IConfig;
+import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
@@ -18,12 +18,12 @@ import static org.mockito.Mockito.*;
  *
  * @author jantic
  */
-public class LogTests {
+public class LogTest {
     private final String proj1Path = "./test-projects/project 1";
     private final String logFolderPath = proj1Path + "/logs/";
     private final String logFilePath = logFolderPath + "rolling-log.log";
     
-    public LogTests() {
+    public LogTest() {
     }
     
     /***Tests creation of fresh log file/folder, reads from it to make sure logs are being recorded as expected************/ 
@@ -170,7 +170,7 @@ public class LogTests {
     }
     
     private ILog getLog() throws FatalException{
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getProjectPath()).thenReturn(proj1Path);
         final ILog log = new Log(config);
         return log;

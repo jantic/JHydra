@@ -11,4 +11,9 @@ package jhydra.core.config;
 public interface IProjectConfig extends IConfig {
     String getProjectName();
     String getProjectPath();
+    String getScriptsPath();
+    String getLexiconPath();
+    Integer getScriptTimeout();
+    Integer getScriptMaxTries();
+    Integer getScriptTimeBetweenAttempts();
 }

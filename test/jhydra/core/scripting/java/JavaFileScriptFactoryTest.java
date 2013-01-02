@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Locale;
 import javax.tools.Diagnostic;
 import jhydra.core.config.IConfig;
+import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.logging.ILog;
@@ -33,7 +34,7 @@ import org.mockito.stubbing.Answer;
  *
  * @author jantic
  */
-public class JavaFileScriptFactoryTests { 
+public class JavaFileScriptFactoryTest { 
     //Needed to verify sum set in NormalScript from project 1.
     private String sum = "";
     //Needed to verify message in Proj2Script from project 2
@@ -232,7 +233,7 @@ public class JavaFileScriptFactoryTests {
     }
     
     private IScript getScript(String name, IValueMap valueMap, Integer projNum) throws FatalException{
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getScriptsPath()).thenReturn("./test-projects/project " + projNum.toString() + "/scripts/");
         when(config.getProjectPath()).thenReturn("./test-projects/project " + projNum.toString() + "/");
         when(config.getScriptMaxTries()).thenReturn(1);

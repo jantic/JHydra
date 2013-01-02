@@ -17,7 +17,7 @@ import org.junit.Test;
  *
  * @author jantic
  */
-public class PropertiesTests {
+public class PropertiesTest {
     /***Tests on correctly configured properties file****************************************/
    
     @Test

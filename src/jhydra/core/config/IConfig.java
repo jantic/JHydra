@@ -10,10 +10,4 @@ package jhydra.core.config;
  */
 public interface IConfig {
     String getProgramPath();
-    String getProjectPath();
-    String getScriptsPath();
-    String getLexiconPath();
-    Integer getScriptTimeout();
-    Integer getScriptMaxTries();
-    Integer getScriptTimeBetweenAttempts();
 }

@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import jhydra.core.config.IConfig;
+import jhydra.core.config.IProjectConfig;
+import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.exceptions.LexiconFileTypeException;
 import jhydra.core.lexicon.exceptions.LexiconNotFoundException;
 import jhydra.core.lexicon.exceptions.LexiconReadException;
@@ -34,13 +36,11 @@ import org.apache.commons.io.FilenameUtils;
  */
 public class Lexicon implements ILexicon {
     private static final String FILE_EXTENSION = "properties";
-    private final IConfig config;
+    private final IProjectConfig config;
     private final Map<String, INameValue> staticRegistry = new HashMap<>();
     private final INameValueValidator nameValueValidator;
 
-    public Lexicon(IConfig config) 
-            throws LexiconNotFoundException, LexiconFileTypeException, LexiconReadException, 
-            DuplicatedKeyException, NameNotValidException, NameNotInPropertiesFileException{
+    public Lexicon(IProjectConfig config) throws FatalException{
         this.config = config;
         this.nameValueValidator = new NameValueValidator();
         loadStaticRegistry();

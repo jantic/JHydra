@@ -6,6 +6,7 @@ package jhydra.core.lexicon;
 
 import java.util.List;
 import jhydra.core.config.IConfig;
+import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 import jhydra.core.properties.INameValue;
@@ -20,8 +21,8 @@ import static org.mockito.Mockito.*;
  *
  * @author jantic
  */
-public class LexiconTests {
-    public LexiconTests() {
+public class LexiconTest {
+    public LexiconTest() {
     }
     
     /***Tests on correctly configured lexicon****************************************/
@@ -101,7 +102,7 @@ public class LexiconTests {
     
    @Test
     public void specCharsValues_getNameValue_CorrectValue() throws FatalException{
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/speccharvalues_lexicon.properties");
         final ILexicon lexicon = new Lexicon(config);
         final String expected = "!#$%^&*()-_}{][\\|/><.,;\"-+.:?=";
@@ -111,7 +112,7 @@ public class LexiconTests {
     
    @Test
     public void numericValues_getNameValue_CorrectValue() throws FatalException{
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/speccharvalues_lexicon.properties");
         final ILexicon lexicon = new Lexicon(config);
         final String expected = "1234567890";
@@ -124,7 +125,7 @@ public class LexiconTests {
     @Test(expected = DuplicatedKeyException.class)
     @SuppressWarnings("ResultOfObjectAllocationIgnored")
     public void initialization_DupeKeyLexicon_DuplicatedKeyException() throws FatalException{
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/dupekey_lexicon.properties");
         new Lexicon(config);
     }
@@ -132,13 +133,13 @@ public class LexiconTests {
     @Test(expected = NameNotValidException.class)
     @SuppressWarnings("ResultOfObjectAllocationIgnored")
     public void initialization_NameWithSpaces_NameNotValidException() throws FatalException{
-        final IConfig config = mock(IConfig.class);
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/spacedname_lexicon.properties");
         new Lexicon(config);
     }
     
-    private IConfig getMockedBasicConfig(){
-        final IConfig config = mock(IConfig.class);
+    private IProjectConfig getMockedBasicConfig(){
+        final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLexiconPath()).thenReturn("./test/test data/basic_lexicon.properties");
         return config;
     }
