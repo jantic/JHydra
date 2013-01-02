@@ -4,6 +4,8 @@
  */
 package jhydra.core.valuemap;
 
+import java.io.File;
+import java.net.URI;
 import jhydra.core.config.IConfig;
 import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
@@ -93,7 +95,7 @@ public class ValueMapTest {
    @Test
     public void specCharsValues_getValue_CorrectValue() throws FatalException{
         final IProjectConfig config = mock(IProjectConfig.class);
-        when(config.getLexiconPath()).thenReturn("./test/test data/speccharvalues_lexicon.properties");
+        when(config.getLexiconPath()).thenReturn(getURI("./test/test data/speccharvalues_lexicon.properties"));
         final ILexicon lexicon = new Lexicon(config);
         final IValueMap valueMap = new ValueMap(lexicon);
         final String expected = "!#$%^&*()-_}{][\\|/><.,;\"-+.:?=";
@@ -104,7 +106,7 @@ public class ValueMapTest {
    @Test
     public void numericValues_getValue_CorrectValue() throws FatalException{
         final IProjectConfig config = mock(IProjectConfig.class);
-        when(config.getLexiconPath()).thenReturn("./test/test data/speccharvalues_lexicon.properties");
+        when(config.getLexiconPath()).thenReturn(getURI("./test/test data/speccharvalues_lexicon.properties"));
         final ILexicon lexicon = new Lexicon(config);
         final IValueMap valueMap = new ValueMap(lexicon);
         final String expected = "1234567890";
@@ -249,8 +251,13 @@ public class ValueMapTest {
      
     private IProjectConfig getMockedBasicConfig(){
         final IProjectConfig config = mock(IProjectConfig.class);
-        when(config.getLexiconPath()).thenReturn("./test/test data/basic_lexicon.properties");
+        when(config.getLexiconPath()).thenReturn(getURI("./test/test data/basic_lexicon.properties"));
         return config;
+    }
+    
+    private URI getURI(String relativePath){
+        final File file = new File(relativePath);
+        return file.toURI();
     }
     
 }

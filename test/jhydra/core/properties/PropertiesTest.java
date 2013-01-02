@@ -4,6 +4,8 @@
  */
 package jhydra.core.properties;
 
+import java.io.File;
+import java.net.URI;
 import java.util.List;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.properties.exceptions.DuplicatedKeyException;
@@ -136,22 +138,27 @@ public class PropertiesTest {
     /***Private methods****************************************/ 
     
     private IProperties getBasicProperties() throws FatalException{
-        return new Properties("./test/test data/basic_lexicon.properties");
+        return new Properties(getURI("./test/test data/basic_lexicon.properties"));
     }
     
     private IProperties getDupeKeyProperties() throws FatalException{
-        return new Properties("./test/test data/dupekey_lexicon.properties");
+        return new Properties(getURI("./test/test data/dupekey_lexicon.properties"));
     }
     
     private IProperties getNonExistingProperties() throws FatalException{
-        return new Properties("./test/test data/derp.properties");
+        return new Properties(getURI("./test/test data/derp.properties"));
     }
     
     private IProperties getSpacedNameProperties() throws FatalException{
-        return new Properties("./test/test data/spacedname_lexicon.properties");
+        return new Properties(getURI("./test/test data/spacedname_lexicon.properties"));
     }
     
     private IProperties getSpecCharsProperties() throws FatalException{
-        return new Properties("./test/test data/speccharvalues_lexicon.properties");
+        return new Properties(getURI("./test/test data/speccharvalues_lexicon.properties"));
+    }
+    
+    private URI getURI(String relativePath){
+        final File file = new File(relativePath);
+        return file.toURI();
     }
 }

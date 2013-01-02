@@ -39,7 +39,7 @@ public class RobustScript implements IScript{
 
     @Override
     public void execute() throws RecoverableException, FatalException {  
-        final Integer maxNumberOfTries = config.getScriptMaxTries();
+        final Integer maxNumberOfTries = config.getScriptMaxNumTries();
         Integer numberOfTries = 1;
 
         while (numberOfTries <= maxNumberOfTries) {

@@ -4,18 +4,19 @@
  */
 package jhydra.core.properties;
 
-import jhydra.core.properties.exceptions.NameNotValidException;
-import jhydra.core.properties.exceptions.GeneralPropertiesFileException;
-import jhydra.core.properties.exceptions.PropertiesFileNotFoundException;
-import jhydra.core.properties.exceptions.PropertiesFileReadPermissionsException;
-import jhydra.core.properties.exceptions.NameNotInPropertiesFileException;
-import jhydra.core.properties.exceptions.DuplicatedKeyException;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import jhydra.core.properties.exceptions.DuplicatedKeyException;
+import jhydra.core.properties.exceptions.GeneralPropertiesFileException;
+import jhydra.core.properties.exceptions.NameNotInPropertiesFileException;
+import jhydra.core.properties.exceptions.NameNotValidException;
+import jhydra.core.properties.exceptions.PropertiesFileNotFoundException;
+import jhydra.core.properties.exceptions.PropertiesFileReadPermissionsException;
 import org.apache.commons.io.FileUtils;
 
 /**
@@ -25,9 +26,9 @@ import org.apache.commons.io.FileUtils;
 public class Properties implements IProperties {
     private static final String SEPARATOR = "=";
     private final Map<String,INameValue> keyValues;
-    private final String filepath;
+    private final URI filepath;
     
-    public Properties(String filepath) 
+    public Properties(URI filepath) 
             throws DuplicatedKeyException, NameNotValidException, PropertiesFileNotFoundException, 
             GeneralPropertiesFileException, PropertiesFileReadPermissionsException{
         this.filepath = filepath;
@@ -51,7 +52,7 @@ public class Properties implements IProperties {
     public String getProperty(String name) throws NameNotInPropertiesFileException{
         final String key = generateKey(name);
         if(!keyValues.containsKey(key)){
-            throw new NameNotInPropertiesFileException(name, this.filepath);
+            throw new NameNotInPropertiesFileException(name, this.filepath.toString());
         }
         return keyValues.get(key).getValue();
     }
@@ -62,7 +63,7 @@ public class Properties implements IProperties {
         return keyValues.containsKey(key);
     }
     
-    private Map<String,INameValue> load(String filepath) 
+    private Map<String,INameValue> load(URI filepath) 
             throws DuplicatedKeyException, NameNotValidException, PropertiesFileNotFoundException, 
             GeneralPropertiesFileException, PropertiesFileReadPermissionsException{
         final File file = new File(filepath);
@@ -95,7 +96,7 @@ public class Properties implements IProperties {
             final String value = split.length > 1 ? split[1].trim() : "";
             
             if(mapping.containsKey(key)){
-                throw new DuplicatedKeyException(name, filepath);
+                throw new DuplicatedKeyException(name, filepath.toString());
             }
             
             final INameValue pair = NameValue.getInstance(name, value);            
@@ -109,7 +110,7 @@ public class Properties implements IProperties {
         try {
             return FileUtils.readLines(file);
         } catch (IOException e) {
-            throw new GeneralPropertiesFileException(this.filepath, e);
+            throw new GeneralPropertiesFileException(this.filepath.toString(), e);
         }
     
     }

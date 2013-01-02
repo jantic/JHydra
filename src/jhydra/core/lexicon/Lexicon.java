@@ -5,6 +5,7 @@
 package jhydra.core.lexicon;
 
 import java.io.File;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,7 +59,7 @@ public class Lexicon implements ILexicon {
     }
 
     @Override
-    public String getFilePath() {
+    public URI getFilePath() {
         return config.getLexiconPath();
     }
     
@@ -66,7 +67,7 @@ public class Lexicon implements ILexicon {
     public INameValue getNameValue(String name) throws NameNotInLexiconException, NameNotValidException{
         nameValueValidator.validateName(name);
         if(!hasNameValue(name)){
-            throw new NameNotInLexiconException(name, getFilePath());
+            throw new NameNotInLexiconException(name, getFilePath().toString());
         }
         final String key = generateKey(name);
         return staticRegistry.get(key);
@@ -97,10 +98,10 @@ public class Lexicon implements ILexicon {
             parseAndWriteToStaticRegistry(properties);
         }
         catch(PropertiesFileNotFoundException e){
-            throw new LexiconNotFoundException(this.getFilePath(), e);
+            throw new LexiconNotFoundException(this.getFilePath().toString(), e);
         }
         catch(PropertiesFileReadPermissionsException|GeneralPropertiesFileException e){
-            throw new LexiconReadException(this.getFilePath(), e);
+            throw new LexiconReadException(this.getFilePath().toString(), e);
         }
     }
     
@@ -114,7 +115,7 @@ public class Lexicon implements ILexicon {
             final String key = generateKey(name);
             
             if(this.staticRegistry.containsKey(key)){
-                throw new DuplicatedKeyException(name, getFilePath());
+                throw new DuplicatedKeyException(name, getFilePath().toString());
             }
             else{
                 this.staticRegistry.put(key, pair);
@@ -124,17 +125,17 @@ public class Lexicon implements ILexicon {
     
     private void validateLexiconFile() 
             throws LexiconNotFoundException, LexiconFileTypeException{      
-        final String path = getFilePath();
+        final URI path = getFilePath();
         final File file =  new File(path);
         
         if(!file.isFile()){
-            throw new LexiconNotFoundException(this.getFilePath());
+            throw new LexiconNotFoundException(this.getFilePath().toString());
         }
         
-        final String extension = FilenameUtils.getExtension(this.getFilePath());
+        final String extension = FilenameUtils.getExtension(this.getFilePath().toString());
         
         if(!extension.equalsIgnoreCase(FILE_EXTENSION)){
-            throw new LexiconFileTypeException(FILE_EXTENSION, extension, this.getFilePath());
+            throw new LexiconFileTypeException(FILE_EXTENSION, extension, this.getFilePath().toString());
         }
     }
 }

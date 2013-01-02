@@ -6,6 +6,7 @@ package jhydra.core.logging;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import org.apache.commons.io.FileUtils;
@@ -171,9 +172,14 @@ public class LogTest {
     
     private ILog getLog() throws FatalException{
         final IProjectConfig config = mock(IProjectConfig.class);
-        when(config.getProjectPath()).thenReturn(proj1Path);
+        when(config.getLogsDirectory()).thenReturn(getURI(logFolderPath)); 
         final ILog log = new Log(config);
         return log;
+    }
+    
+    private URI getURI(String relativePath){
+        final File file = new File(relativePath);
+        return file.toURI();
     }
     
     private void clearLogDirectory() throws IOException{

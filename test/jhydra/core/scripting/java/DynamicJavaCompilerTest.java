@@ -198,7 +198,7 @@ public class DynamicJavaCompilerTest {
     /***Tests on attempting to compile/instantiate non java script file****************************************/
     @Test(expected = ScriptInputLoadingException.class)
     public void getCompiledScript_nonJava_ScriptInputLoadingException() throws FatalException{
-        getCompiledScript("NonJava", BADNONCOMPILING, ScriptType.JYTHON);
+        getNonJavaCompiledScript("NonJava", "./", ScriptType.JYTHON);
     }
     
     /***PRIVATE************************************************************************/
@@ -214,6 +214,16 @@ public class DynamicJavaCompilerTest {
         script.setScriptFactory(scriptFactory);
         script.setValueMap(valueMap);
         return script;
+    }
+    
+    private IBaseScript getNonJavaCompiledScript(String name, String path, ScriptType scriptType) throws FatalException{
+        final IScriptCompiler compiler = new DynamicJavaCompiler();
+        final IScriptInfo scriptInfo = mock(IScriptInfo.class);
+        when(scriptInfo.getClassName()).thenReturn("jhydra.scripts." + name);
+        when(scriptInfo.getFilePath()).thenReturn("./test-projects/project 1/alt scripts/" + path + name +"." + scriptType.getExtension());
+        when(scriptInfo.getName()).thenReturn(name);
+        when(scriptInfo.getType()).thenReturn(scriptType);
+        return compiler.getCompiledScript(scriptInfo); 
     }
     
     private IBaseScript getCompiledScript(String name, String path, ScriptType scriptType) throws FatalException{

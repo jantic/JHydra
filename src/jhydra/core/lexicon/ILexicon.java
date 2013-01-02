@@ -4,10 +4,11 @@
  */
 package jhydra.core.lexicon;
 
-import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
-import jhydra.core.properties.exceptions.NameNotValidException;
+import java.net.URI;
 import java.util.List;
+import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 import jhydra.core.properties.INameValue;
+import jhydra.core.properties.exceptions.NameNotValidException;
 
 /**
  *
@@ -16,7 +17,7 @@ import jhydra.core.properties.INameValue;
 public interface ILexicon {
     List<INameValue> getAllNameDefaultValuePairs();
     void registerVariable(String variableName, String defaultValue);
-    String getFilePath();
+    URI getFilePath();
     INameValue getNameValue(String name) throws NameNotInLexiconException, NameNotValidException;
     Boolean hasNameValue(String name);
 }

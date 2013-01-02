@@ -18,52 +18,51 @@ import ch.qos.logback.core.rolling.FixedWindowRollingPolicy;
 import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy;
 import java.io.File;
+import java.net.URI;
 import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import org.slf4j.LoggerFactory;
 
 
 public class Log implements ILog{
-    //TODO:  Put this stuff in config?
-    private final String relativeLogDirectory = "/logs/";
     private final String logFileName = "rolling-log.log";
-    private final String logDirectory;
+    private final URI logDirectory;
     private final Logger logger;
     
     //For project specific logging
     public Log(IProjectConfig config) throws FatalException{
-        logDirectory = config.getProjectPath() + relativeLogDirectory;
-        final String logPath = logDirectory + logFileName;
-        logger = getLogger(logPath);
+        logDirectory = config.getLogsDirectory();
+        logger = getLogger();
     }
 
-    private Logger getLogger(String logPath) 
+    private Logger getLogger() 
             throws LogDirectoryAccessDeniedException, LogDirectoryCreationException{
-        establishLogDirectory(logDirectory);
-        return getConfiguredLogger(logPath);
+        establishLogDirectory();
+        return getConfiguredLogger();
     }
     
-    private void establishLogDirectory(String logDirectory) 
+    private void establishLogDirectory() 
             throws LogDirectoryAccessDeniedException, LogDirectoryCreationException{
-        try{
-            final File file = new File(logDirectory);
-           
+        
+        final File file = new File(logDirectory);
+        
+        try{      
             if (!file.isDirectory()){
                 file.mkdirs();
             }
             
             if(!file.canWrite()){
-                throw new LogDirectoryAccessDeniedException(logDirectory);
+                throw new LogDirectoryAccessDeniedException(file.getPath());
             }
         }
         catch(Exception e){
-            throw new LogDirectoryCreationException(logDirectory, e);
+            throw new LogDirectoryCreationException(file.getPath(), e);
         }
     }
 
-    private Logger getConfiguredLogger(String logPath){
+    private Logger getConfiguredLogger(){
         final LoggerContext loggerContext = (LoggerContext) LoggerFactory.getILoggerFactory();
-        final RollingFileAppender<ILoggingEvent> appender = getAppender(logPath, loggerContext);        
+        final RollingFileAppender<ILoggingEvent> appender = getAppender(loggerContext);        
         final Logger logbackLogger = loggerContext.getLogger(Log.class);
         logbackLogger.addAppender(appender);
         logbackLogger.setLevel(Level.DEBUG);
@@ -71,9 +70,10 @@ public class Log implements ILog{
         return logbackLogger;
     }
     
-    private RollingFileAppender<ILoggingEvent> getAppender(String logPath, LoggerContext loggerContext){
+    private RollingFileAppender<ILoggingEvent> getAppender(LoggerContext loggerContext){
         final RollingFileAppender<ILoggingEvent> appender = new RollingFileAppender<>();
         appender.setContext(loggerContext);
+        final String logPath = getLogPath();
         appender.setFile(logPath);
         appender.setAppend(true);
         final FixedWindowRollingPolicy rollingPolicy = new FixedWindowRollingPolicy();
@@ -98,6 +98,10 @@ public class Log implements ILog{
         appender.setLayout(layout);
         appender.start();
         return appender;
+    }
+    
+    private String getLogPath(){
+        return logDirectory.getPath() + "/" + logFileName;
     }
     
     @Override

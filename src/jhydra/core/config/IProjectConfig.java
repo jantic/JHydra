@@ -4,16 +4,23 @@
  */
 package jhydra.core.config;
 
+import java.net.URI;
+import java.net.URL;
+import java.util.List;
+
 /**
  *
  * @author jantic
  */
 public interface IProjectConfig extends IConfig {
     String getProjectName();
-    String getProjectPath();
-    String getScriptsPath();
-    String getLexiconPath();
+    URI getProjectDirectory();
+    List<URI> getScriptDirectories();
+    URI getLexiconPath();
     Integer getScriptTimeout();
-    Integer getScriptMaxTries();
+    Integer getScriptMaxNumTries();
     Integer getScriptTimeBetweenAttempts();
+    URI getScreenshotsDirectory();
+    URL getURL();  
+    URI getLogsDirectory();
 }
