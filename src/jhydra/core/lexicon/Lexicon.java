@@ -4,31 +4,22 @@
  */
 package jhydra.core.lexicon;
 
-import java.io.File;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import jhydra.core.config.IConfig;
 import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.exceptions.LexiconFileTypeException;
 import jhydra.core.lexicon.exceptions.LexiconNotFoundException;
 import jhydra.core.lexicon.exceptions.LexiconReadException;
 import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
-import jhydra.core.properties.INameValue;
-import jhydra.core.properties.INameValueValidator;
-import jhydra.core.properties.NameValue;
-import jhydra.core.properties.NameValueValidator;
-import jhydra.core.properties.Properties;
-import jhydra.core.properties.exceptions.DuplicatedKeyException;
-import jhydra.core.properties.exceptions.GeneralPropertiesFileException;
-import jhydra.core.properties.exceptions.NameNotInPropertiesFileException;
-import jhydra.core.properties.exceptions.NameNotValidException;
-import jhydra.core.properties.exceptions.PropertiesFileNotFoundException;
-import jhydra.core.properties.exceptions.PropertiesFileReadPermissionsException;
+import jhydra.core.properties.*;
+import jhydra.core.properties.exceptions.*;
 import org.apache.commons.io.FilenameUtils;
+
+import java.io.File;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -49,8 +40,7 @@ public class Lexicon implements ILexicon {
     
     @Override
     public List<INameValue> getAllNameDefaultValuePairs() {
-        final List<INameValue> pairs = new ArrayList<>(this.staticRegistry.values());
-        return pairs;
+        return new ArrayList<>(this.staticRegistry.values());
     }
 
     @Override

@@ -25,7 +25,6 @@ import org.slf4j.LoggerFactory;
 
 
 public class Log implements ILog{
-    private final String logFileName = "rolling-log.log";
     private final URI logDirectory;
     private final Logger logger;
     
@@ -36,23 +35,20 @@ public class Log implements ILog{
     }
 
     private Logger getLogger() 
-            throws LogDirectoryAccessDeniedException, LogDirectoryCreationException{
+            throws LogDirectoryCreationException{
         establishLogDirectory();
         return getConfiguredLogger();
     }
     
     private void establishLogDirectory() 
-            throws LogDirectoryAccessDeniedException, LogDirectoryCreationException{
+            throws LogDirectoryCreationException{
         
         final File file = new File(logDirectory);
         
-        try{      
+        try{
             if (!file.isDirectory()){
+                //noinspection ResultOfMethodCallIgnored
                 file.mkdirs();
-            }
-            
-            if(!file.canWrite()){
-                throw new LogDirectoryAccessDeniedException(file.getPath());
             }
         }
         catch(Exception e){
@@ -101,6 +97,7 @@ public class Log implements ILog{
     }
     
     private String getLogPath(){
+        final String logFileName = "rolling-log.log";
         return logDirectory.getPath() + "/" + logFileName;
     }
     

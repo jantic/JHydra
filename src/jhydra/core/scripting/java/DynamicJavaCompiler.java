@@ -123,8 +123,8 @@ class DynamicJavaCompiler implements IScriptCompiler {
 
     }
       
-    private List<Diagnostic<? extends JavaFileObject>> compile(Iterable<JavaFileObject> files) 
-            throws CompileErrorException, IOException {
+    private List<Diagnostic<? extends JavaFileObject>> compile(Iterable<JavaFileObject> files)
+            throws IOException {
         final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         final DiagnosticCollector<JavaFileObject> diagnosticCollector = new DiagnosticCollector<>();
         

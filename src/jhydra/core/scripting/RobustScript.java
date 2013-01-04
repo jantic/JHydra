@@ -43,11 +43,10 @@ public class RobustScript implements IScript{
         Integer numberOfTries = 1;
 
         while (numberOfTries <= maxNumberOfTries) {
-            final Boolean success = attemptExecution();
-            if(success){return;}
+            if(attemptExecution()){return;}
             numberOfTries++;
 
-            if (!success && numberOfTries <= maxNumberOfTries) {
+            if (numberOfTries <= maxNumberOfTries) {
                 final String message = "Attempt on script failed.  Attempt number " + numberOfTries.toString() + " coming up.";
                 log.error(message);
             }

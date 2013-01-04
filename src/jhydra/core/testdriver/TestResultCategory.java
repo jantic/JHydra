@@ -18,4 +18,9 @@ public class TestResultCategory {
     private TestResultCategory(String name){
         this.name = name;
     }
+
+    @Override
+    public String toString(){
+        return name;
+    }
 }

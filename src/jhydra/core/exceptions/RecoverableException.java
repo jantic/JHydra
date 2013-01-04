@@ -11,11 +11,11 @@ package jhydra.core.exceptions;
 public abstract class RecoverableException extends Exception{
     //Convenience type to consolidate exception handling.
     
-    public RecoverableException(String message, Exception e){
+    protected RecoverableException(String message, Exception e){
         super(message, e);
     }
     
-    public RecoverableException(String message){
+    protected RecoverableException(String message){
         super(message);
     } 
 }

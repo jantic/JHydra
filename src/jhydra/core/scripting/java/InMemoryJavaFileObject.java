@@ -13,7 +13,7 @@ import javax.tools.SimpleJavaFileObject;
  *
  * @author jantic
  */
-public class InMemoryJavaFileObject  extends SimpleJavaFileObject{
+class InMemoryJavaFileObject  extends SimpleJavaFileObject{
     private String contents = null;
 
     public InMemoryJavaFileObject(String className, String contents) {

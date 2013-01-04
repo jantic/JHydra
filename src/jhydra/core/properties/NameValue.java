@@ -29,10 +29,7 @@ public class NameValue implements INameValue{
     //capitalization errors in config, etc.
     @Override
     public Boolean matchesName(String name) {
-        if(name==null){
-            return false;
-        }
-        return this.name.trim().equalsIgnoreCase(name.trim());
+        return name != null && this.name.trim().equalsIgnoreCase(name.trim());
     }
 
     //We want this to be precise, so no trim/ignore case

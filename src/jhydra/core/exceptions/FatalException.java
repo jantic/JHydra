@@ -10,11 +10,11 @@ package jhydra.core.exceptions;
  */ 
 public abstract class FatalException extends Exception {
     //Convenience type so we can consolidate exception handling.
-    public FatalException(String message, Exception e){
+    protected FatalException(String message, Exception e){
         super(message, e);
     }
     
-    public FatalException(String message){
+    protected FatalException(String message){
         super(message);
     }
 }

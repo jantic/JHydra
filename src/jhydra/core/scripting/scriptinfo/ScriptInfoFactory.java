@@ -21,7 +21,7 @@ import org.apache.commons.io.FileUtils;
  * @author jantic
  */
 public class ScriptInfoFactory implements IScriptInfoFactory {
-    private static Map<String, List<IScriptInfo>> projectPathToScriptInfos = new HashMap<>();
+    private static final Map<String, List<IScriptInfo>> projectPathToScriptInfos = new HashMap<>();
     
     @Override
     public List<IScriptInfo> getAllScriptInfosOfType(IProjectConfig config, ScriptType scriptType) 
