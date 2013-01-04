@@ -9,5 +9,5 @@ package jhydra.core.uinav.selenium;
  * @author jantic
  */
 public interface ISelenium {
-    
+    //TODO:  Perhaps, only support webdriver based selenium?  Probably simpler....
 }

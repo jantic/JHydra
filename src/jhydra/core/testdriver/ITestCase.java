@@ -4,13 +4,15 @@
  */
 package jhydra.core.testdriver;
 
-import jhydra.core.valuemap.IValueMap;
 import jhydra.core.uinav.IMasterNavigator;
+import jhydra.core.valuemap.IValueMap;
 
 /**
  *
  * @author jantic
  */
+
+//TODO:  Should support Excel, CSV, and some open source spreadsheet.
 public interface ITestCase extends ITestInfo {
     ITestCaseResult execute(IMasterNavigator navigator, IValueMap valueMap);
 }
