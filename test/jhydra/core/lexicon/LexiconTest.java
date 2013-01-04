@@ -4,10 +4,6 @@
  */
 package jhydra.core.lexicon;
 
-import java.io.File;
-import java.net.URI;
-import java.util.List;
-import jhydra.core.config.IConfig;
 import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
@@ -16,7 +12,13 @@ import jhydra.core.properties.exceptions.DuplicatedKeyException;
 import jhydra.core.properties.exceptions.NameNotValidException;
 import org.junit.Assert;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
+
+import java.io.File;
+import java.net.URI;
+import java.util.List;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 
 /**

@@ -220,7 +220,7 @@ public class DynamicJavaCompilerTest {
         final IScriptCompiler compiler = new DynamicJavaCompiler();
         final IScriptInfo scriptInfo = mock(IScriptInfo.class);
         when(scriptInfo.getClassName()).thenReturn("jhydra.scripts." + name);
-        when(scriptInfo.getFilePath()).thenReturn("./test-projects/project 1/alt scripts/" + path + name +"." + scriptType.getExtension());
+        when(scriptInfo.getFilePath()).thenReturn("./test projects/project 1/alt scripts/" + path + name +"." + scriptType.getExtension());
         when(scriptInfo.getName()).thenReturn(name);
         when(scriptInfo.getType()).thenReturn(scriptType);
         return compiler.getCompiledScript(scriptInfo); 
@@ -230,7 +230,7 @@ public class DynamicJavaCompilerTest {
         final IScriptCompiler compiler = new DynamicJavaCompiler();
         final IScriptInfo scriptInfo = mock(IScriptInfo.class);
         when(scriptInfo.getClassName()).thenReturn("jhydra.scripts." + name);
-        when(scriptInfo.getFilePath()).thenReturn("./test-projects/project 1/scripts/" + path + name +"." + scriptType.getExtension());
+        when(scriptInfo.getFilePath()).thenReturn("./test projects/project 1/scripts/" + path + name +"." + scriptType.getExtension());
         when(scriptInfo.getName()).thenReturn(name);
         when(scriptInfo.getType()).thenReturn(scriptType);
         return compiler.getCompiledScript(scriptInfo); 

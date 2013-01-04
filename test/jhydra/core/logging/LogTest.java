@@ -20,7 +20,7 @@ import static org.mockito.Mockito.*;
  * @author jantic
  */
 public class LogTest {
-    private final String proj1Path = "./test-projects/project 1";
+    private final String proj1Path = "./test projects/project 1";
     private final String logFolderPath = proj1Path + "/logs/";
     private final String logFilePath = logFolderPath + "rolling-log.log";
     
@@ -87,7 +87,7 @@ public class LogTest {
         log.info("log line 1");
         
         try{
-            int result = 1/0; 
+            @SuppressWarnings({"NumericOverflow", "UnusedDeclaration"}) int result = 1/0;
         }
         catch(Exception e){
             log.info("log line 2", e);
@@ -108,7 +108,7 @@ public class LogTest {
         log.debug("log line 1");
         
         try{
-            int result = 1/0; 
+            @SuppressWarnings({"NumericOverflow", "UnusedDeclaration"}) int result = 1/0;
         }
         catch(Exception e){
             log.debug("log line 2", e);
@@ -129,7 +129,7 @@ public class LogTest {
         log.warn("log line 1");
         
         try{
-            int result = 1/0; 
+            @SuppressWarnings({"NumericOverflow", "UnusedDeclaration"}) int result = 1/0;
         }
         catch(Exception e){
             log.warn("log line 2", e);
@@ -150,7 +150,7 @@ public class LogTest {
         log.error("log line 1");
         
         try{
-            int result = 1/0; 
+            @SuppressWarnings({"NumericOverflow", "UnusedDeclaration"}) int result = 1/0;
         }
         catch(Exception e){
             log.error("log line 2", e);
@@ -166,15 +166,13 @@ public class LogTest {
     
     private String getLogContents() throws IOException{
         final File logFile = new File(logFilePath);
-        final String logContents = FileUtils.readFileToString(logFile);
-        return logContents;
+        return FileUtils.readFileToString(logFile);
     }
     
     private ILog getLog() throws FatalException{
         final IProjectConfig config = mock(IProjectConfig.class);
         when(config.getLogsDirectory()).thenReturn(getURI(logFolderPath)); 
-        final ILog log = new Log(config);
-        return log;
+        return new Log(config);
     }
     
     private URI getURI(String relativePath){

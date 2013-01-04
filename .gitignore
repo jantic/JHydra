@@ -1,26 +1,18 @@
 
 build/classes/.netbeans_automatic_build
-
 build/classes/.netbeans_update_resources
-
 build/test/
-
 *.class
-
 *.mf
-
 *.form
-
 nbproject/build-impl.xml
-
 nbproject/genfiles.properties
-
 nbproject/private/private.properties
-
 nbproject/private/private.xml
-
 scripts/.DS_Store
-
 .DS_Store
 /dist/
-test-projects/project 1/logs/
+test projects/project 1/logs/
+temp
+/out/
+*.log

@@ -4,30 +4,27 @@
  */
 package jhydra.core.scripting.java;
 
-import java.io.File;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import javax.tools.Diagnostic;
 import jhydra.core.config.IProjectConfig;
 import jhydra.core.logging.ILog;
 import jhydra.core.scripting.CompileErrorReport;
 import jhydra.core.scripting.IScript;
 import jhydra.core.scripting.IScriptFactory;
-import jhydra.core.scripting.exceptions.ClassNotInScriptFileException;
-import jhydra.core.scripting.exceptions.CompileErrorException;
-import jhydra.core.scripting.exceptions.NonPublicScriptClassException;
-import jhydra.core.scripting.exceptions.ScriptInstantiationException;
-import jhydra.core.scripting.exceptions.ScriptNotExistException;
+import jhydra.core.scripting.exceptions.*;
 import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.valuemap.IValueMap;
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
+
+import javax.tools.Diagnostic;
+import java.io.File;
+import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+import static org.mockito.Mockito.*;
 
 /**
  *
@@ -233,7 +230,7 @@ public class JavaFileScriptFactoryTest {
     
     private IScript getScript(String name, IValueMap valueMap, Integer projNum) throws Exception{
         final IProjectConfig config = mock(IProjectConfig.class);
-        final String projectsDirectory = "./test-projects/project " + projNum.toString();
+        final String projectsDirectory = "./test projects/project " + projNum.toString();
         final List<URI> scriptDirectories = new ArrayList<>();
         scriptDirectories.add(getURI(projectsDirectory + "/scripts/"));
         scriptDirectories.add(getURI(projectsDirectory + "/alt scripts/"));
