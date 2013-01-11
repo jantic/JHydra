@@ -6,7 +6,7 @@ package jhydra.core.valuemap;
 
 import java.io.File;
 import java.net.URI;
-import jhydra.core.config.IConfig;
+
 import jhydra.core.config.IProjectConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.ILexicon;

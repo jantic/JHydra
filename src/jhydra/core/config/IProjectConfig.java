@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author jantic
  */
-public interface IProjectConfig extends IConfig {
+public interface IProjectConfig extends IProgramConfig {
     String getProjectName();
     URI getProjectDirectory();
     List<URI> getScriptDirectories();

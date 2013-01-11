@@ -10,10 +10,10 @@ import java.net.URI;
  *
  * @author jantic
  */
-public interface IConfig {
+public interface IProgramConfig {
     URI getProgramDirectory();
     URI getProjectsDirectory();
     String getProgramName();
-    URI getSTMPHost();
-    String isAutomaticRun();
+    IEmailSettings getEmailSettings();
+    Boolean isAutomaticRun();
 }

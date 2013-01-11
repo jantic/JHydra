@@ -9,8 +9,5 @@ package jhydra.core.config;
  * @author jantic
  */
 public interface ICommandLineArgs {
-    String GetArgumentValue(String argName);
-    Boolean HasArgument(String argName);
-    Boolean HasSpecifiedProject();
-    String getSpecifiedProjectName();
+    String getProjectNameToRun();
 }

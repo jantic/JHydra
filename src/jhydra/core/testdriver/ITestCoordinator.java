@@ -5,7 +5,7 @@
 package jhydra.core.testdriver;
 
 import java.util.List;
-import jhydra.core.config.IConfig;
+import jhydra.core.config.IProgramConfig;
 
 /**
  *
@@ -13,6 +13,6 @@ import jhydra.core.config.IConfig;
  */
 public interface ITestCoordinator {
     void RequestRun(ITestRunRequest request);
-    void RequestScriptCheck(IConfig config);
-    List<ITestInfo> getAvailableTestInfos(IConfig config, ITestMode mode);
+    void RequestScriptCheck(IProgramConfig config);
+    List<ITestInfo> getAvailableTestInfos(IProgramConfig config, ITestMode mode);
 }

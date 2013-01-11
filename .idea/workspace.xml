@@ -7,21 +7,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dc7f23d-2e2c-445b-b326-21c0ef198368" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/DynamicJavaCompiler.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/DynamicJavaCompiler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/exceptions/FatalException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/exceptions/FatalException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/InMemoryJavaFileObject.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/InMemoryJavaFileObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/logging/Log.java" afterPath="$PROJECT_DIR$/src/jhydra/core/logging/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/exceptions/RecoverableException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/exceptions/RecoverableException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testdriver/TestResultCategory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testdriver/TestResultCategory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mail/dsn.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mail/imap.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mail/mail.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mail/mailapi.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mail/pop3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mail/smtp.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/CommandLineArgs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/ConfiguredPathNotValidException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/DefaultProjectConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/EmailSettings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/EmailSettingsFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IEmailSettings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/InvalidEmailAddressException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/dsn.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/smtp.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/IConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/ICommandLineArgs.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ICommandLineArgs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/IProjectConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IProjectConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testdriver/ITestCoordinator.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testdriver/ITestCoordinator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testdriver/ITestRunRequest.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testdriver/ITestRunRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JHydra.iml" afterPath="$PROJECT_DIR$/JHydra.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JHydra.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357274628286" ignored="false" />
+    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883784580" ignored="false" />
     <file path="/DynamicJavaCompiler.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268510102" ignored="false" />
     <file path="/a.dummy" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268889882" ignored="false" />
     <file path="/.gitignore" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357270540085" ignored="false" />
@@ -31,6 +45,327 @@
     <file path="/Lexicon.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357273893726" ignored="false" />
     <file path="/ScriptInfoFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357274063642" ignored="false" />
     <file path="/RobustScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357274396916" ignored="false" />
+    <file path="/ProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883379153" ignored="false" />
+    <file path="/fragment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357879320338" ignored="false" />
+    <file path="/ConfiguredPathNotValidException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357876557741" ignored="false" />
+    <file path="/EmailConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883052657" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/class-use/Report.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456753" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/class-use/MultipartReport.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/DeliveryStatus.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/class-use/MessageHeaders.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/class-use/DispositionNotification.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/class-use/DeliveryStatus.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/DispositionNotification.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/MessageHeaders.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/MultipartReport.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/ACL.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/Report.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456754" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/ACL.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/IMAPMessage.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.ProtocolCommand.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.FetchProfileItem.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/Rights.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/IMAPSSLStore.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/IMAPStore.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/Rights.Right.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/IMAPFolder.FetchProfileItem.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/class-use/SortTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456755" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/IMAPFolder.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/IMAPMessage.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/IMAPFolder.ProtocolCommand.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/IMAPSSLStore.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/IMAPStore.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/Rights.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456756" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/SortTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/imap/Rights.Right.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/class-use/POP3Message.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/class-use/POP3Folder.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/class-use/POP3Store.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/class-use/POP3SSLStore.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/POP3Folder.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/POP3Message.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/POP3SSLStore.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/pop3/POP3Store.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSendFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSenderFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456757" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/class-use/SMTPMessage.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/class-use/SMTPAddressSucceededException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/class-use/SMTPAddressFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/class-use/SMTPTransport.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSSLTransport.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/SMTPAddressFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/SMTPMessage.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/SMTPAddressSucceededException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/SMTPSendFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/SMTPSenderFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/SMTPTransport.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/smtp/SMTPSSLTransport.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/class-use/MailSSLSocketFactory.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/logging/class-use/MailHandler.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/class-use/ReadableMime.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456758" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/logging/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/logging/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/MailSSLSocketFactory.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/logging/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/ReadableMime.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/util/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Authenticator.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456975" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/AuthenticationFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Address.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/BodyPart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Address.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Authenticator.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/AuthenticationFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/FetchProfile.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/BodyPart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456759" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Flags.Flag.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/FetchProfile.Item.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Folder.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Flags.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Header.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/FolderNotFoundException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/FolderClosedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Message.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/IllegalWriteException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/MessageContext.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/MessageAware.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Message.RecipientType.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/MessagingException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/MessageRemovedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456760" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Multipart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/MethodNotSupportedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/MultipartDataSource.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Part.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/NoSuchProviderException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Quota.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Provider.Type.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Provider.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/PasswordAuthentication.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Service.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/SendFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/ReadOnlyFolderException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/QuotaAwareStore.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Quota.Resource.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Session.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Store.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/UIDFolder.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/UIDFolder.FetchProfileItem.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/Transport.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/StoreClosedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/ConnectionAdapter.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456761" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/class-use/URLName.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/ConnectionEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/MailEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/FolderListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/FolderEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/FolderAdapter.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/ConnectionListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/MessageChangedListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/MessageChangedEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/MessageCountListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/MessageCountEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/MessageCountAdapter.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/TransportListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/TransportEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/TransportAdapter.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/StoreListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/class-use/StoreEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/ConnectionEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/ConnectionAdapter.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/ConnectionListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/MailEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/FolderListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/FolderEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/FolderAdapter.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/MessageCountAdapter.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456762" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/MessageChangedListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/MessageChangedEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/MessageCountListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/MessageCountEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/StoreEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/StoreListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/TransportListener.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/TransportEvent.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456975" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/event/TransportAdapter.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/FetchProfile.Item.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/FetchProfile.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Flags.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456975" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Flags.Flag.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Folder.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/FolderClosedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Header.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/FolderNotFoundException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/IllegalWriteException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456763" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/ContentDisposition.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/AddressException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/AddressException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/ContentType.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/InternetHeaders.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/InternetAddress.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/HeaderTokenizer.Token.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/HeaderTokenizer.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/InternetHeaders.InternetHeader.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/MimeBodyPart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/MailDateFormat.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/MimeMultipart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/MimeMessage.RecipientType.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/MimeMessage.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/MimePart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/ParseException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/ParameterList.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/MimePartDataSource.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/NewsAddress.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/MimeUtility.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/ContentType.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/SharedInputStream.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/ContentDisposition.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/class-use/PreencodedMimeBodyPart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456764" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/InternetAddress.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456765" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/HeaderTokenizer.Token.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456765" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/HeaderTokenizer.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456765" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/InternetHeaders.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456765" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/InternetHeaders.InternetHeader.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456765" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/MimeBodyPart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/MailDateFormat.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456765" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/MimeMessage.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/MimeMessage.RecipientType.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/MimeMultipart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/MimePartDataSource.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456975" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/MimePart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/NewsAddress.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/MimeUtility.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/ParseException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/ParameterList.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/PreencodedMimeBodyPart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/internet/SharedInputStream.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456766" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Message.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/MessageContext.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/MessageAware.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Message.RecipientType.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456912" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/MethodNotSupportedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/MessagingException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/MessageRemovedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/MultipartDataSource.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Multipart.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/NoSuchProviderException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Part.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Provider.Type.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Provider.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/PasswordAuthentication.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456975" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Quota.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/ReadOnlyFolderException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/QuotaAwareStore.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456767" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Quota.Resource.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/AddressStringTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/AndTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/AddressTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/AddressStringTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/BodyTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/AddressTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/FromStringTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/FlagTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/DateTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/ComparisonTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/BodyTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/AndTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/HeaderTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/FromTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/NotTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/MessageNumberTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/MessageIDTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456768" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/IntegerComparisonTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/SearchTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/SearchException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/RecipientTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/RecipientStringTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/ReceivedDateTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/OrTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/SentDateTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/StringTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/SizeTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/ComparisonTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/class-use/SubjectTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456769" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/DateTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/FromTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/FromStringTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/FlagTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/HeaderTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/IntegerComparisonTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/MessageNumberTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/MessageIDTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/OrTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/NotTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/ReceivedDateTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/package-use.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/RecipientTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456771" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/RecipientStringTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456770" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/SearchTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456771" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/SearchException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456771" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/StringTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456771" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/SizeTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456771" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/SentDateTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456771" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/SendFailedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/search/SubjectTerm.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456771" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Session.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Service.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878457230" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Store.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456974" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/StoreClosedException.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/UIDFolder.FetchProfileItem.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/Transport.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456975" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/URLName.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/UIDFolder.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/package-summary.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/package-frame.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/ByteArrayDataSource.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/class-use/SharedFileInputStream.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/class-use/SharedByteArrayInputStream.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/class-use/ByteArrayDataSource.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/package-tree.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/SharedFileInputStream.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456773" ignored="false" />
+    <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/javax/mail/util/SharedByteArrayInputStream.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456772" ignored="false" />
+    <file path="/ICommandLineArgs.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357879883069" ignored="false" />
+    <file path="/IProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883221702" ignored="false" />
+    <file path="/CommandLineArgs.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357879996617" ignored="false" />
+    <file path="/EmailSettingsFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357880768547" ignored="false" />
+    <file path="/EmailSettings.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357882177103" ignored="false" />
+    <file path="/InvalidEmailAddressException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357881937574" ignored="false" />
+    <file path="/File Header.txt.ft" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883986214" ignored="false" />
+    <file path="/DefaultProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357884004917" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,10 +424,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Lexicon.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java">
+      <file leaf-file-name="IProgramConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="69" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
+            <state line="17" column="11" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProgramConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="25" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,64 +444,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NameValue.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java">
+      <file leaf-file-name="DefaultProjectConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/DefaultProjectConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="8" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
+            <state line="6" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RobustScript.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java">
+      <file leaf-file-name="CommandLineArgs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/CommandLineArgs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
+            <state line="11" column="55" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JavaBaseScript.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java">
+      <file leaf-file-name="EmailSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/EmailSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="27" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestResultCategory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/testdriver/TestResultCategory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="43" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScriptInfoFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="24" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ILexicon.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/ILexicon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="33" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicJavaCompiler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/java/DynamicJavaCompiler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="19" selection-start="4568" selection-end="4568" vertical-scroll-proportion="0.0">
+            <state line="14" column="3" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,19 +473,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Log.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/logging/Log.java">
+      <file leaf-file-name="ValueMapTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="24" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.33279222">
+            <state line="142" column="51" selection-start="5741" selection-end="5741" vertical-scroll-proportion="0.25632378">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompileErrorException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/CompileErrorException.java">
+      <file leaf-file-name="IEmailSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IEmailSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="27" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
+            <state line="14" column="26" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvalidEmailAddressException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/InvalidEmailAddressException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="3" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailSettingsFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/EmailSettingsFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="20" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICommandLineArgs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ICommandLineArgs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="11" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -202,20 +541,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java" />
-        <option value="$PROJECT_DIR$/test/jhydra/core/scripting/java/DynamicJavaCompilerTest.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/test/jhydra/core/scripting/java/JavaFileScriptFactoryTest.java" />
-        <option value="$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/testdriver/TestResultCategory.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/exceptions/FatalException.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/scripting/java/DynamicJavaCompiler.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/logging/Log.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/DirectoryPathNotValidException.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/ConfigDirectoryPathNotValidException.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/ConfiguredPathNotValidException.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/EmailConfig.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/ICommandLineArgs.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/IEmailSettings.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/DefaultProjectConfig.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/CommandLineArgs.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/EmailSettingsFactory.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/InvalidEmailAddressException.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/EmailSettings.java" />
       </list>
     </option>
   </component>
@@ -279,33 +620,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lexicon" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,16 +632,33 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="fileTemplates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test lib" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/test lib" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test lib" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jhydra.core.config.jydra.core.config.exceptions" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="jhydra.core.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/mail" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.All in JHydra">
     <configuration default="false" name="LexiconTest" type="JUnit" factoryName="JUnit" temporary="true">
@@ -499,6 +831,11 @@
       <created>1357266533311</created>
       <updated>1357266533311</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed code issues found with analysis tool.">
+      <created>1357274650308</created>
+      <updated>1357274650308</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -523,7 +860,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="97" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -537,13 +874,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15528281" sideWeight="0.21875" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15528281" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21504803" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27291667" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28333333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -589,7 +926,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed code issues found with analysis tool." />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on implementing configuration code." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -604,6 +941,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Switch to IntelliJ project." />
     <MESSAGE value="Fixed code issues found with analysis tool." />
+    <MESSAGE value="Worked on implementing configuration code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -613,95 +951,16 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="48" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/jhydra/core/scripting/java/JavaFileScriptFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0">
+        <state line="27" column="13" selection-start="693" selection-end="693" vertical-scroll-proportion="-2.215909">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="70" selection-start="5445" selection-end="5445" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/IScriptInfoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="69" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptExecutionException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="55" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/exceptions/FatalException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="24" selection-start="627" selection-end="627" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/java/DynamicJavaCompiler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="19" selection-start="4568" selection-end="4568" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/CompileErrorException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/ILexicon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="33" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="8" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
+        <state line="21" column="13" selection-start="457" selection-end="457" vertical-scroll-proportion="-3.237013">
           <folding />
         </state>
       </provider>
@@ -713,18 +972,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java">
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IProjectConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="69" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
+        <state line="23" column="23" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/IProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="278" selection-end="278" vertical-scroll-proportion="0.22765599">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/ConfiguredPathNotValidException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="49" selection-start="279" selection-end="673" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="11" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/DefaultProjectConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/CommandLineArgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="55" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/EmailSettingsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/logging/Log.java">
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/InvalidEmailAddressException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="24" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.33279222">
+        <state line="4" column="3" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IEmailSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="26" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="25" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ICommandLineArgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="11" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/EmailSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="3" selection-start="493" selection-end="493" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="51" selection-start="5741" selection-end="5741" vertical-scroll-proportion="0.25632378">
           <folding />
         </state>
       </provider>

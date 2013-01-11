@@ -5,7 +5,7 @@
 package jhydra.core.testdriver;
 
 import java.util.List;
-import jhydra.core.config.IConfig;
+import jhydra.core.config.IProgramConfig;
 import jhydra.core.uinav.browser.IBrowserInfo;
 
 /**
@@ -13,7 +13,7 @@ import jhydra.core.uinav.browser.IBrowserInfo;
  * @author jantic
  */
 public interface ITestRunRequest {
-    IConfig getConfig();
+    IProgramConfig getConfig();
     IBrowserInfo getBrowser();
     Boolean debugMode();
     ITestEnvironment getEnvironment();
