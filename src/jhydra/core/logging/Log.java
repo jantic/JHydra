@@ -19,7 +19,7 @@ import ch.qos.logback.core.rolling.RollingFileAppender;
 import ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy;
 import java.io.File;
 import java.net.URI;
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +29,7 @@ public class Log implements ILog{
     private final Logger logger;
     
     //For project specific logging
-    public Log(IProjectConfig config) throws FatalException{
+    public Log(IRuntimeConfig config) throws FatalException{
         logDirectory = config.getLogsDirectory();
         logger = getLogger();
     }

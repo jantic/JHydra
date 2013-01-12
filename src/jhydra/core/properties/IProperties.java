@@ -5,6 +5,8 @@
 package jhydra.core.properties;
 
 import jhydra.core.properties.exceptions.NameNotInPropertiesFileException;
+
+import java.net.URI;
 import java.util.List;
 
 /**
@@ -18,5 +20,7 @@ public interface IProperties {
     Boolean hasProperty(String name);
 
     List<String> getAllPropertyNames();
+
+    URI getFilePath();
     
 }

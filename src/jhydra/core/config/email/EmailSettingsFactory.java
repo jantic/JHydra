@@ -1,4 +1,4 @@
-package jhydra.core.config;
+package jhydra.core.config.email;
 
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.properties.IProperties;

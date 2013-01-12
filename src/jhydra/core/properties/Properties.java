@@ -46,7 +46,12 @@ public class Properties implements IProperties {
         
         return names;
     }
-    
+
+    @Override
+    public URI getFilePath() {
+        return this.filepath;
+    }
+
 
     @Override
     public String getProperty(String name) throws NameNotInPropertiesFileException{

@@ -13,7 +13,7 @@ import java.net.URI;
 public interface IProgramConfig {
     URI getProgramDirectory();
     URI getProjectsDirectory();
+    URI getSharedScriptsDirectory();
+    URI getSharedLexiconPath();
     String getProgramName();
-    IEmailSettings getEmailSettings();
-    Boolean isAutomaticRun();
 }

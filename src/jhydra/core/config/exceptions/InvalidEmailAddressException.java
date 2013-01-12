@@ -1,4 +1,4 @@
-package jhydra.core.config.jydra.core.config.exceptions;
+package jhydra.core.config.exceptions;
 
 import jhydra.core.exceptions.FatalException;
 

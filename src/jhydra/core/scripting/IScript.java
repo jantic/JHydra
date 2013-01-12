@@ -13,7 +13,6 @@ import jhydra.core.lexicon.ILexicon;
  * @author jantic
  */
 public interface IScript {
-    public void registerVariables(ILexicon registry);
     public void execute() throws RecoverableException, FatalException;
     public String getName();
 }

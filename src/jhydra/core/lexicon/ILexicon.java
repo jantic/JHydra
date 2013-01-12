@@ -17,7 +17,7 @@ import jhydra.core.properties.exceptions.NameNotValidException;
 public interface ILexicon {
     List<INameValue> getAllNameDefaultValuePairs();
     void registerVariable(String variableName, String defaultValue);
-    URI getFilePath();
+    List<URI> getFilePaths();
     INameValue getNameValue(String name) throws NameNotInLexiconException, NameNotValidException;
     Boolean hasNameValue(String name);
 }

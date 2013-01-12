@@ -4,7 +4,7 @@
  */
 package jhydra.core.scripting.java;
 
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.logging.ILog;
 import jhydra.core.scripting.CompileErrorReport;
 import jhydra.core.scripting.IScript;
@@ -229,7 +229,7 @@ public class JavaFileScriptFactoryTest {
     }
     
     private IScript getScript(String name, IValueMap valueMap, Integer projNum) throws Exception{
-        final IProjectConfig config = mock(IProjectConfig.class);
+        final IRuntimeConfig config = mock(IRuntimeConfig.class);
         final String projectsDirectory = "./test projects/project " + projNum.toString();
         final List<URI> scriptDirectories = new ArrayList<>();
         scriptDirectories.add(getURI(projectsDirectory + "/scripts/"));

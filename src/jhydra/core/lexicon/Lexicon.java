@@ -4,7 +4,7 @@
  */
 package jhydra.core.lexicon;
 
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.exceptions.LexiconFileTypeException;
 import jhydra.core.lexicon.exceptions.LexiconNotFoundException;
@@ -28,14 +28,14 @@ import java.util.Map;
  */
 public class Lexicon implements ILexicon {
     private static final String FILE_EXTENSION = "properties";
-    private final IProjectConfig config;
+    private final IRuntimeConfig config;
     private final Map<String, INameValue> staticRegistry = new HashMap<>();
     private final INameValueValidator nameValueValidator;
 
-    public Lexicon(IProjectConfig config) throws FatalException{
+    public Lexicon(IRuntimeConfig config) throws FatalException{
         this.config = config;
         this.nameValueValidator = new NameValueValidator();
-        loadStaticRegistry();
+        loadAllStaticRegistries();
     }
     
     @Override
@@ -49,15 +49,15 @@ public class Lexicon implements ILexicon {
     }
 
     @Override
-    public URI getFilePath() {
-        return config.getLexiconPath();
+    public List<URI> getFilePaths() {
+        return config.getLexiconPaths();
     }
     
     @Override
     public INameValue getNameValue(String name) throws NameNotInLexiconException, NameNotValidException{
         nameValueValidator.validateName(name);
         if(!hasNameValue(name)){
-            throw new NameNotInLexiconException(name, getFilePath().toString());
+            throw new NameNotInLexiconException(name, getFilePaths());
         }
         final String key = generateKey(name);
         return staticRegistry.get(key);
@@ -76,22 +76,27 @@ public class Lexicon implements ILexicon {
         
         return name.trim().toLowerCase();
     }
+
+    private void loadAllStaticRegistries() throws FatalException{
+        final List<URI> paths = this.getFilePaths();
+
+        for(URI path : paths){
+            loadStaticRegistry(path);
+        }
+    }
     
-    private void loadStaticRegistry() 
-            throws LexiconNotFoundException, LexiconFileTypeException, LexiconReadException, 
-            DuplicatedKeyException, NameNotValidException, NameNotInPropertiesFileException{
-        
-        validateLexiconFile();
+    private void loadStaticRegistry(URI path) throws FatalException{
+        validateLexiconFile(path);
 
         try{
-            final Properties properties = new Properties(this.getFilePath());
+            final Properties properties = new Properties(path);
             parseAndWriteToStaticRegistry(properties);
         }
         catch(PropertiesFileNotFoundException e){
-            throw new LexiconNotFoundException(this.getFilePath().toString(), e);
+            throw new LexiconNotFoundException(path.toString(), e);
         }
         catch(PropertiesFileReadPermissionsException|GeneralPropertiesFileException e){
-            throw new LexiconReadException(this.getFilePath().toString(), e);
+            throw new LexiconReadException(path.toString(), e);
         }
     }
     
@@ -105,7 +110,7 @@ public class Lexicon implements ILexicon {
             final String key = generateKey(name);
             
             if(this.staticRegistry.containsKey(key)){
-                throw new DuplicatedKeyException(name, getFilePath().toString());
+                throw new DuplicatedKeyException(name, properties.getFilePath().toString());
             }
             else{
                 this.staticRegistry.put(key, pair);
@@ -113,19 +118,18 @@ public class Lexicon implements ILexicon {
         }
     }
     
-    private void validateLexiconFile() 
-            throws LexiconNotFoundException, LexiconFileTypeException{      
-        final URI path = getFilePath();
+    private void validateLexiconFile(URI path)
+            throws LexiconNotFoundException, LexiconFileTypeException{
         final File file =  new File(path);
         
         if(!file.isFile()){
-            throw new LexiconNotFoundException(this.getFilePath().toString());
+            throw new LexiconNotFoundException(path.toString());
         }
         
-        final String extension = FilenameUtils.getExtension(this.getFilePath().toString());
+        final String extension = FilenameUtils.getExtension(path.toString());
         
         if(!extension.equalsIgnoreCase(FILE_EXTENSION)){
-            throw new LexiconFileTypeException(FILE_EXTENSION, extension, this.getFilePath().toString());
+            throw new LexiconFileTypeException(FILE_EXTENSION, extension, path.toString());
         }
     }
 }

@@ -5,7 +5,7 @@
 package jhydra.core.scripting.scriptinfo;
 
 import java.util.List;
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.scripting.ScriptType;
 import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
 
@@ -15,6 +15,6 @@ import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
  */
 public interface IScriptInfoFactory {
 
-    List<IScriptInfo> getAllScriptInfosOfType(IProjectConfig config, ScriptType scriptType) throws ScriptInfoLoadException;
+    List<IScriptInfo> getAllScriptInfosOfType(IRuntimeConfig config, ScriptType scriptType) throws ScriptInfoLoadException;
     
 }

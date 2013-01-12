@@ -1,7 +1,7 @@
-package jhydra.core.config;
+package jhydra.core.config.email;
 
-import jhydra.core.config.jydra.core.config.exceptions.ConfiguredPathNotValidException;
-import jhydra.core.config.jydra.core.config.exceptions.InvalidEmailAddressException;
+import jhydra.core.config.exceptions.ConfiguredPathNotValidException;
+import jhydra.core.config.exceptions.InvalidEmailAddressException;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.properties.IProperties;
 

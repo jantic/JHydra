@@ -4,7 +4,7 @@
  */
 package jhydra.core.scripting.java;
 
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.lexicon.ILexicon;
@@ -26,7 +26,7 @@ public class JavaBaseScript implements IBaseScript{
     private IMasterNavigator navigator;
     private IValueMap valueMap;
     private IScriptFactory scriptFactory;
-    private IProjectConfig config;
+    private IRuntimeConfig config;
     
     //The following are meant to be accessed as is by children scripts.  I just wish Java has C# style properties!
     protected IExtendedSelenium selenium;
@@ -56,19 +56,14 @@ public class JavaBaseScript implements IBaseScript{
     }
     
     @Override
-    public void setConfig(IProjectConfig config){
+    public void setConfig(IRuntimeConfig config){
         this.config = config;
-        this.timeout = config.getScriptTimeout();
+        this.timeout = config.getScriptTimeoutSeconds();
     }
     
     @Override
     public void setLog(ILog log){
         this.log = log;
-    }
-
-    @Override
-    public void registerVariables(ILexicon registry) {
-        //do nothing- just a place holder which is to be overriden by scripts that need this functionality.     
     }
 
     @Override

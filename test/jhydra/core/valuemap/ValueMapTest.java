@@ -6,8 +6,10 @@ package jhydra.core.valuemap;
 
 import java.io.File;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.lexicon.ILexicon;
 import jhydra.core.lexicon.Lexicon;
@@ -94,8 +96,8 @@ public class ValueMapTest {
     
    @Test
     public void specCharsValues_getValue_CorrectValue() throws FatalException{
-        final IProjectConfig config = mock(IProjectConfig.class);
-        when(config.getLexiconPath()).thenReturn(getURI("./test/test data/speccharvalues_lexicon.properties"));
+        final IRuntimeConfig config = mock(IRuntimeConfig.class);
+        when(config.getLexiconPaths()).thenReturn(getURIList("./test/test data/speccharvalues_lexicon.properties"));
         final ILexicon lexicon = new Lexicon(config);
         final IValueMap valueMap = new ValueMap(lexicon);
         final String expected = "!#$%^&*()-_}{][\\|/><.,;\"-+.:?=";
@@ -105,8 +107,8 @@ public class ValueMapTest {
     
    @Test
     public void numericValues_getValue_CorrectValue() throws FatalException{
-        final IProjectConfig config = mock(IProjectConfig.class);
-        when(config.getLexiconPath()).thenReturn(getURI("./test/test data/speccharvalues_lexicon.properties"));
+        final IRuntimeConfig config = mock(IRuntimeConfig.class);
+        when(config.getLexiconPaths()).thenReturn(getURIList("./test/test data/speccharvalues_lexicon.properties"));
         final ILexicon lexicon = new Lexicon(config);
         final IValueMap valueMap = new ValueMap(lexicon);
         final String expected = "1234567890";
@@ -249,15 +251,17 @@ public class ValueMapTest {
         return new Lexicon(getMockedBasicConfig());
     }
      
-    private IProjectConfig getMockedBasicConfig(){
-        final IProjectConfig config = mock(IProjectConfig.class);
-        when(config.getLexiconPath()).thenReturn(getURI("./test/test data/basic_lexicon.properties"));
+    private IRuntimeConfig getMockedBasicConfig(){
+        final IRuntimeConfig config = mock(IRuntimeConfig.class);
+        when(config.getLexiconPaths()).thenReturn(getURIList("./test/test data/basic_lexicon.properties"));
         return config;
     }
     
-    private URI getURI(String relativePath){
+    private List<URI> getURIList(String relativePath){
         final File file = new File(relativePath);
-        return file.toURI();
+        final List<URI> uriList = new ArrayList<>();
+        uriList.add(file.toURI());
+        return uriList;
     }
     
 }

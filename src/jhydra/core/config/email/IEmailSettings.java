@@ -1,4 +1,4 @@
-package jhydra.core.config;
+package jhydra.core.config.email;
 
 import javax.mail.internet.InternetAddress;
 import java.net.URI;

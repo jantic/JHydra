@@ -7,7 +7,7 @@ package jhydra.core.scripting.java;
 import java.util.List;
 import java.util.Locale;
 import javax.tools.Diagnostic;
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.logging.ILog;
@@ -204,7 +204,7 @@ public class DynamicJavaCompilerTest {
     /***PRIVATE************************************************************************/
     private IScript getInitializedScriptJava(String name, String path, IValueMap valueMap) throws FatalException{
         final IBaseScript script = getCompiledScriptJava(name, path);
-        final IProjectConfig config = mock(IProjectConfig.class);
+        final IRuntimeConfig config = mock(IRuntimeConfig.class);
         script.setConfig(config);
         final ILog log = mock(ILog.class);
         script.setLog(log);

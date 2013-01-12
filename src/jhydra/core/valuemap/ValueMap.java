@@ -71,7 +71,7 @@ public class ValueMap implements IValueMap {
         
         if(!map.containsKey(key)){
             final String message = "Value named '" + name + "' could not be found!";
-            throw new NameNotInLexiconException(message, this.lexicon.getFilePath().toString());
+            throw new NameNotInLexiconException(message, this.lexicon.getFilePaths());
         }
 
     }

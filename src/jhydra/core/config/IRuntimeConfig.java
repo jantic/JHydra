@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package jhydra.core.config;
 
 import jhydra.core.config.email.IEmailSettings;
@@ -11,10 +7,10 @@ import java.net.URI;
 import java.util.List;
 
 /**
- *
- * @author jantic
+ * Author: jantic
+ * Date: 1/12/13
  */
-public interface IProjectConfig {
+public interface IRuntimeConfig {
     String getProjectName();
     URI getProjectDirectory();
     List<URI> getScriptDirectories();
@@ -24,7 +20,8 @@ public interface IProjectConfig {
     Integer getScriptWaitSecondsBetweenAttempts();
     URI getScreenshotsDirectory();
     URI getLogsDirectory();
-    List<IEnvironment> getEnvironments();
+    IEnvironment getEnvironment();
     String getProgramName();
     IEmailSettings getEmailSettings();
+    Boolean isAutomaticRun();
 }

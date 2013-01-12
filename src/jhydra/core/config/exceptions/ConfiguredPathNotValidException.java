@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.config.jydra.core.config.exceptions;
+package jhydra.core.config.exceptions;
 
 
 import jhydra.core.exceptions.FatalException;

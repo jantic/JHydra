@@ -7,7 +7,7 @@ package jhydra.core.scripting.java;
 import java.util.HashMap; 
 import java.util.List;
 import java.util.Map;
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.logging.ILog;
 import jhydra.core.scripting.exceptions.CompileErrorException;
 import jhydra.core.scripting.IBaseScript;
@@ -31,13 +31,13 @@ import jhydra.core.valuemap.IValueMap;
  * @author jantic
  */
 public class JavaFileScriptFactory implements IScriptFactory {
-    private final IProjectConfig config;
+    private final IRuntimeConfig config;
     private final ILog log;
     private final IScriptInfoFactory scriptInfoFactory;
     private final IScriptFactory masterScriptFactory;
     private final Map<String,IScriptInfo> nameToScriptInfo = new HashMap<>();
     
-    public JavaFileScriptFactory(IProjectConfig config, ILog log, IScriptFactory masterScriptFactory) throws ScriptInfoLoadException{
+    public JavaFileScriptFactory(IRuntimeConfig config, ILog log, IScriptFactory masterScriptFactory) throws ScriptInfoLoadException{
         this.config = config;
         this.log = log;
         this.masterScriptFactory = masterScriptFactory;

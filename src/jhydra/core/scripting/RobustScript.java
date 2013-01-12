@@ -4,7 +4,7 @@
  */
 package jhydra.core.scripting;
 
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.lexicon.ILexicon;
@@ -23,18 +23,13 @@ import jhydra.core.scripting.exceptions.ScriptExecutionException;
 
 public class RobustScript implements IScript{
     private final IScript script;
-    private final IProjectConfig config;
+    private final IRuntimeConfig config;
     private final ILog log;
     
-    public RobustScript(IScript script, IProjectConfig config, ILog log){
+    public RobustScript(IScript script, IRuntimeConfig config, ILog log){
         this.script = script;
         this.config = config;
         this.log = log;
-    }
-
-    @Override
-    public void registerVariables(ILexicon lexicon) {
-        this.script.registerVariables(lexicon);
     }
 
     @Override
@@ -58,7 +53,7 @@ public class RobustScript implements IScript{
     }
     
     private Boolean attemptExecution() throws FatalException{
-        final Integer timeInBetweenAttempts = config.getScriptTimeBetweenAttempts();
+        final Integer timeInBetweenAttempts = config.getScriptWaitSecondsBetweenAttempts();
         
         try {
             log.info("\t\tSCRIPT: " + this.getName());

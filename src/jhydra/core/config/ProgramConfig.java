@@ -1,8 +1,9 @@
 package jhydra.core.config;
 
-import jhydra.core.config.jydra.core.config.exceptions.ConfiguredPathNotValidException;
+import jhydra.core.config.commandline.CommandLineArgs;
+import jhydra.core.config.commandline.ICommandLineArgs;
+import jhydra.core.config.exceptions.ConfiguredPathNotValidException;
 import jhydra.core.exceptions.FatalException;
-import sun.management.snmp.jvmmib.JvmThreadInstanceEntryMBean;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -24,8 +25,9 @@ public class ProgramConfig implements IProgramConfig{
     private final URI programDirectory;
     private final URI programConfigPath;
     private final URI projectsDirectory;
+    private final URI sharedScriptsDirectory;
+    private final URI sharedLexiconPath;
     private final String programName;
-    private final IEmailSettings emailSettings;
     private final Boolean isAutomaticRun;
 
     //Package access
@@ -44,8 +46,9 @@ public class ProgramConfig implements IProgramConfig{
         this.programDirectory = convertToURI("ProgramDirectory", programDirString);
         this.programConfigPath = convertToURI("ProgramConfigPath", programDirString + "/jhydra.program");
         this.projectsDirectory = convertToURI("ProjectsDirectory", programDirString + "/projects/");
+        this.sharedScriptsDirectory = convertToURI("SharedScriptsDirectory", programDirString + "/shared/scripts/");
+        this.sharedLexiconPath = convertToURI("SharedLexiconPath", programDirString + "/shared/lexicon.properties");
         this.programName = "JHydra";
-        this.emailSettings = loadEmailSettings();
         this.isAutomaticRun = (commandLineArgs == CommandLineArgs.NULL);
     }
 
@@ -60,32 +63,28 @@ public class ProgramConfig implements IProgramConfig{
     }
 
     @Override
+    public URI getSharedScriptsDirectory(){
+        return this.sharedScriptsDirectory;
+    }
+
+    @Override
+    public URI getSharedLexiconPath(){
+        return this.sharedLexiconPath;
+    }
+
+    @Override
     public String getProgramName() {
         return this.programName;
     }
 
-    @Override
-    public IEmailSettings getEmailSettings() {
-        return this.emailSettings;
-    }
-
-    @Override
-    public Boolean isAutomaticRun() {
-        return this.isAutomaticRun;
-    }
-
-    private URI convertToURI(String configKey, String path) throws ConfiguredPathNotValidException{
+    private URI convertToURI(String configKey, String path) throws ConfiguredPathNotValidException {
         try{
             return new URI(path);
         }
         catch(URISyntaxException e){
-            //This isn't likely to ever happen....
             throw new ConfiguredPathNotValidException(configKey, path);
         }
     }
 
-    private IEmailSettings loadEmailSettings() throws FatalException{
-        EmailSettingsFactory emailSettingsFactory = new EmailSettingsFactory();
-        return emailSettingsFactory.load(this.programConfigPath);
-    }
+
 }

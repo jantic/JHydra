@@ -1,4 +1,4 @@
-package jhydra.core.config;
+package jhydra.core.config.commandline;
 
 /**
  * User: jantic

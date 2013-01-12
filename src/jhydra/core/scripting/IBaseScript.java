@@ -4,7 +4,7 @@
  */
 package jhydra.core.scripting;
 
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.logging.ILog;
 import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.valuemap.IValueMap;
@@ -19,7 +19,7 @@ public interface IBaseScript extends IScript{
     
     public void setScriptFactory(IScriptFactory scriptFactory);
     
-    public void setConfig(IProjectConfig config);
+    public void setConfig(IRuntimeConfig config);
     
     public void setLog(ILog log);
     

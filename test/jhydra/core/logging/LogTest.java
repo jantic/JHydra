@@ -7,7 +7,7 @@ package jhydra.core.logging;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
-import jhydra.core.config.IProjectConfig;
+import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
@@ -170,7 +170,7 @@ public class LogTest {
     }
     
     private ILog getLog() throws FatalException{
-        final IProjectConfig config = mock(IProjectConfig.class);
+        final IRuntimeConfig config = mock(IRuntimeConfig.class);
         when(config.getLogsDirectory()).thenReturn(getURI(logFolderPath)); 
         return new Log(config);
     }
