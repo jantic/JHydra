@@ -4,7 +4,6 @@ import jhydra.core.config.exceptions.ConfiguredPathNotValidException;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.properties.IProperties;
 import jhydra.core.properties.Properties;
-import org.omg.CosNaming.NamingContextExtPackage.StringNameHelper;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -33,7 +32,7 @@ public class EnvironmentFactory {
             final String uriSelector = uriPrefix + index.toString();
             final String descriptionSelector = descriptionPrefix + index.toString();
 
-            if(properties.hasProperty(nameSelector) && properties.hasProperty(uriPrefix)){
+            if(properties.hasProperty(nameSelector) && properties.hasProperty(uriSelector)){
                 final String name = properties.getProperty(nameSelector);
                 final String appURIString = properties.getProperty(uriSelector);
                 final String description = properties.hasProperty(descriptionSelector) ?
@@ -41,7 +40,14 @@ public class EnvironmentFactory {
                 final IEnvironment environment = generateEnvironment(name, description, appURIString);
                 environments.add(environment);
             }
+            else{
+                found = false;
+            }
+
+            index++;
         }
+
+        //TODO:  Detect duplicate environment names?
 
         return environments;
     }

@@ -1,14 +1,11 @@
 package jhydra.core.config.email;
 
-import jhydra.core.config.exceptions.ConfiguredPathNotValidException;
 import jhydra.core.config.exceptions.InvalidEmailAddressException;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.properties.IProperties;
 
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,14 +14,12 @@ import java.util.List;
  * Date: 1/10/13
  */
 
+//TODO:  Use a non smtp based email sending program, to minimize complication.
 //TODO:  This should probably be something that's set up in a wizard (esp with the smtp host business). Until then, just don't send emails
 public class EmailSettings implements IEmailSettings {
     private final List<InternetAddress> failureRecipients;
     private final List<InternetAddress> successRecipients;
     private final InternetAddress sender;
-    private final URI smtpHost;
-    private final Boolean sendSuccessEmail;
-    private final Boolean sendFailureEmail;
 
 
     //Package access, instantiated via factory
@@ -32,9 +27,6 @@ public class EmailSettings implements IEmailSettings {
         this.failureRecipients = parseFailureRecipients(properties);
         this.successRecipients = parseSuccessRecipients(properties);
         this.sender = parseSender(properties);
-        this.smtpHost = parseSmtpHost(properties);
-        this.sendSuccessEmail = parseSendSuccessEmail(properties);
-        this.sendFailureEmail = parseSendFailureEmail(properties);
     }
 
     @Override
@@ -51,23 +43,6 @@ public class EmailSettings implements IEmailSettings {
     public InternetAddress getSender(){
         return this.sender;
     }
-
-    @Override
-    public URI getSmtpHost(){
-        return this.smtpHost;
-    }
-
-    @Override
-    public Boolean sendSuccessEmail(){
-        return this.sendSuccessEmail;
-    }
-
-    @Override
-    public Boolean getSendFailureEmail(){
-        return this.sendFailureEmail;
-    }
-
-
 
     private List<InternetAddress> parseFailureRecipients(IProperties properties) throws FatalException{
         final String emailsString = properties.getProperty(getFailureRecipientsKey());
@@ -120,43 +95,5 @@ public class EmailSettings implements IEmailSettings {
 
     private String getSenderKey(){
         return "Email.Sender";
-    }
-
-    private URI parseSmtpHost(IProperties properties) throws FatalException{
-        final String smtpHostString = properties.getProperty(getSmtpHostKey());
-
-        try{
-
-            return new URI(smtpHostString);
-        }
-        catch(URISyntaxException e){
-            throw new ConfiguredPathNotValidException(getSmtpHostKey(), smtpHostString);
-        }
-    }
-
-    private String getSmtpHostKey(){
-        return "Email.SMTPHost";
-    }
-
-    private Boolean parseSendSuccessEmail(IProperties properties) throws FatalException{
-        final String value = properties.getProperty(getSendSuccessEmailKey());
-        return parseBoolean(value);
-    }
-
-    private Boolean parseBoolean(String value){
-        return value.equalsIgnoreCase("Y") || value.equalsIgnoreCase("true") || value.equalsIgnoreCase("Yes");
-    }
-
-    private String getSendSuccessEmailKey(){
-        return "Email.SendForSucccess";
-    }
-
-    private Boolean parseSendFailureEmail(IProperties properties) throws FatalException{
-        final String value = properties.getProperty(getSendFailureEmailKey());
-        return parseBoolean(value);
-    }
-
-    private String getSendFailureEmailKey(){
-        return "Email.SendForFailure";
     }
 }

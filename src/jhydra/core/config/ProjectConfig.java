@@ -4,13 +4,12 @@ import jhydra.core.config.email.EmailSettingsFactory;
 import jhydra.core.config.email.IEmailSettings;
 import jhydra.core.config.environment.EnvironmentFactory;
 import jhydra.core.config.environment.IEnvironment;
-import jhydra.core.config.exceptions.ConfiguredPathNotValidException;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.properties.IProperties;
 import jhydra.core.properties.Properties;
 
+import java.io.File;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,13 +35,13 @@ public class ProjectConfig implements IProjectConfig{
     public ProjectConfig(IProgramConfig programConfig, URI projectDirectory) throws FatalException{
         this.programConfig = programConfig;
         this.projectDirectory = projectDirectory;
-        this.projectConfigPath = convertToURI("Project.ConfigPath", projectDirectory.toString() + "/jhydra.project");
+        this.projectConfigPath = convertToFileURI(projectDirectory, "/jhydra.project");
         final IProperties properties = getConfigFile();
         this.projectName =  properties.getProperty("Project.Name");
-        this.projectScriptDirectory =   convertToURI("Project.ScriptDirectory", projectDirectory.toString() + "/scripts/");
-        this.projectLexiconPath = convertToURI("Project.LexiconPath",projectDirectory.toString() + "/lexicon.properties");
-        this.projectScreenShotsDirectory = convertToURI("Project.ScreenShotsDirectory", projectDirectory.toString() + "/screenshots/");
-        this.projectLogsDirectory = convertToURI("Project.LogsDirectory", projectDirectory.toString() + "/logs/");
+        this.projectScriptDirectory =   convertToFileURI(projectDirectory, "/scripts/");
+        this.projectLexiconPath = convertToFileURI(projectDirectory, "/lexicon.properties");
+        this.projectScreenShotsDirectory = convertToFileURI(projectDirectory, "/screenshots/");
+        this.projectLogsDirectory = convertToFileURI(projectDirectory, "/logs/");
         this.scriptTimeoutSeconds = Integer.parseInt(properties.getProperty("Script.TimeoutSeconds"));
         this.scriptMaxNumberOfTries = Integer.parseInt(properties.getProperty("Script.MaxNumberOfTries"));
         this.scriptWaitSecondsBetweenAttempts = Integer.parseInt(properties.getProperty("Script.WaitSecondsBetweenAttempts"));
@@ -120,13 +119,10 @@ public class ProjectConfig implements IProjectConfig{
         return new Properties(this.projectConfigPath);
     }
 
-    private URI convertToURI(String configKey, String path) throws ConfiguredPathNotValidException {
-        try{
-            return new URI(path);
-        }
-        catch(URISyntaxException e){
-            throw new ConfiguredPathNotValidException(configKey, path);
-        }
+    private URI convertToFileURI(URI baseURI, String relativePath) {
+        final File baseDirectory = new File(baseURI);
+        final File file = new File(baseDirectory.getPath() + relativePath);
+        return file.toURI();
     }
 
     private IEmailSettings loadEmailSettings() throws FatalException{

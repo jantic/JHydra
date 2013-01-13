@@ -13,7 +13,7 @@ import java.util.regex.Pattern;
  * @author jantic
  */
 public class NameValueValidator implements INameValueValidator {
-    private static final String NAME_PATTERN = "^\\w+$";
+    private static final String NAME_PATTERN = "^([^\\s=]+)$";
     
     @Override
     public void validateName(String name) throws NameNotValidException{
@@ -26,7 +26,7 @@ public class NameValueValidator implements INameValueValidator {
         
         if(!matcher.matches()){
             final String details = "Variable name attempted is not valid! Attempted: " + name + 
-                    ".  Names must be alphanumeric, and not have any spaces in between characters.";
+                    ".  Names can be composed of any character, except '=' and spaces.";
             throw new NameNotValidException(name, details);
         }
     }

@@ -7,47 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dc7f23d-2e2c-445b-b326-21c0ef198368" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/environment/Environment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/environment/IEnvironment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IRuntimeConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/RuntimeConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/jantic.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/CommandLineArgs.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/commandline/CommandLineArgs.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/DefaultProjectConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/EmailSettings.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/EmailSettingsFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettingsFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/ICommandLineArgs.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/commandline/ICommandLineArgs.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/IEmailSettings.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/ConfiguredPathNotValidException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/ConfiguredPathNotValidException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/jydra/core/config/exceptions/InvalidEmailAddressException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/InvalidEmailAddressException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/scripting/java/DynamicJavaCompilerTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/java/DynamicJavaCompilerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/IBaseScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/IBaseScript.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/ILexicon.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/ILexicon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/IProjectConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IProjectConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/IProperties.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/IProperties.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/IScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/IScript.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/IScriptInfoFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/IScriptInfoFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaFileScriptFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaFileScriptFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/scripting/java/JavaFileScriptFactoryTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/java/JavaFileScriptFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/logging/Log.java" afterPath="$PROJECT_DIR$/src/jhydra/core/logging/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/NameNotInLexiconException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/NameNotInLexiconException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/NameValueValidator.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/NameValueValidator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/Properties.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/Properties.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/valuemap/ValueMap.java" afterPath="$PROJECT_DIR$/src/jhydra/core/valuemap/ValueMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jantic.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jantic.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JHydra.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357884122648" ignored="false" />
+    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358047629207" ignored="false" />
     <file path="/DynamicJavaCompiler.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268510102" ignored="false" />
     <file path="/a.dummy" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268889882" ignored="false" />
     <file path="/.gitignore" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357270540085" ignored="false" />
@@ -57,8 +30,8 @@
     <file path="/Lexicon.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976820160" ignored="false" />
     <file path="/ScriptInfoFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975464044" ignored="false" />
     <file path="/RobustScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975401921" ignored="false" />
-    <file path="/ProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357968795247" ignored="false" />
-    <file path="/fragment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357974244576" ignored="false" />
+    <file path="/ProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358040387166" ignored="false" />
+    <file path="/fragment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358039721917" ignored="false" />
     <file path="/ConfiguredPathNotValidException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357876557741" ignored="false" />
     <file path="/EmailConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883052657" ignored="false" />
     <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/class-use/Report.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456753" ignored="false" />
@@ -374,15 +347,15 @@
     <file path="/IProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883221702" ignored="false" />
     <file path="/CommandLineArgs.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357879996617" ignored="false" />
     <file path="/EmailSettingsFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357880768547" ignored="false" />
-    <file path="/EmailSettings.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357972903087" ignored="false" />
+    <file path="/EmailSettings.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358043040549" ignored="false" />
     <file path="/InvalidEmailAddressException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357881937574" ignored="false" />
     <file path="/File Header.txt.ft" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883986214" ignored="false" />
     <file path="/DefaultProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357884004917" ignored="false" />
-    <file path="/ProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357974849251" ignored="false" />
+    <file path="/ProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358041520957" ignored="false" />
     <file path="/IProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357971838096" ignored="false" />
     <file path="/Environment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357971559370" ignored="false" />
     <file path="/RuntimeConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975046325" ignored="false" />
-    <file path="/EnvironmentFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357974621872" ignored="false" />
+    <file path="/EnvironmentFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358045444691" ignored="false" />
     <file path="/JavaBaseScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975328146" ignored="false" />
     <file path="/IBaseScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975375468" ignored="false" />
     <file path="/JavaFileScriptFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975426918" ignored="false" />
@@ -396,6 +369,8 @@
     <file path="/NameNotInLexiconException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976302882" ignored="false" />
     <file path="/IProperties.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976597392" ignored="false" />
     <file path="/Properties.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976626889" ignored="false" />
+    <file path="/ProgramConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358039689228" ignored="false" />
+    <file path="/ProjectConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358047599134" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -454,24 +429,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ValueMapTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java">
+      <file leaf-file-name="ProjectConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="260" column="23" selection-start="10342" selection-end="10564" vertical-scroll-proportion="0.0">
+            <state line="133" column="68" selection-start="4735" selection-end="4753" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NameValueValidator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/NameValueValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="85" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnvironmentFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="41" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectConfigTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="140" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.4198988">
               <folding>
+                <element signature="e#0#12114#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JavaBaseScript.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java">
+      <file leaf-file-name="NameValue.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="5" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="18" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -479,65 +480,41 @@
       <file leaf-file-name="LexiconTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="5" selection-start="6431" selection-end="6431" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5172#5224#0" expanded="true" />
-                <element signature="e#5589#5641#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RuntimeConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/RuntimeConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="136" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProgramConfig.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="131" selection-start="832" selection-end="832" vertical-scroll-proportion="0.45054945">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lexicon.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="68" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IProperties.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/IProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="597" selection-end="676" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="5" selection-start="3432" selection-end="3432" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IEmailSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="31" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProgramConfigTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="150" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -545,16 +522,7 @@
       <file leaf-file-name="Properties.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/Properties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="42" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LexiconFileTypeException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconFileTypeException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+            <state line="79" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -579,14 +547,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/jhydra/core/logging/Log.java" />
-        <option value="$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java" />
-        <option value="$PROJECT_DIR$/test/jhydra/core/scripting/java/DynamicJavaCompilerTest.java" />
-        <option value="$PROJECT_DIR$/test/jhydra/core/scripting/java/JavaFileScriptFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/lexicon/ILexicon.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/valuemap/ValueMap.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/NameNotInLexiconException.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/scripting/IScript.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconReadException.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/properties/IProperties.java" />
@@ -595,6 +555,14 @@
         <option value="$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/properties/NameValueValidator.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java" />
+        <option value="$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" />
+        <option value="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java" />
       </list>
     </option>
   </component>
@@ -658,7 +626,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -676,7 +658,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -690,8 +672,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -709,12 +691,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jhydra.core.config" />
       <recent name="jhydra.core.config.environment" />
       <recent name="jhydra.core.config.jydra.core.config.exceptions" />
     </key>
@@ -727,7 +710,7 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.jhydra.core in JHydra">
+  <component name="RunManager" selected="JUnit.ProjectConfigTest">
     <configuration default="false" name="LexiconTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -813,6 +796,68 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="ProgramConfigTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jhydra.core.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JHydra" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jhydra.core.config" />
+      <option name="MAIN_CLASS_NAME" value="jhydra.core.config.ProgramConfigTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProjectConfigTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jhydra.core.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JHydra" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jhydra.core.config" />
+      <option name="MAIN_CLASS_NAME" value="jhydra.core.config.ProjectConfigTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -825,6 +870,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -853,19 +911,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -904,16 +949,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.LexiconTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.jhydra.core in JHydra" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ProgramConfigTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ProjectConfigTest" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.jhydra.core in JHydra" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LexiconTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ProjectConfigTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.jhydra.core in JHydra" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProgramConfigTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LexiconTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -936,10 +985,14 @@
       <created>1357884135729</created>
       <updated>1357884135729</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Continued work on configuration code.">
+      <created>1357977298174</created>
+      <updated>1357977298175</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -960,13 +1013,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="97" width="1920" height="1080" extended-state="6" />
+    <frame x="-1920" y="97" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67083335" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -976,17 +1028,18 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15528281" sideWeight="0.21875" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21504803" sideWeight="0.71666664" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27291667" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28333333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16328709" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28333333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27291667" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1027,7 +1080,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on implementing configuration code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added junit tests for ProjectConfig and ProgramConfig; Reworked some of the configuration code along the way." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1043,6 +1096,8 @@
     <MESSAGE value="Switch to IntelliJ project." />
     <MESSAGE value="Fixed code issues found with analysis tool." />
     <MESSAGE value="Worked on implementing configuration code." />
+    <MESSAGE value="Continued work on configuration code." />
+    <MESSAGE value="Added junit tests for ProjectConfig and ProgramConfig; Reworked some of the configuration code along the way." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1052,75 +1107,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="948" selection-end="948" vertical-scroll-proportion="0.35714287">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/IBaseScript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/NameNotInLexiconException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="809" selection-end="1051" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconReadException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="6" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconFileTypeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/exceptions/DuplicatedKeyException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="11" selection-start="363" selection-end="363" vertical-scroll-proportion="0.3288364">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/IProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="5" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/Properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="42" selection-start="1027" selection-end="1027" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="68" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0">
@@ -1130,9 +1116,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/RuntimeConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="136" selection-start="513" selection-end="513" vertical-scroll-proportion="0.38636363">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="5" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.0">
+        <state line="66" column="5" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.29848486">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1141,36 +1136,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="23" selection-start="10342" selection-end="10564" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="5" selection-start="6431" selection-end="6431" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5172#5224#0" expanded="true" />
-            <element signature="e#5589#5641#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/RuntimeConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="136" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="608" selection-end="608" vertical-scroll-proportion="0.0">
+        <state line="248" column="98" selection-start="9950" selection-end="9950" vertical-scroll-proportion="3.6363637">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1179,8 +1145,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="131" selection-start="832" selection-end="832" vertical-scroll-proportion="0.45054945">
+        <state line="63" column="59" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.0">
           <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettingsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="30" selection-start="430" selection-end="443" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="597" selection-end="676" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/NameValueValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="85" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="68" selection-start="4735" selection-end="4753" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="5" selection-start="3432" selection-end="3432" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="31" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="41" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="150" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="140" selection-start="1543" selection-end="1543" vertical-scroll-proportion="0.4198988">
+          <folding>
+            <element signature="e#0#12114#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
