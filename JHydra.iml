@@ -33,6 +33,7 @@
     <orderEntry type="library" name="smtp" level="project" />
     <orderEntry type="library" name="dsn" level="project" />
     <orderEntry type="library" name="smtp (2)" level="project" />
+    <orderEntry type="library" name="commons-lang3-3.1" level="project" />
   </component>
 </module>
 

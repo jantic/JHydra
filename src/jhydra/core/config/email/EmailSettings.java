@@ -45,8 +45,13 @@ public class EmailSettings implements IEmailSettings {
     }
 
     private List<InternetAddress> parseFailureRecipients(IProperties properties) throws FatalException{
-        final String emailsString = properties.getProperty(getFailureRecipientsKey());
-        return convertToEmailAddressObjects(emailsString);
+        final String key = getFailureRecipientsKey();
+        if(properties.hasProperty(key)){
+            final String emailsString = properties.getProperty(key);
+            return convertToEmailAddressObjects(emailsString);
+        }
+
+        return new ArrayList<>();
     }
 
     private List<InternetAddress> convertToEmailAddressObjects(String emailsString) throws FatalException{
@@ -74,8 +79,13 @@ public class EmailSettings implements IEmailSettings {
     }
 
     private List<InternetAddress> parseSuccessRecipients(IProperties properties) throws FatalException{
-        final String emailsString = properties.getProperty(getSuccessRecipientsKey());
-        return convertToEmailAddressObjects(emailsString);
+        final String key = getSuccessRecipientsKey();
+        if(properties.hasProperty(key)){
+            final String emailsString = properties.getProperty(getSuccessRecipientsKey());
+            return convertToEmailAddressObjects(emailsString);
+        }
+
+        return new ArrayList<>();
     }
 
     private String getSuccessRecipientsKey(){
@@ -83,14 +93,20 @@ public class EmailSettings implements IEmailSettings {
     }
 
     private InternetAddress parseSender(IProperties properties) throws FatalException{
-        final String senderEmailString = properties.getProperty(getSenderKey());
+        final String key = getSenderKey();
+        String senderEmailString = "";
 
         try{
-            return new InternetAddress(senderEmailString);
+            if(properties.hasProperty(key)){
+                senderEmailString = properties.getProperty(getSenderKey());
+                return new InternetAddress(senderEmailString);
+            }
         }
         catch(AddressException e){
             throw new InvalidEmailAddressException(senderEmailString, e.getMessage());
         }
+
+        return new InternetAddress();
     }
 
     private String getSenderKey(){
