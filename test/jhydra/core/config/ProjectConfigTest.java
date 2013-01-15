@@ -308,16 +308,16 @@ public class ProjectConfigTest {
 
     private IProjectConfig getEmptyProjectConfig() throws FatalException, URISyntaxException {
         final IProgramConfig programConfig = getNormalProgramConfig();
-        final File programDirectory = new File(programConfig.getProjectsDirectory().getPath() + "/project 2/");
-        final URI projectConfigURI = programDirectory.toURI();
+        final File projectConfigPath = new File(programConfig.getProjectsDirectory().getPath() + "/project 2/jhydra.project");
+        final URI projectConfigURI = projectConfigPath.toURI();
         return new ProjectConfig(programConfig, projectConfigURI);
     }
 
 
     private IProjectConfig getNormalProjectConfig() throws FatalException, URISyntaxException {
         final IProgramConfig programConfig = getNormalProgramConfig();
-        final File programDirectory = new File(programConfig.getProjectsDirectory().getPath() + "/project 1/");
-        final URI projectConfigURI = programDirectory.toURI();
+        final File projectConfigPath = new File(programConfig.getProjectsDirectory().getPath() + "/project 1/jhydra.project");
+        final URI projectConfigURI = projectConfigPath.toURI();
         return new ProjectConfig(programConfig, projectConfigURI);
     }
 

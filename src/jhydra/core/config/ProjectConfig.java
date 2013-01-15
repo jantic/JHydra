@@ -41,10 +41,10 @@ public class ProjectConfig implements IProjectConfig{
     private final String SCRIPT_WAIT_SECONDS_BETWEEN_ATTEMPTS_KEY = "Script.WaitSecondsBetweenAttempts";
     private final Integer SCRIPT_WAIT_SECONDS_BETWEEN_ATTEMPTS_DEFAULT = 60;
 
-    public ProjectConfig(IProgramConfig programConfig, URI projectDirectory) throws FatalException{
+    public ProjectConfig(IProgramConfig programConfig, URI projectConfigPath) throws FatalException{
         this.programConfig = programConfig;
-        this.projectDirectory = projectDirectory;
-        this.projectConfigPath = convertToFileURI(projectDirectory, "/jhydra.project");
+        this.projectConfigPath = projectConfigPath;
+        this.projectDirectory = deriveParentDirectory(projectConfigPath);
         this.projectScriptDirectory =   convertToFileURI(projectDirectory, "/scripts/");
         this.projectLexiconPath = convertToFileURI(projectDirectory, "/lexicon.properties");
         this.projectScreenShotsDirectory = convertToFileURI(projectDirectory, "/screenshots/");
@@ -124,6 +124,10 @@ public class ProjectConfig implements IProjectConfig{
     @Override
     public IEmailSettings getEmailSettings() {
         return this.emailSettings;
+    }
+
+    private URI deriveParentDirectory(URI filePath){
+        return new File(filePath).getParentFile().toURI();
     }
 
     private IProperties getConfigFile() throws FatalException {

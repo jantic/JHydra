@@ -16,7 +16,7 @@ import static org.mockito.Mockito.when;
  * Date: 1/13/13
  */
 public class RuntimeConfigTest {
-    /***Tests on normally configured project****************************************/
+    /***Tests on normally configured project with no command line args****************************************/
     @Test
     public void normalProjectFile_getProgramName_CorrectValue() throws FatalException, URISyntaxException {
         final IRuntimeConfig runtimeConfig = getNormalRuntimeConfig();
@@ -178,6 +178,7 @@ public class RuntimeConfigTest {
         final String actual = runtimeConfig.getScriptDirectories().get(1).toString();
         Assert.assertEquals(expected, actual);
     }
+
 
     /*TODO:  Test for empty project files- Should we even allow for this?  An empty project file doesn't have
     *environments specified, which means that a sensible runtime config cannot be made (hence, a run can't
