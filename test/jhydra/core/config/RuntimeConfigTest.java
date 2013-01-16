@@ -194,9 +194,9 @@ public class RuntimeConfigTest {
 
     private IProjectConfig getNormalProjectConfig() throws FatalException, URISyntaxException {
         final IProgramConfig programConfig = getNormalProgramConfig();
-        final File programDirectory = new File(programConfig.getProjectsDirectory().getPath() + "/project 1/");
-        final URI projectConfigURI = programDirectory.toURI();
-        return new ProjectConfig(programConfig, projectConfigURI);
+        final File projectConfigFile = new File(programConfig.getProjectsDirectory().getPath() + "/project 1/jhydra.project");
+        final URI projectConfigPathURI = projectConfigFile.toURI();
+        return new ProjectConfig(programConfig, projectConfigPathURI);
     }
 
     private IProgramConfig getNormalProgramConfig(){

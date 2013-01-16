@@ -7,19 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dc7f23d-2e2c-445b-b326-21c0ef198368" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/InvalidProjectNameException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfigFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigFactoryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test projects/deeper projects/even deeper/project 3/jhydra.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test projects/deeper projects/even deeper/project 3/should not be picked up/jhydra.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/jhydra/core/config/environment/EnvironmentFactoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test data/basic_project.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test data/invalidAppURI_project.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test data/missingAppURI_project.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test data/missingName_project.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettingsFactory.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JHydra.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358230868948" ignored="false" />
+    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358230904203" ignored="false" />
     <file path="/DynamicJavaCompiler.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268510102" ignored="false" />
     <file path="/a.dummy" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268889882" ignored="false" />
     <file path="/.gitignore" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357270540085" ignored="false" />
@@ -28,9 +31,9 @@
     <file path="/TestResultCategory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357273847513" ignored="false" />
     <file path="/Lexicon.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976820160" ignored="false" />
     <file path="/ScriptInfoFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975464044" ignored="false" />
-    <file path="/RobustScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975401921" ignored="false" />
+    <file path="/RobustScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358313193084" ignored="false" />
     <file path="/ProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358040387166" ignored="false" />
-    <file path="/fragment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358230442331" ignored="false" />
+    <file path="/fragment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358313794530" ignored="false" />
     <file path="/ConfiguredPathNotValidException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357876557741" ignored="false" />
     <file path="/EmailConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883052657" ignored="false" />
     <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/class-use/Report.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456753" ignored="false" />
@@ -345,16 +348,16 @@
     <file path="/ICommandLineArgs.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357879883069" ignored="false" />
     <file path="/IProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883221702" ignored="false" />
     <file path="/CommandLineArgs.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357879996617" ignored="false" />
-    <file path="/EmailSettingsFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357880768547" ignored="false" />
-    <file path="/EmailSettings.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358138474344" ignored="false" />
+    <file path="/EmailSettingsFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358314397038" ignored="false" />
+    <file path="/EmailSettings.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358314460229" ignored="false" />
     <file path="/InvalidEmailAddressException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357881937574" ignored="false" />
     <file path="/File Header.txt.ft" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883986214" ignored="false" />
     <file path="/DefaultProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357884004917" ignored="false" />
-    <file path="/ProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358225945921" ignored="false" />
+    <file path="/ProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358314447283" ignored="false" />
     <file path="/IProjectConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357971838096" ignored="false" />
     <file path="/Environment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357971559370" ignored="false" />
     <file path="/RuntimeConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975046325" ignored="false" />
-    <file path="/EnvironmentFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358045444691" ignored="false" />
+    <file path="/EnvironmentFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358315773174" ignored="false" />
     <file path="/JavaBaseScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975328146" ignored="false" />
     <file path="/IBaseScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975375468" ignored="false" />
     <file path="/JavaFileScriptFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975426918" ignored="false" />
@@ -371,10 +374,12 @@
     <file path="/ProgramConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358039689228" ignored="false" />
     <file path="/ProjectConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358225818176" ignored="false" />
     <file path="/ConfigFieldInfo.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358136727685" ignored="false" />
-    <file path="/RuntimeConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358223875541" ignored="false" />
-    <file path="/ProjectConfigFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358230889055" ignored="false" />
+    <file path="/RuntimeConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358314778695" ignored="false" />
+    <file path="/ProjectConfigFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358314485878" ignored="false" />
     <file path="/ProjectConfigFactoryTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358230707323" ignored="false" />
     <file path="/InvalidProjectNameException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358230487272" ignored="false" />
+    <file path="/EnvironmentFactoryTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358317150669" ignored="false" />
+    <file path="/invalidAppURI_project.properties" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358317086804" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -433,75 +438,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProjectConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java">
+      <file leaf-file-name="EnvironmentFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="76" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectConfigTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="331" column="13" selection-start="16247" selection-end="16247" vertical-scroll-proportion="-23.884615">
-              <folding>
-                <element signature="e#0#16531#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RuntimeConfigTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="0" selection-start="8659" selection-end="8659" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectConfigFactory.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfigFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="81" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.21103896">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProjectConfigFactoryTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigFactoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="94" selection-start="2814" selection-end="2814" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="603" column="0" selection-start="22213" selection-end="22213" vertical-scroll-proportion="0.0">
+            <state line="27" column="154" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgramConfigTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java">
+      <file leaf-file-name="EnvironmentFactoryTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/environment/EnvironmentFactoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="41" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
+            <state line="8" column="45" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailSettings.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="97" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.5">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -509,21 +467,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgramConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java">
+      <file leaf-file-name="invalidAppURI_project.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test data/invalidAppURI_project.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="32" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="16" column="40" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IRuntimeConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IRuntimeConfig.java">
+      <file leaf-file-name="missingName_project.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test data/missingName_project.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="17" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
+            <state line="13" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="missingAppURI_project.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test data/missingAppURI_project.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="43" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -548,22 +513,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/properties/NameValueValidator.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java" />
-        <option value="$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/config/field/ConfigField.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/config/field/StringConfigField.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/config/field/ConfigFieldInfo.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" />
-        <option value="$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigFactory.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/config/exceptions/InvalidProjectNameException.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigFactoryTest.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" />
+        <option value="$PROJECT_DIR$/test/test data/basic_project.properties" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettingsFactory.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfigFactory.java" />
+        <option value="$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java" />
+        <option value="$PROJECT_DIR$/test/test data/missingAppURI_project.properties" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" />
+        <option value="$PROJECT_DIR$/test/test data/missingName_project.properties" />
+        <option value="$PROJECT_DIR$/test/test data/invalidAppURI_project.properties" />
+        <option value="$PROJECT_DIR$/test/jhydra/core/config/environment/EnvironmentFactoryTest.java" />
       </list>
     </option>
   </component>
@@ -666,6 +631,28 @@
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valuemap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -704,6 +691,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -765,6 +774,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="email" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -796,10 +831,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jhydra.core.config.environment" />
       <recent name="jhydra.core.config.exceptions" />
       <recent name="jhydra.core.config" />
-      <recent name="jhydra.core.config.environment" />
       <recent name="jhydra.core.config.jydra.core.config.exceptions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/test data" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="jhydra.core.config" />
@@ -813,63 +851,7 @@
       <recent name="$PROJECT_DIR$/lib/mail" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProjectConfigFactoryTest">
-    <configuration default="false" name="jhydra.core in JHydra" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jhydra.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JHydra" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jhydra.core" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ProgramConfigTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jhydra.core.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JHydra" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jhydra.core.config" />
-      <option name="MAIN_CLASS_NAME" value="jhydra.core.config.ProgramConfigTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in JHydra">
     <configuration default="false" name="ProjectConfigTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -966,6 +948,57 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="EnvironmentFactoryTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jhydra.core.config.environment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JHydra" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jhydra.core.config.environment" />
+      <option name="MAIN_CLASS_NAME" value="jhydra.core.config.environment.EnvironmentFactoryTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in JHydra" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="JHydra" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -1058,19 +1091,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.jhydra.core in JHydra" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ProgramConfigTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ProjectConfigTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RuntimeConfigTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ProjectConfigFactoryTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ProjectConfigTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.RuntimeConfigTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ProjectConfigFactoryTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EnvironmentFactoryTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ProjectConfigFactoryTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RuntimeConfigTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ProjectConfigTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.jhydra.core in JHydra" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ProgramConfigTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EnvironmentFactoryTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProjectConfigFactoryTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RuntimeConfigTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ProjectConfigTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1105,7 +1138,11 @@
       <created>1358139910144</created>
       <updated>1358139910144</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added ProjectConfigFactory functionality and associated junit tests.">
+      <created>1358230907826</created>
+      <updated>1358230907826</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1129,7 +1166,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="97" width="1920" height="1080" extended-state="0" />
+    <frame x="-1920" y="97" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1143,14 +1180,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15528281" sideWeight="0.21875" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16328709" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28333333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20384204" sideWeight="0.71666664" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28333333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1225,97 +1262,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="41" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IProjectConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/Properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IRuntimeConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="17" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="32" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/RuntimeConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="11" selection-start="419" selection-end="419" vertical-scroll-proportion="0.33279222">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="0" selection-start="8659" selection-end="8659" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="76" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="41" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="603" column="0" selection-start="22213" selection-end="22213" vertical-scroll-proportion="0.0">
@@ -1349,9 +1295,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfigFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="81" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.21103896">
+        <state line="44" column="49" selection-start="1569" selection-end="1583" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="0" selection-start="2391" selection-end="2391" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="197" column="67" selection-start="9641" selection-end="9641" vertical-scroll-proportion="0.45454547">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/properties/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test data/basic_project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="23" selection-start="722" selection-end="754" vertical-scroll-proportion="0.5681818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test data/missingAppURI_project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="43" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test data/missingName_project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="154" selection-start="816" selection-end="816" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test data/invalidAppURI_project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="40" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/environment/EnvironmentFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="45" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="97" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.5">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

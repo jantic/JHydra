@@ -1,6 +1,6 @@
 package jhydra.core.config;
 
-import jhydra.core.config.email.EmailSettingsFactory;
+import jhydra.core.config.email.EmailSettings;
 import jhydra.core.config.email.IEmailSettings;
 import jhydra.core.config.environment.EnvironmentFactory;
 import jhydra.core.config.environment.IEnvironment;
@@ -55,8 +55,8 @@ public class ProjectConfig implements IProjectConfig{
         this.scriptTimeoutSeconds = determineScriptTimeoutSeconds(properties);
         this.scriptMaxNumberOfTries = determineScriptMaxNumberOfTries(properties);
         this.scriptWaitSecondsBetweenAttempts = determineWaitTimeSecondsBetweenAttempts(properties);
-        this.environments = loadEnvironments();
-        this.emailSettings = loadEmailSettings();
+        this.environments = loadEnvironments(properties);
+        this.emailSettings = loadEmailSettings(properties);
     }
 
 
@@ -140,14 +140,13 @@ public class ProjectConfig implements IProjectConfig{
         return file.toURI();
     }
 
-    private IEmailSettings loadEmailSettings() throws FatalException{
-        final EmailSettingsFactory emailSettingsFactory = new EmailSettingsFactory();
-        return emailSettingsFactory.load(this.projectConfigPath);
+    private IEmailSettings loadEmailSettings(IProperties properties) throws FatalException{
+        return new EmailSettings(properties);
     }
 
-    private List<IEnvironment> loadEnvironments() throws FatalException {
+    private List<IEnvironment> loadEnvironments(IProperties properties) throws FatalException {
         final EnvironmentFactory environmentFactory = new EnvironmentFactory();
-        return environmentFactory.load(this.projectConfigPath);
+        return environmentFactory.load(properties);
     }
 
     private String determineProjectName(IProperties properties) throws FatalException{

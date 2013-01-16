@@ -16,8 +16,7 @@ import java.util.List;
  */
 public class EnvironmentFactory {
 
-    public List<IEnvironment> load(URI propertiesPath) throws FatalException{
-        final IProperties properties = new Properties(propertiesPath);
+    public List<IEnvironment> load(IProperties properties) throws FatalException{
         final String namePrefix = "Environment.Name.";
         final String descriptionPrefix = "Environment.Description.";
         final String uriPrefix = "Environment.AppURI.";
@@ -40,14 +39,18 @@ public class EnvironmentFactory {
                 final IEnvironment environment = generateEnvironment(name, description, appURIString);
                 environments.add(environment);
             }
-            else{
+            else if(!(properties.hasProperty(nameSelector) || properties.hasProperty(uriSelector))){
+                //No matching config keys found.  We're done.
                 found = false;
+            }
+            else{
+                //If parts are found, but not correctly configured, then we'll keep found at true and try the next,
+                // ignoring this one.  Just log a warning here.
+                //TODO:  Log a warning here.
             }
 
             index++;
         }
-
-        //TODO:  Detect duplicate environment names?
 
         return environments;
     }

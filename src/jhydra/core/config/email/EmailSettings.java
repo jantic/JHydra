@@ -21,9 +21,7 @@ public class EmailSettings implements IEmailSettings {
     private final List<InternetAddress> successRecipients;
     private final InternetAddress sender;
 
-
-    //Package access, instantiated via factory
-    EmailSettings(IProperties properties) throws FatalException{
+    public EmailSettings(IProperties properties) throws FatalException{
         this.failureRecipients = parseFailureRecipients(properties);
         this.successRecipients = parseSuccessRecipients(properties);
         this.sender = parseSender(properties);
