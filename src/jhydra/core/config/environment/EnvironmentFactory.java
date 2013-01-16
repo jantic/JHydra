@@ -3,7 +3,6 @@ package jhydra.core.config.environment;
 import jhydra.core.config.exceptions.ConfiguredPathNotValidException;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.properties.IProperties;
-import jhydra.core.properties.Properties;
 
 import java.net.URI;
 import java.net.URISyntaxException;

@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 //TODO:  Use a non smtp based email sending program, to minimize complication.
-//TODO:  This should probably be something that's set up in a wizard (esp with the smtp host business). Until then, just don't send emails
+//TODO:  This should probably be something that's set up in a wizard.  Until then, just don't send emails
 public class EmailSettings implements IEmailSettings {
     private final List<InternetAddress> failureRecipients;
     private final List<InternetAddress> successRecipients;
@@ -52,7 +52,7 @@ public class EmailSettings implements IEmailSettings {
         return new ArrayList<>();
     }
 
-    private List<InternetAddress> convertToEmailAddressObjects(String emailsString) throws FatalException{
+    private List<InternetAddress> convertToEmailAddressObjects(String emailsString){
         final String[] emailAddressStrings = emailsString.split(",");
         final List<InternetAddress> emailAddressList = new ArrayList<>();
 
@@ -65,7 +65,8 @@ public class EmailSettings implements IEmailSettings {
                 }
             }
             catch(AddressException e){
-                throw new InvalidEmailAddressException(emailAddressString, e.getMessage());
+                //Just skip over it, log a warning.
+                //TODO:  Log a warning here.
             }
         }
 
@@ -101,6 +102,7 @@ public class EmailSettings implements IEmailSettings {
             }
         }
         catch(AddressException e){
+            //We can't send an email without a sender.
             throw new InvalidEmailAddressException(senderEmailString, e.getMessage());
         }
 
