@@ -250,13 +250,13 @@ public class ProjectConfigTest {
     @Test
     public void emptyProjectFile_getScriptWaitSecondsBetweenAttempts_CorrectValue() throws FatalException, URISyntaxException {
         final IProjectConfig projectConfig = getEmptyProjectConfig();
-        final Integer expected = 60;
+        final Integer expected = 5;
         final Integer actual = projectConfig.getScriptWaitSecondsBetweenAttempts();
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void emptyProjectFile_getScriptTimeoutSeconds_CorrectValue() throws FatalException, URISyntaxException {
+         public void emptyProjectFile_getScriptTimeoutSeconds_CorrectValue() throws FatalException, URISyntaxException {
         final IProjectConfig projectConfig = getEmptyProjectConfig();
         final Integer expected = 30;
         final Integer actual = projectConfig.getScriptTimeoutSeconds();
@@ -268,6 +268,22 @@ public class ProjectConfigTest {
         final IProjectConfig projectConfig = getEmptyProjectConfig();
         final Integer expected = 3;
         final Integer actual = projectConfig.getScriptMaxNumTries();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void emptyProjectFile_getTestCaseWaitSecondsBetweenAttempts_CorrectValue() throws FatalException, URISyntaxException {
+        final IProjectConfig projectConfig = getEmptyProjectConfig();
+        final Integer expected = 60;
+        final Integer actual = projectConfig.getTestCaseWaitSecondsBetweenAttempts();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void emptyProjectFile_getTestCaseMaxNumTries_CorrectValue() throws FatalException, URISyntaxException {
+        final IProjectConfig projectConfig = getEmptyProjectConfig();
+        final Integer expected = 3;
+        final Integer actual = projectConfig.getTestCaseMaxNumTries();
         Assert.assertEquals(expected, actual);
     }
 

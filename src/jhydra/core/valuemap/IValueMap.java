@@ -4,8 +4,11 @@
  */
 package jhydra.core.valuemap;
 
-import jhydra.core.properties.exceptions.NameNotValidException;
 import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
+import jhydra.core.properties.INameValue;
+import jhydra.core.properties.exceptions.NameNotValidException;
+
+import java.util.List;
 
 /**
  *
@@ -18,5 +21,7 @@ public interface IValueMap {
     boolean hasValue(String name);
 
     void setValue(String name, String value) throws NameNotInLexiconException, NameNotValidException;
-    
+
+    void updateValues(List<INameValue> pairs) throws NameNotInLexiconException, NameNotValidException;
+
 }

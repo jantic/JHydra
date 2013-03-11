@@ -18,6 +18,8 @@ public interface IRuntimeConfig {
     Integer getScriptTimeoutSeconds();
     Integer getScriptMaxNumTries();
     Integer getScriptWaitSecondsBetweenAttempts();
+    Integer getTestCaseMaxNumTries();
+    Integer getTestCaseWaitSecondsBetweenAttempts();
     URI getScreenshotsDirectory();
     URI getLogsDirectory();
     IEnvironment getEnvironment();

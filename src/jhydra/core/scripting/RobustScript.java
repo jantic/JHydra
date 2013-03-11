@@ -7,7 +7,6 @@ package jhydra.core.scripting;
 import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
-import jhydra.core.lexicon.ILexicon;
 import jhydra.core.logging.ILog;
 import jhydra.core.scripting.exceptions.ScriptExecutionException;
 
@@ -44,7 +43,7 @@ public class RobustScript implements IScript{
 
             if (numberOfTries <= maxNumberOfTries) {
                 final String message = "Attempt on script failed.  Attempt number " + numberOfTries.toString() + " coming up.";
-                log.error(message);
+                log.warn(message);
             }
         }
 

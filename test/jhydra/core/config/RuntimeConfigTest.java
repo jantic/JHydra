@@ -162,6 +162,23 @@ public class RuntimeConfigTest {
         Assert.assertEquals(expected, actual);
     }
 
+
+    @Test
+    public void normalProjectFile_getTestCaseMaxNumTries_CorrectValue() throws FatalException, URISyntaxException {
+        final IRuntimeConfig runtimeConfig = getNormalRuntimeConfig();
+        final Integer expected = 8;
+        final Integer actual = runtimeConfig.getTestCaseMaxNumTries();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void normalProjectFile_getTestCaseWaitSecondsBetweenAttempts_CorrectValue() throws FatalException, URISyntaxException {
+        final IRuntimeConfig runtimeConfig = getNormalRuntimeConfig();
+        final Integer expected = 64;
+        final Integer actual = runtimeConfig.getTestCaseWaitSecondsBetweenAttempts();
+        Assert.assertEquals(expected, actual);
+    }
+
     @Test
     public void normalProjectFile_getScriptDirectories_FirstDirectory_CorrectValue() throws FatalException, URISyntaxException {
         final IRuntimeConfig runtimeConfig = getNormalRuntimeConfig();

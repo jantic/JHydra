@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.testdriver;
+package jhydra.core.testcase;
 
 /**
  *
@@ -10,8 +10,9 @@ package jhydra.core.testdriver;
  */
 public class TestResultCategory {
     public static final TestResultCategory PASS = new TestResultCategory("pass");
-    public static final TestResultCategory ABNORMAL_EXIT = new TestResultCategory("abnormal exit");
-    public static final TestResultCategory VALUE_FAILURE = new TestResultCategory("value fallure");
+    public static final TestResultCategory NON_FATAL_EXIT = new TestResultCategory("non-fatal exit");
+    public static final TestResultCategory FATAL_EXIT = new TestResultCategory("fatal exit");
+    public static final TestResultCategory VALUE_FAILURE = new TestResultCategory("value failure");
     
     private final String name;
     

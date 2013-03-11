@@ -22,6 +22,8 @@ public interface IProjectConfig {
     Integer getScriptTimeoutSeconds();
     Integer getScriptMaxNumTries();
     Integer getScriptWaitSecondsBetweenAttempts();
+    Integer getTestCaseMaxNumTries();
+    Integer getTestCaseWaitSecondsBetweenAttempts();
     URI getScreenshotsDirectory();
     URI getLogsDirectory();
     List<IEnvironment> getEnvironments();

@@ -34,6 +34,7 @@
     <orderEntry type="library" name="dsn" level="project" />
     <orderEntry type="library" name="smtp (2)" level="project" />
     <orderEntry type="library" name="commons-lang3-3.1" level="project" />
+    <orderEntry type="library" name="joda-time-2.1" level="project" />
   </component>
 </module>
 

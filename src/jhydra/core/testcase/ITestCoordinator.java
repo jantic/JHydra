@@ -2,10 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.testdriver;
+package jhydra.core.testcase;
+
+import jhydra.core.config.IProgramConfig;
 
 import java.util.List;
-import jhydra.core.config.IProgramConfig;
 
 /**
  *

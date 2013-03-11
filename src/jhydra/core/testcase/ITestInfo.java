@@ -2,13 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.testdriver;
+package jhydra.core.testcase;
 
 /**
  *
  * @author jantic
  */
-public interface ITestEnvironment {
+public interface ITestInfo {
     String getName();
-    String getURL();
+    String getDescription();
+    Integer getTestNumber();
 }

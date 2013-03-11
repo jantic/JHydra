@@ -57,6 +57,16 @@ public class RuntimeConfig implements IRuntimeConfig {
     }
 
     @Override
+    public Integer getTestCaseMaxNumTries() {
+        return projectConfig.getTestCaseMaxNumTries();
+    }
+
+    @Override
+    public Integer getTestCaseWaitSecondsBetweenAttempts() {
+        return projectConfig.getTestCaseWaitSecondsBetweenAttempts();
+    }
+
+    @Override
     public URI getScreenshotsDirectory() {
         return projectConfig.getScreenshotsDirectory();
     }

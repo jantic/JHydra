@@ -2,9 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jhydra.core.testdriver;
+package jhydra.core.testcase;
 
-import java.util.Date;
+import org.joda.time.DateTime;
+
 import java.util.List;
 
 /**
@@ -12,9 +13,9 @@ import java.util.List;
  * @author jantic
  */
 public interface ITestCaseResult {
-    List<ITestUnitResult> getAllTestUnitResults();
+    List<TestValueResult> getAllTestValueResults();
     TestResultCategory getResultCategory();
-    Date runStartTime();
-    Date runCompletedTime();
-    
+    DateTime getRunStartTime();
+    DateTime getRunCompletedTime();
+    List<String> getErrorMessages();
 }
