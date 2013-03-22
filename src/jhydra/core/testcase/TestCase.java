@@ -1,6 +1,5 @@
 package jhydra.core.testcase;
 
-import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.lexicon.ILexicon;
 import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
@@ -33,6 +32,7 @@ public class TestCase implements ITestCase{
     private final ITestDataAnalyzer testDataAnalyzer;
     private final ILog log;
 
+
     public TestCase(ITestInfo testInfo, IScriptFactory scriptFactory,
                     String entryScriptName, ILexicon lexicon, IMasterNavigator masterNavigator,
                     ITestDataAnalyzer testDataAnalyzer, ILog log){
@@ -45,6 +45,10 @@ public class TestCase implements ITestCase{
         this.log = log;
     }
 
+
+    //Summary:  We want the test cases to be completely contained and "sand boxed" so that error conditions from the
+    //scripts contained within can't escape these confines.  Hence the error handling logic below, and the use of
+    //the ITestCaseResult type.
     @Override
     public ITestCaseResult execute(){
         final DateTime runStartTime = DateTime.now();
@@ -63,7 +67,7 @@ public class TestCase implements ITestCase{
             final DateTime runCompleted = DateTime.now();
             return new NonFatalExitTestCaseResult(runStartTime, runCompleted, generateErrorList(e.getMessage()));
         }
-        catch(FatalException e){
+        catch(Throwable e){
             log.error("Test case " + this.getName() + ", number " + this.getTestNumber().toString() + " ran into a" +
                     " fatal error, and therefore will be aborted: " + e.getMessage());
             final DateTime runCompleted = DateTime.now();
