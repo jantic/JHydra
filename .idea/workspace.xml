@@ -6,14 +6,14 @@
     <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7dc7f23d-2e2c-445b-b326-21c0ef198368" name="Default" comment="Added more tests concentrating on test case error handling and reporting;  Refined test case error handling in the process to handle all derivations of Throwable in order to &quot;sand box&quot; all script issues.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java" />
+    <list default="true" id="7dc7f23d-2e2c-445b-b326-21c0ef198368" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/RobustTestCaseTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JHydra.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1363931373227" ignored="false" />
+    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1363931408541" ignored="false" />
     <file path="/DynamicJavaCompiler.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268510102" ignored="false" />
     <file path="/a.dummy" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268889882" ignored="false" />
     <file path="/.gitignore" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357270540085" ignored="false" />
@@ -24,7 +24,7 @@
     <file path="/ScriptInfoFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975464044" ignored="false" />
     <file path="/RobustScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362868693861" ignored="false" />
     <file path="/ProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358040387166" ignored="false" />
-    <file path="/fragment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1363559319034" ignored="false" />
+    <file path="/fragment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1364359446875" ignored="false" />
     <file path="/ConfiguredPathNotValidException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357876557741" ignored="false" />
     <file path="/EmailConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357883052657" ignored="false" />
     <file path="$PROJECT_DIR$/lib/javamail-1.4.5/docs/javadocs/com/sun/mail/dsn/class-use/Report.html" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357878456753" ignored="false" />
@@ -380,7 +380,7 @@
     <file path="/TestValueResult.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362976222177" ignored="false" />
     <file path="/ITestCaseResult.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362977914951" ignored="false" />
     <file path="/TestCaseResult.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362887404579" ignored="false" />
-    <file path="/RobustTestCase.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362939751049" ignored="false" />
+    <file path="/RobustTestCase.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1364360790198" ignored="false" />
     <file path="/InvalidTestCaseNunTriesException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362869307950" ignored="false" />
     <file path="/IRuntimeConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362869418443" ignored="false" />
     <file path="/AbnormalExitTestCaseResult.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362887848797" ignored="false" />
@@ -392,6 +392,7 @@
     <file path="/FatalExitTestCaseResultTests.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362979939948" ignored="false" />
     <file path="/jhydra.project" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362980520283" ignored="false" />
     <file path="/TestCaseTests.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1363931395963" ignored="false" />
+    <file path="/RobustTestCaseTests.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1364363346616" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -450,30 +451,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="NormalTestCaseResult.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/NormalTestCaseResult.java">
+      <file leaf-file-name="TestCase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="65" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+            <state line="52" column="119" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java">
+      <file leaf-file-name="RobustTestCase.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="31" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state line="21" column="55" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCaseTests.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RobustTestCaseTests.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/jhydra/core/testcase/RobustTestCaseTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="435" column="144" selection-start="23650" selection-end="23650" vertical-scroll-proportion="9.343465">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCaseTests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="764" column="44" selection-start="41184" selection-end="41184" vertical-scroll-proportion="0.6486486">
+            <state line="750" column="96" selection-start="40383" selection-end="40383" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#29117#29301#0" expanded="true" />
                 <element signature="e#29299#29300#0" expanded="true" />
@@ -486,33 +494,6 @@
                 <element signature="e#39902#40069#0" expanded="true" />
                 <element signature="e#40067#40068#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScriptInputLoadingException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptInputLoadingException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="69" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestResultCategory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/TestResultCategory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IScriptFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/IScriptFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="12" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -536,8 +517,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCase.java" />
-        <option value="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/testcase/TestValueResult.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCaseResult.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/testcase/NormalTestCaseResult.java" />
@@ -552,6 +531,8 @@
         <option value="$PROJECT_DIR$/src/jhydra/core/testcase/TestValueResultType.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" />
+        <option value="$PROJECT_DIR$/test/jhydra/core/testcase/RobustTestCaseTests.java" />
       </list>
     </option>
   </component>
@@ -956,7 +937,7 @@
       <recent name="$PROJECT_DIR$/lib/mail" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestCaseTests">
+  <component name="RunManager" selected="JUnit.RobustTestCaseTests">
     <configuration default="false" name="All in JHydra" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="JHydra" />
@@ -966,34 +947,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="EmailSettingsTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jhydra.core.config.email.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JHydra" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jhydra.core.config.email" />
-      <option name="MAIN_CLASS_NAME" value="jhydra.core.config.email.EmailSettingsTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1092,6 +1045,40 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="RobustTestCaseTests" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jhydra.core.testcase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JHydra" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jhydra.core.testcase" />
+      <option name="MAIN_CLASS_NAME" value="jhydra.core.testcase.RobustTestCaseTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -1185,18 +1172,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EmailSettingsTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.NormalTestCaseResultTests" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.NonFatalExitTestCaseResultTests" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestCaseTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.NormalTestCaseResultTests" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.NonFatalExitTestCaseResultTests" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestCaseTests" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RobustTestCaseTests" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestCaseTests" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RobustTestCaseTests" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NonFatalExitTestCaseResultTests" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.NormalTestCaseResultTests" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.EmailSettingsTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestCaseTests" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.NonFatalExitTestCaseResultTests" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.NormalTestCaseResultTests" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1247,7 +1234,11 @@
       <created>1362980949537</created>
       <updated>1362980949537</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added more tests concentrating on test case error handling and reporting;  Refined test case error handling in the process to handle all derivations of Throwable in order to &quot;sand box&quot; all script issues.">
+      <created>1363931413778</created>
+      <updated>1363931413778</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1279,20 +1270,20 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67083335" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31210855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3914405" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2348643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15528281" sideWeight="0.21875" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1905016" sideWeight="0.6085595" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28392485" sideWeight="0.9862562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1905016" sideWeight="0.7160752" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28392485" sideWeight="0.9862562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1371,25 +1362,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test projects/project 1/jhydra.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="40" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="141" selection-start="10123" selection-end="10123" vertical-scroll-proportion="1.6621212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="72" selection-start="13412" selection-end="13412" vertical-scroll-proportion="0.7530303">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/jhydra/core/testcase/NormalTestCaseResultTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="111" column="82" selection-start="4955" selection-end="4955" vertical-scroll-proportion="0.0">
@@ -1460,15 +1432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="31" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptInputLoadingException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="69" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
@@ -1476,9 +1439,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="119" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/test lib/junit-4.7.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="0" selection-start="4894" selection-end="4894" vertical-scroll-proportion="0.34597155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="764" column="44" selection-start="41184" selection-end="41184" vertical-scroll-proportion="0.6486486">
+        <state line="750" column="96" selection-start="40383" selection-end="40383" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#29117#29301#0" expanded="true" />
             <element signature="e#29299#29300#0" expanded="true" />
@@ -1491,6 +1468,20 @@
             <element signature="e#39902#40069#0" expanded="true" />
             <element signature="e#40067#40068#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="55" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/testcase/RobustTestCaseTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="435" column="144" selection-start="23650" selection-end="23650" vertical-scroll-proportion="9.343465">
+          <folding />
         </state>
       </provider>
     </entry>

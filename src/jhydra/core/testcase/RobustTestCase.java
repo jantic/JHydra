@@ -25,6 +25,7 @@ public class RobustTestCase implements ITestCase{
     @Override
     public ITestCaseResult execute(){
         final Integer maxNumberOfTries = config.getTestCaseMaxNumTries();
+        final Integer waitSecondsBetweenAttempts = config.getTestCaseWaitSecondsBetweenAttempts();
         Integer numberOfTries = 1;
 
         while (numberOfTries <= maxNumberOfTries) {
@@ -33,8 +34,10 @@ public class RobustTestCase implements ITestCase{
             numberOfTries++;
 
             if (numberOfTries <= maxNumberOfTries) {
-                final String message = "Attempt on test case failed.  Attempt number " + numberOfTries.toString() + " coming up.";
+                final String message = "Attempt on test case failed.  Attempt number " + numberOfTries.toString() +
+                        " coming up, after a " + waitSecondsBetweenAttempts.toString() + " second pause.";
                 log.warn(message);
+                pauseBetweenAttempts(waitSecondsBetweenAttempts);
             }
             else{
                 final String message = "Attempt on test case failed, and max number of attempts were made.  Returning failure result.";
@@ -49,6 +52,16 @@ public class RobustTestCase implements ITestCase{
         final List<String> errorMessages = new ArrayList<>();
         errorMessages.add(message);
         return new FatalExitTestCaseResult(DateTime.now(), DateTime.now(), errorMessages);
+    }
+
+    private void pauseBetweenAttempts(Integer pauseSeconds){
+        try{
+            Thread.sleep(pauseSeconds * 1000);
+        }
+        catch(InterruptedException e){
+            final String message = "Warning- testing pause failed: " + e.getMessage();
+            log.warn(message);
+        }
     }
 
     @Override
