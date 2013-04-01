@@ -9,6 +9,8 @@ import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.logging.ILog;
 import jhydra.core.scripting.exceptions.ScriptExecutionException;
+import jhydra.core.scripting.exceptions.ScriptOtherFatalException;
+import sun.reflect.Reflection;
 
 /**
  *
@@ -35,6 +37,7 @@ public class RobustScript implements IScript{
     @Override
     public void execute() throws RecoverableException, FatalException {  
         final Integer maxNumberOfTries = config.getScriptMaxNumTries();
+        final Integer timeInBetweenAttempts = config.getScriptWaitSecondsBetweenAttempts();
         Integer numberOfTries = 1;
 
         while (numberOfTries <= maxNumberOfTries) {
@@ -42,8 +45,11 @@ public class RobustScript implements IScript{
             numberOfTries++;
 
             if (numberOfTries <= maxNumberOfTries) {
-                final String message = "Attempt on script failed.  Attempt number " + numberOfTries.toString() + " coming up.";
+                final String message = "Attempt on script failed.  Attempt number " + numberOfTries.toString() +
+                        " coming up, after a " + timeInBetweenAttempts.toString() + " second pause.";
+
                 log.warn(message);
+                waitForNextAttempt(timeInBetweenAttempts * 1000);
             }
         }
 
@@ -52,21 +58,79 @@ public class RobustScript implements IScript{
         throw ex;
     }
     
-    private Boolean attemptExecution() throws FatalException{
-        final Integer timeInBetweenAttempts = config.getScriptWaitSecondsBetweenAttempts();
-        
+    private Boolean attemptExecution() throws FatalException, RecoverableException{
         try {
             log.info("\t\tSCRIPT: " + this.getName());
             this.script.execute();
             return true;
-        } catch (RecoverableException ex) {
-            log.warn(ex.getMessage(), ex);
-            waitForNextAttempt(timeInBetweenAttempts * 1000);
-            return false;
-        } catch (FatalException ex) {
-            log.error(ex.getMessage(), ex);
+        } catch (ScriptExecutionException ex){
+            //We only want to retry on RecoverableExceptions that are not ScriptExecutionExceptions,
+            // because we don't want these retries cascading to each script in the parent call chain.
+            // Instead, only the parent test case itself shall retry based on this exception.
             throw ex;
+        } catch (RecoverableException ex) {
+            //Only retry in this case if this script is embedded in another script.  Otherwise, the script
+            //is being called directly by a test case, and that test case itself will be retried.
+            if(isParentCallingObjectAScript()){
+                log.warn(ex.getMessage(), ex);
+                return false;
+            }
+            else{
+                log.error(ex.getMessage(), ex);
+                throw new ScriptExecutionException(this.getName(), ex.getMessage(), ex);
+            }
+        } catch (FatalException ex) {
+            logFatalException(ex);
+            throw ex;
+        } catch (Exception ex){
+            //Default to fatal, as no other categorization can be assumed at this point.
+            logFatalException(ex);
+            throw new ScriptOtherFatalException(this.getName(), ex);
+        } catch (Throwable ex){
+            //Default to fatal, as no other categorization can be assumed at this point.
+            logFatalError(ex);
+            throw new ScriptOtherFatalException(this.getName(), ex);
         }
+    }
+
+    private void logFatalException(Exception ex){
+        final String message = "Script named " + this.getName() + " encountered a fatal error: " + ex.getMessage();
+        log.error(message, ex);
+    }
+
+    private void logFatalError(Throwable ex){
+        final String message = "Script named " + this.getName() + " encountered a fatal error: " + ex.getMessage();
+        log.error(message);
+    }
+
+    private Boolean isParentCallingObjectAScript(){
+        final StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        //Iterate up the stack until the calling object isn't this one
+        Boolean executeMethodFound = false;
+
+        for(int index = 0; index < stackTraceElements.length; index++){
+            final StackTraceElement stackTraceElement = stackTraceElements[index];
+
+            if(executeMethodFound){
+                return containsScriptInterface(Reflection.getCallerClass(index).getInterfaces());
+            }
+            if(stackTraceElement.getMethodName().equalsIgnoreCase("execute")){
+                executeMethodFound = true;
+            }
+
+        }
+
+        return false;
+    }
+
+    private Boolean containsScriptInterface(Class<?>[] classes){
+       for(Class<?> classObject : classes){
+           if(classObject == IScript.class){
+               return true;
+           }
+       }
+
+        return false;
     }
     
     private void waitForNextAttempt(Integer milliseconds){

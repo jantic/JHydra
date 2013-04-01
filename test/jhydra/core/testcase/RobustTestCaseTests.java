@@ -195,7 +195,7 @@ public class RobustTestCaseTests {
     /***Tests abnormally (but recoverable) exiting test case****************************************/
     //Note:  Should retry!
     @Test
-    public void recoverableAbnormalExitingTestCase_execute_runElapsedTime_OverThreeSeconds() throws FatalException, RecoverableException{
+    public void recoverableAbnormalExitingTestCase_execute_runElapsedTime_OverTwoSeconds() throws FatalException, RecoverableException{
         final RobustTestCase testCase = getRecoverableAbnormalExitingTestCase();
         final Boolean expected = true;
         final DateTime startTime = DateTime.now();
