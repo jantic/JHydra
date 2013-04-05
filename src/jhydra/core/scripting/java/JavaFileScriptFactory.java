@@ -4,26 +4,22 @@
  */
 package jhydra.core.scripting.java;
 
-import java.util.HashMap; 
-import java.util.List;
-import java.util.Map;
 import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.logging.ILog;
+import jhydra.core.scripting.*;
 import jhydra.core.scripting.exceptions.CompileErrorException;
-import jhydra.core.scripting.IBaseScript;
-import jhydra.core.scripting.IScript;
-import jhydra.core.scripting.IScriptCompiler;
-import jhydra.core.scripting.IScriptFactory;
-import jhydra.core.scripting.RobustScript;
 import jhydra.core.scripting.exceptions.ScriptFatalException;
 import jhydra.core.scripting.exceptions.ScriptNotExistException;
-import jhydra.core.scripting.ScriptType;
 import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import jhydra.core.scripting.scriptinfo.IScriptInfoFactory;
 import jhydra.core.scripting.scriptinfo.ScriptInfoFactory;
 import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
 import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.valuemap.IValueMap;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -53,6 +49,12 @@ public class JavaFileScriptFactory implements IScriptFactory {
         final IBaseScript baseScript = compiler.getCompiledScript(scriptInfo);
         initializeBaseScript(baseScript, valueMap, navigator);
         return new RobustScript(baseScript, config, log);
+    }
+
+    @Override
+    public Boolean hasScript(String name){
+        final String key = generateKey(name);
+        return nameToScriptInfo.containsKey(key);
     }
     
     private void initializeBaseScript(IBaseScript baseScript, IValueMap valueMap, IMasterNavigator masterNavigator){

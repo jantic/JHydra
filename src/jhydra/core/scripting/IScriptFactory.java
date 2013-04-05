@@ -15,6 +15,8 @@ import jhydra.core.valuemap.IValueMap;
  */
 public interface IScriptFactory {
 
-    IScript getScript(String name, IValueMap valueMap, IMasterNavigator navigator) 
-            throws ScriptFatalException, CompileErrorException;  
+    IScript getScript(String name, IValueMap valueMap, IMasterNavigator navigator)
+            throws ScriptFatalException, CompileErrorException;
+
+    Boolean hasScript(String name);
 }

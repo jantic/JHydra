@@ -45,7 +45,7 @@ public class JavaFileScriptFactoryTest {
         final String actual = script.getName();
         Assert.assertEquals(expected, actual);
     }
-    
+
     @Test
     public void getScript_proj2_proj2Script_getName_Proj2Script() throws Exception{
         final IScript script = getProj2Script("Proj2Script");
@@ -53,7 +53,7 @@ public class JavaFileScriptFactoryTest {
         final String actual = script.getName();
         Assert.assertEquals(expected, actual);
     }
-    
+
     
     @Test
     public void getScript_proj1_normalScript_execute_Success() throws Exception{

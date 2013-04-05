@@ -4,34 +4,25 @@
  */
 package jhydra.core.scripting.java;
 
-import java.util.List;
-import java.util.Locale;
-import javax.tools.Diagnostic;
 import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
 import jhydra.core.logging.ILog;
-import jhydra.core.scripting.CompileErrorReport;
-import jhydra.core.scripting.IBaseScript;
-import jhydra.core.scripting.IScript;
-import jhydra.core.scripting.IScriptCompiler;
-import jhydra.core.scripting.IScriptFactory;
-import jhydra.core.scripting.MasterScriptFactory;
-import jhydra.core.scripting.ScriptType;
-import jhydra.core.scripting.exceptions.ClassNotInScriptFileException;
-import jhydra.core.scripting.exceptions.CompileErrorException;
-import jhydra.core.scripting.exceptions.NonPublicScriptClassException;
-import jhydra.core.scripting.exceptions.ScriptInputLoadingException;
-import jhydra.core.scripting.exceptions.ScriptInstantiationException;
-import jhydra.core.scripting.exceptions.ScriptNotExistException;
+import jhydra.core.scripting.*;
+import jhydra.core.scripting.exceptions.*;
 import jhydra.core.scripting.scriptinfo.IScriptInfo;
 import jhydra.core.uinav.IMasterNavigator;
 import jhydra.core.valuemap.IValueMap;
 import org.junit.Assert;
 import org.junit.Test;
-import static org.mockito.Mockito.*;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
+
+import javax.tools.Diagnostic;
+import java.util.List;
+import java.util.Locale;
+
+import static org.mockito.Mockito.*;
 
 /**
  *
@@ -210,7 +201,7 @@ public class DynamicJavaCompilerTest {
         script.setLog(log);
         final IMasterNavigator navigator = mock(IMasterNavigator.class);
         script.setNavigator(navigator);
-        final IScriptFactory scriptFactory = new MasterScriptFactory();
+        final IScriptFactory scriptFactory = new MasterScriptFactory(config, log);
         script.setScriptFactory(scriptFactory);
         script.setValueMap(valueMap);
         return script;
