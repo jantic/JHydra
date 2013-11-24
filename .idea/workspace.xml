@@ -7,28 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dc7f23d-2e2c-445b-b326-21c0ef198368" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/FatalExitTestCaseResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/FatalExitTestCaseResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCaseResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/ITestCaseResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/NonFatalExitTestCaseResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/NonFatalExitTestCaseResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/NormalTestCaseResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/NormalTestCaseResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/TestResultCategory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestResultCategory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/TestValueResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestValueResult.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/TestValueResultType.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestValueResultType.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/FatalExitTestCaseResultTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/result/FatalExitTestCaseResultTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/NonFatalExitTestCaseResultTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/result/NonFatalExitTestCaseResultTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/NormalTestCaseResultTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/result/NormalTestCaseResultTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCase.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestDataAnalyzer.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestDataAnalyzer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/RobustTestCaseTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/RobustTestCaseTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JHydra.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385268526931" ignored="false" />
+    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385269135501" ignored="false" />
     <file path="/DynamicJavaCompiler.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268510102" ignored="false" />
     <file path="/a.dummy" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268889882" ignored="false" />
     <file path="/.gitignore" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357270540085" ignored="false" />
@@ -36,7 +21,7 @@
     <file path="/Log.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975666246" ignored="false" />
     <file path="/TestResultCategory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362888154093" ignored="false" />
     <file path="/Lexicon.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976820160" ignored="false" />
-    <file path="/ScriptInfoFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357975464044" ignored="false" />
+    <file path="/ScriptInfoFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385269879195" ignored="false" />
     <file path="/RobustScript.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1364794877124" ignored="false" />
     <file path="/ProgramConfig.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358040387166" ignored="false" />
     <file path="/fragment.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385269031141" ignored="false" />
@@ -793,7 +778,7 @@
     <file path="/MasterScriptFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1365131958255" ignored="false" />
     <file path="/IScriptFactory.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1365131704283" ignored="false" />
     <file path="/MasterScriptFactoryTests.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1365134262499" ignored="false" />
-    <file path="/ScriptInfoFactoryTests.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1365135162464" ignored="false" />
+    <file path="/ScriptInfoFactoryTests.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385269442803" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/flex/lib/FlexSupport.jar!/schemas/AIR_Descriptor.3.7.xsd" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385268535425" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/flex/lib/FlexSupport.jar!/schemas/AIR_Descriptor.3.6.xsd" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385268535425" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/Spring/lib/spring.jar!/resources/schemas/spring-util-3.1.xsd" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385268535425" ignored="false" />
@@ -884,10 +869,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RobustScript.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java">
+      <file leaf-file-name="ScriptInfoFactoryTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="47" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.65665233">
+            <state line="34" column="0" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Integer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="640" column="0" selection-start="23942" selection-end="23942" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScriptInfoFactory.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="79" selection-start="944" selection-end="944" vertical-scroll-proportion="0.2955032">
               <folding />
             </state>
           </provider>
@@ -912,7 +917,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/jhydra/core/testcase/TestValueResultType.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" />
@@ -928,6 +932,7 @@
         <option value="$PROJECT_DIR$/test/jhydra/core/scripting/MasterScriptFactoryTests.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/scripting/MasterScriptFactory.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java" />
+        <option value="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" />
       </list>
     </option>
   </component>
@@ -977,6 +982,202 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project 1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project 1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test projects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project 1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alt scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scriptinfo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1088,7 +1289,7 @@
       <recent name="jhydra.core.config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in JHydra">
+  <component name="RunManager" selected="JUnit.ScriptInfoFactoryTests">
     <configuration default="false" name="All in JHydra" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="JHydra" />
@@ -1098,68 +1299,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="RobustScriptTests" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jhydra.core.scripting.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JHydra" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jhydra.core.scripting" />
-      <option name="MAIN_CLASS_NAME" value="jhydra.core.scripting.RobustScriptTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="RobustScriptTests.recoverableAbnormallyExitingSingleInnerScript_execute_throwsRecoverableException" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jhydra.core.scripting.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JHydra" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jhydra.core.scripting" />
-      <option name="MAIN_CLASS_NAME" value="jhydra.core.scripting.RobustScriptTests" />
-      <option name="METHOD_NAME" value="recoverableAbnormallyExitingSingleInnerScript_execute_throwsRecoverableException" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1216,6 +1355,68 @@
       <option name="MAIN_CLASS_NAME" value="jhydra.core.scripting.ScriptInfoFactoryTests" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ScriptInfoFactoryTests.getAllScriptInfos_proj1_jython_size1" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jhydra.core.scripting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JHydra" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jhydra.core.scripting" />
+      <option name="MAIN_CLASS_NAME" value="jhydra.core.scripting.ScriptInfoFactoryTests" />
+      <option name="METHOD_NAME" value="getAllScriptInfos_proj1_jython_size1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ScriptInfoFactoryTests.getAllScriptInfos_proj1_java_size7" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jhydra.core.scripting.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JHydra" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jhydra.core.scripting" />
+      <option name="MAIN_CLASS_NAME" value="jhydra.core.scripting.ScriptInfoFactoryTests" />
+      <option name="METHOD_NAME" value="getAllScriptInfos_proj1_java_size7" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1323,18 +1524,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.RobustScriptTests" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RobustScriptTests.recoverableAbnormallyExitingSingleInnerScript_execute_throwsRecoverableException" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MasterScriptFactoryTests" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MasterScriptFactoryTests" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_jython_size1" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_java_size7" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MasterScriptFactoryTests" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RobustScriptTests" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RobustScriptTests.recoverableAbnormallyExitingSingleInnerScript_execute_throwsRecoverableException" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_jython_size1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_java_size7" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MasterScriptFactoryTests" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1401,7 +1602,11 @@
       <created>1365134392510</created>
       <updated>1365134392510</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Refactored test case result files into separate package.">
+      <created>1385269169886</created>
+      <updated>1385269169886</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1426,20 +1631,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="808" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32848838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67083335" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31210855" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32267442" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32848838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.234375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1447,8 +1652,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2553802" sideWeight="0.71802324" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28197673" sideWeight="0.9862562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2553802" sideWeight="0.71947676" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28052327" sideWeight="0.9862562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1498,7 +1703,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented MasterScriptFactory and added junit tests for it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored test case result files into separate package." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1526,6 +1731,7 @@
     <MESSAGE value="Added tests for RobustTestCase." />
     <MESSAGE value="Added tests for RobustScript.  Redefined RobustScript behavior in terms of retries." />
     <MESSAGE value="Implemented MasterScriptFactory and added junit tests for it." />
+    <MESSAGE value="Refactored test case result files into separate package." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1535,16 +1741,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptOutputLoadingException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="213" selection-end="677" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/IScript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="314" selection-end="314" vertical-scroll-proportion="0.22727273" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/IBaseScript.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="17" selection-start="336" selection-end="336" vertical-scroll-proportion="0.22727273" />
@@ -1590,20 +1786,6 @@
         <state line="33" column="0" selection-start="1317" selection-end="1827" vertical-scroll-proportion="0.53323907" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="22" selection-start="255" selection-end="255" vertical-scroll-proportion="0.25751072">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="103" selection-start="864" selection-end="864" vertical-scroll-proportion="0.03218884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/jhydra/core/scripting/MasterScriptFactoryTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="132" column="0" selection-start="5334" selection-end="5463" vertical-scroll-proportion="0.6459227">
@@ -1620,7 +1802,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="47" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.65665233">
+        <state line="78" column="109" selection-start="3011" selection-end="3011" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/ScriptType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="35" selection-start="368" selection-end="368" vertical-scroll-proportion="0.33190578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="640" column="0" selection-start="23942" selection-end="23942" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="79" selection-start="944" selection-end="944" vertical-scroll-proportion="0.2955032">
           <folding />
         </state>
       </provider>

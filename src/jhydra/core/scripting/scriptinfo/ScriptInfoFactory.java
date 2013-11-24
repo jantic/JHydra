@@ -4,17 +4,14 @@
  */
 package jhydra.core.scripting.scriptinfo;
 
-import java.io.File;
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.scripting.ScriptType;
 import jhydra.core.scripting.scriptinfo.exceptions.ScriptInfoLoadException;
 import org.apache.commons.io.FileUtils;
+
+import java.io.File;
+import java.net.URI;
+import java.util.*;
 
 /**
  *
@@ -26,7 +23,7 @@ public class ScriptInfoFactory implements IScriptInfoFactory {
     @Override
     public List<IScriptInfo> getAllScriptInfosOfType(IRuntimeConfig config, ScriptType scriptType)
             throws ScriptInfoLoadException{
-        final String key = generateKey(config.getProjectDirectory());
+        final String key = generateKey(config.getProjectDirectory(), scriptType);
         
         if(projectPathToScriptInfos.containsKey(key)){
             return projectPathToScriptInfos.get(key);
@@ -71,11 +68,11 @@ public class ScriptInfoFactory implements IScriptInfoFactory {
         return fileName.replaceAll("\\." + scriptType.getExtension(), "");
     }
     
-    private String generateKey(URI projectPath){
+    private String generateKey(URI projectPath, ScriptType scriptType){
         if(projectPath == null){
             return "";
         }
         
-        return projectPath.toString().trim().toLowerCase();
+        return projectPath.toString().trim().toLowerCase() + "." + scriptType.getExtension();
     }
 }

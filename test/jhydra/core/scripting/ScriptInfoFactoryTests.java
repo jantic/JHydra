@@ -29,6 +29,15 @@ public class ScriptInfoFactoryTests {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void getAllScriptInfos_proj1_jython_size1() throws Exception{
+        final ScriptInfoFactory scriptInfoFactory = new ScriptInfoFactory();
+        final List<IScriptInfo> scriptInfos = scriptInfoFactory.getAllScriptInfosOfType(getConfig(1), ScriptType.JYTHON);
+        final Integer expected = 1;
+        final Integer actual = scriptInfos.size();
+        Assert.assertEquals(expected, actual);
+    }
+
     /***PRIVATE METHODS*********************************************************************/
     private IRuntimeConfig getConfig(Integer projNum){
         final IRuntimeConfig config = mock(IRuntimeConfig.class);
