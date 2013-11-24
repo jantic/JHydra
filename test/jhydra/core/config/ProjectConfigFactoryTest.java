@@ -19,10 +19,10 @@ import static org.mockito.Mockito.when;
  */
 public class ProjectConfigFactoryTest {
     @Test
-    public void getAllProjectConfigs_listSize3() throws FatalException, URISyntaxException {
+    public void getAllProjectConfigs_listSize4() throws FatalException, URISyntaxException {
         final ProjectConfigFactory projectConfigFactory = getProjectConfigFactory();
         final List<IProjectConfig> projectConfigs = projectConfigFactory.getAllProjectConfigs();
-        final Integer expected = 3;
+        final Integer expected = 4;
         final Integer actual = projectConfigs.size();
         Assert.assertEquals(expected, actual);
     }
