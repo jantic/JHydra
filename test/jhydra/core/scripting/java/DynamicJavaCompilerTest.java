@@ -196,14 +196,10 @@ public class DynamicJavaCompilerTest {
     private IScript getInitializedScriptJava(String name, String path, IValueMap valueMap) throws FatalException{
         final IBaseScript script = getCompiledScriptJava(name, path);
         final IRuntimeConfig config = mock(IRuntimeConfig.class);
-        script.setConfig(config);
         final ILog log = mock(ILog.class);
-        script.setLog(log);
         final IMasterNavigator navigator = mock(IMasterNavigator.class);
-        script.setNavigator(navigator);
         final IScriptFactory scriptFactory = new MasterScriptFactory(config, log);
-        script.setScriptFactory(scriptFactory);
-        script.setValueMap(valueMap);
+        script.initialize(navigator, valueMap, scriptFactory, config, log);
         return script;
     }
     

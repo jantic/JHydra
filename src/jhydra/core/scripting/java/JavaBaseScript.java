@@ -7,7 +7,6 @@ package jhydra.core.scripting.java;
 import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.exceptions.FatalException;
 import jhydra.core.exceptions.RecoverableException;
-import jhydra.core.lexicon.ILexicon;
 import jhydra.core.lexicon.exceptions.NameNotInLexiconException;
 import jhydra.core.logging.ILog;
 import jhydra.core.properties.exceptions.NameNotValidException;
@@ -36,33 +35,18 @@ public class JavaBaseScript implements IBaseScript{
     public JavaBaseScript(){
 
     }
-    
-    //We need setters to keep the construction hidden from the scripts 
+
+    //We need this initialization function to keep the construction hidden from the scripts
     //(i.e. we just want them to deal with a default constructor).
-    @Override
-    public void setNavigator(IMasterNavigator navigator){
+
+    public void initialize(IMasterNavigator navigator, IValueMap valueMap, IScriptFactory scriptFactory,
+                           IRuntimeConfig config, ILog log){
         this.navigator = navigator;
         this.selenium = navigator.getSelenium();
-    }
-    
-    @Override
-    public void setValueMap(IValueMap valueMap){
         this.valueMap = valueMap;
-    }
-    
-    @Override
-    public void setScriptFactory(IScriptFactory scriptFactory){
         this.scriptFactory = scriptFactory;
-    }
-    
-    @Override
-    public void setConfig(IRuntimeConfig config){
         this.config = config;
         this.timeout = config.getScriptTimeoutSeconds();
-    }
-    
-    @Override
-    public void setLog(ILog log){
         this.log = log;
     }
 

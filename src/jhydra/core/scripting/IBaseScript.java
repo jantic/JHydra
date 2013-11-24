@@ -14,14 +14,7 @@ import jhydra.core.valuemap.IValueMap;
  * @author jantic
  */
 public interface IBaseScript extends IScript{
-    
-    public void setValueMap(IValueMap valueMap);
-    
-    public void setScriptFactory(IScriptFactory scriptFactory);
-    
-    public void setConfig(IRuntimeConfig config);
-    
-    public void setLog(ILog log);
-    
-    public void setNavigator(IMasterNavigator navigator);
+
+    public void initialize(IMasterNavigator navigator, IValueMap valueMap, IScriptFactory scriptFactory,
+                           IRuntimeConfig config, ILog log);
 }

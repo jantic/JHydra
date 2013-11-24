@@ -47,7 +47,7 @@ public class JavaFileScriptFactory implements IScriptFactory {
         final IScriptInfo scriptInfo = getScriptInfo(name);
         final IScriptCompiler compiler = new DynamicJavaCompiler();
         final IBaseScript baseScript = compiler.getCompiledScript(scriptInfo);
-        initializeBaseScript(baseScript, valueMap, navigator);
+        baseScript.initialize(navigator, valueMap, this.masterScriptFactory, this.config, this.log);
         return new RobustScript(baseScript, config, log);
     }
 
@@ -56,15 +56,7 @@ public class JavaFileScriptFactory implements IScriptFactory {
         final String key = generateKey(name);
         return nameToScriptInfo.containsKey(key);
     }
-    
-    private void initializeBaseScript(IBaseScript baseScript, IValueMap valueMap, IMasterNavigator masterNavigator){
-        baseScript.setConfig(this.config);
-        baseScript.setLog(this.log);
-        baseScript.setScriptFactory(masterScriptFactory);
-        baseScript.setValueMap(valueMap);
-        baseScript.setNavigator(masterNavigator);
-    }
-    
+
     private IScriptInfo getScriptInfo(String name) throws ScriptNotExistException{
         final String key = generateKey(name);
         
