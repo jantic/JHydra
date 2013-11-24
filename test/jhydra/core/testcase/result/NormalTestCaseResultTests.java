@@ -1,6 +1,7 @@
-package jhydra.core.testcase;
+package jhydra.core.testcase.result;
 
 import jhydra.core.properties.INameValue;
+import jhydra.core.testcase.ITestDataAnalyzer;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDateTime;
 import org.joda.time.format.DateTimeFormat;

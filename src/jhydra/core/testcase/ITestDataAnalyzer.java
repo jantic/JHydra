@@ -1,6 +1,7 @@
 package jhydra.core.testcase;
 
 import jhydra.core.properties.INameValue;
+import jhydra.core.testcase.result.TestValueResult;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package jhydra.core.testcase;
+package jhydra.core.testcase.result;
 
 /**
  * Author: jantic

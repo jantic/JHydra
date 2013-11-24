@@ -2,6 +2,9 @@ package jhydra.core.testcase;
 
 import jhydra.core.config.IRuntimeConfig;
 import jhydra.core.logging.ILog;
+import jhydra.core.testcase.result.FatalExitTestCaseResult;
+import jhydra.core.testcase.result.ITestCaseResult;
+import jhydra.core.testcase.result.TestResultCategory;
 import org.joda.time.DateTime;
 
 import java.util.ArrayList;

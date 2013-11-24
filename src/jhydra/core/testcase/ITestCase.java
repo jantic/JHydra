@@ -4,6 +4,8 @@
  */
 package jhydra.core.testcase;
 
+import jhydra.core.testcase.result.ITestCaseResult;
+
 /**
  *
  * @author jantic
