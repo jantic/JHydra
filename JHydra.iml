@@ -35,6 +35,11 @@
     <orderEntry type="library" name="smtp (2)" level="project" />
     <orderEntry type="library" name="commons-lang3-3.1" level="project" />
     <orderEntry type="library" name="joda-time-2.1" level="project" />
+    <orderEntry type="library" name="poi-3.9-20121203" level="project" />
+    <orderEntry type="library" name="poi-ooxml-3.9-20121203" level="project" />
+    <orderEntry type="library" name="poi-excelant-3.9-20121203" level="project" />
+    <orderEntry type="library" name="poi-ooxml-schemas-3.9-20121203" level="project" />
+    <orderEntry type="library" name="poi-scratchpad-3.9-20121203" level="project" />
   </component>
 </module>
 

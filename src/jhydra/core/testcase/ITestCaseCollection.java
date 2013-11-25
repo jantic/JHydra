@@ -4,7 +4,8 @@
  */
 package jhydra.core.testcase;
 
-import java.util.Date;
+import org.joda.time.DateTime;
+
 import java.util.List;
 
 /**
@@ -17,5 +18,5 @@ public interface ITestCaseCollection {
     String getFileName();
     List<ITestCase> getOrderedTestCases();
     Boolean testsAreIndependent();
-    Date getLoadTimeStamp();
+    DateTime getLoadTimeStamp();
 }
