@@ -7,21 +7,152 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7dc7f23d-2e2c-445b-b326-21c0ef198368" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/excel/ExcelTestCaseCollection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/excel/ExcelWorkbook.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/jhydra/core/excel/ExcelWorksheet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_3_9_20121203.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_excelant_3_9_20121203.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_ooxml_3_9_20121203.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_ooxml_schemas_3_9_20121203.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_scratchpad_3_9_20121203.xml" />
+      <change type="DELETED" beforePath="C:\Users\Jason\Documents\IntellijProjects\JHydra\src\jhydra\core\excel\ExcelWorkbook.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jason\Documents\IntellijProjects\JHydra\src\jhydra\core\excel\ExcelWorksheet.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Compiling/AbstractScript.java" afterPath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Compiling/AbstractScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/uinav/browser/BrowserType.java" afterPath="$PROJECT_DIR$/src/jhydra/core/uinav/browser/BrowserType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ClassNotInScriptFileException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ClassNotInScriptFileException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/commandline/CommandLineArgs.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/commandline/CommandLineArgs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/CompileErrorException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/CompileErrorException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/CompileErrorReport.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/CompileErrorReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/ConfiguredPathNotValidException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/ConfiguredPathNotValidException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/DuplicatedKeyException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/DuplicatedKeyException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/DynamicJavaCompiler.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/DynamicJavaCompiler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/scripting/java/DynamicJavaCompilerTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/java/DynamicJavaCompilerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/email/EmailSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/config/email/EmailSettingsTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/config/email/EmailSettingsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/environment/Environment.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/environment/Environment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/environment/EnvironmentFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/config/environment/EnvironmentFactoryTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/config/environment/EnvironmentFactoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/excel/ExcelTestCaseCollection.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/excel/ExcelTestCaseCollection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/exceptions/FatalException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/exceptions/FatalException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/result/FatalExitTestCaseResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/FatalExitTestCaseResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/result/FatalExitTestCaseResultTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/result/FatalExitTestCaseResultTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/GeneralPropertiesFileException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/GeneralPropertiesFileException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/IBaseScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/IBaseScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/uinav/browser/IBrowserInfo.java" afterPath="$PROJECT_DIR$/src/jhydra/core/uinav/browser/IBrowserInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/commandline/ICommandLineArgs.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/commandline/ICommandLineArgs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/email/IEmailSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/environment/IEnvironment.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/environment/IEnvironment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/uinav/selenium/IExtendedSelenium.java" afterPath="$PROJECT_DIR$/src/jhydra/core/uinav/selenium/IExtendedSelenium.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/ILexicon.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/ILexicon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/logging/ILog.java" afterPath="$PROJECT_DIR$/src/jhydra/core/logging/ILog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/uinav/IMasterNavigator.java" afterPath="$PROJECT_DIR$/src/jhydra/core/uinav/IMasterNavigator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/INameValue.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/INameValue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/INameValueValidator.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/INameValueValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/IProjectConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IProjectConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/IProperties.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/IProperties.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/IRuntimeConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/IRuntimeConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/IScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/IScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/IScriptCompiler.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/IScriptCompiler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/IScriptFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/IScriptFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/IScriptInfo.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/IScriptInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/IScriptInfoFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/IScriptInfoFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/uinav/selenium/ISelenium.java" afterPath="$PROJECT_DIR$/src/jhydra/core/uinav/selenium/ISelenium.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCase.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCaseCollection.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCaseCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JHydra.iml" afterPath="$PROJECT_DIR$/JHydra.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/result/ITestCaseResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/ITestCaseResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCoordinator.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestCoordinator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestDataAnalyzer.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestDataAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestEnvironment.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestEnvironment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestInfo.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestMode.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestMode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestRunRequest.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/ITestRunRequest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/valuemap/IValueMap.java" afterPath="$PROJECT_DIR$/src/jhydra/core/valuemap/IValueMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/InMemoryJavaFileObject.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/InMemoryJavaFileObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/InvalidEmailAddressException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/InvalidEmailAddressException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/InvalidProjectNameException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/exceptions/InvalidProjectNameException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaFileScriptFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaFileScriptFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/scripting/java/JavaFileScriptFactoryTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/java/JavaFileScriptFactoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Non Compiling/JustFunctionBodyScript.java" afterPath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Non Compiling/JustFunctionBodyScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/Lexicon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconFileTypeException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconFileTypeException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconNotFoundException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconNotFoundException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconReadException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/LexiconReadException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/lexicon/LexiconTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/logging/Log.java" afterPath="$PROJECT_DIR$/src/jhydra/core/logging/Log.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/logging/LogDirectoryAccessDeniedException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/logging/LogDirectoryAccessDeniedException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/logging/LogDirectoryCreationException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/logging/LogDirectoryCreationException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/MasterScriptFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/MasterScriptFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/scripting/MasterScriptFactoryTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/MasterScriptFactoryTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/NameNotInLexiconException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/lexicon/exceptions/NameNotInLexiconException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/NameNotInPropertiesFileException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/NameNotInPropertiesFileException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/NameNotValidException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/NameNotValidException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/NameValue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/properties/NameValueTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/properties/NameValueTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/NameValueValidator.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/NameValueValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Non Compiling/NoClassScript.java" afterPath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Non Compiling/NoClassScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/result/NonFatalExitTestCaseResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/NonFatalExitTestCaseResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/result/NonFatalExitTestCaseResultTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/result/NonFatalExitTestCaseResultTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 1/alt scripts/NonJava.py" afterPath="$PROJECT_DIR$/test projects/project 1/alt scripts/NonJava.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 2/alt scripts/NonJava.py" afterPath="$PROJECT_DIR$/test projects/project 2/alt scripts/NonJava.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 2/alt scripts/NonJava2.py" afterPath="$PROJECT_DIR$/test projects/project 2/alt scripts/NonJava2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Compiling/NonPublicScript.java" afterPath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Compiling/NonPublicScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/NonPublicScriptClassException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/NonPublicScriptClassException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 1/scripts/Good Scripts/NormalScript.java" afterPath="$PROJECT_DIR$/test projects/project 1/scripts/Good Scripts/NormalScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/result/NormalTestCaseResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/NormalTestCaseResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/result/NormalTestCaseResultTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/result/NormalTestCaseResultTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 2/scripts/Proj2Script.java" afterPath="$PROJECT_DIR$/test projects/project 2/scripts/Proj2Script.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfigFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/ProjectConfigFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigFactoryTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigFactoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/Properties.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/Properties.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/PropertiesFileNotFoundException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/PropertiesFileNotFoundException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/PropertiesFileReadPermissionsException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/properties/exceptions/PropertiesFileReadPermissionsException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/properties/PropertiesTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/properties/PropertiesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/exceptions/RecoverableException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/exceptions/RecoverableException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/RobustScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/scripting/RobustScriptTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/RobustScriptTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/RobustTestCase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/RobustTestCaseTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/RobustTestCaseTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/config/RuntimeConfig.java" afterPath="$PROJECT_DIR$/src/jhydra/core/config/RuntimeConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/config/RuntimeConfigTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptExecutionException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptExecutionException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptFatalException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptFatalException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfo.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/exceptions/ScriptInfoLoadException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/exceptions/ScriptInfoLoadException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptInputLoadingException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptInputLoadingException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptInstantiationException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptInstantiationException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptNavigationException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptNavigationException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptNotExistException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptNotExistException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptOtherFatalException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptOtherFatalException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptOutputLoadingException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptOutputLoadingException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptRecoverableException.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/exceptions/ScriptRecoverableException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/scripting/ScriptType.java" afterPath="$PROJECT_DIR$/src/jhydra/core/scripting/ScriptType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Non Compiling/SyntaxErrorsScript.java" afterPath="$PROJECT_DIR$/test projects/project 1/scripts/Bad Scripts/Non Compiling/SyntaxErrorsScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java" afterPath="$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestResultCategory.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestResultCategory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestValueResult.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestValueResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestValueResultType.java" afterPath="$PROJECT_DIR$/src/jhydra/core/testcase/result/TestValueResultType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jhydra/core/valuemap/ValueMap.java" afterPath="$PROJECT_DIR$/src/jhydra/core/valuemap/ValueMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java" afterPath="$PROJECT_DIR$/test/jhydra/core/valuemap/ValueMapTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/basic_lexicon.properties" afterPath="$PROJECT_DIR$/test/test data/basic_lexicon.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/basic_project.properties" afterPath="$PROJECT_DIR$/test/test data/basic_project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/dupekey_lexicon.properties" afterPath="$PROJECT_DIR$/test/test data/dupekey_lexicon.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/invalidAppURI_project.properties" afterPath="$PROJECT_DIR$/test/test data/invalidAppURI_project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/invalidRecipientAddress_project.properties" afterPath="$PROJECT_DIR$/test/test data/invalidRecipientAddress_project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/invalidSenderAddress_project.properties" afterPath="$PROJECT_DIR$/test/test data/invalidSenderAddress_project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/deeper projects/even deeper/project 3/jhydra.project" afterPath="$PROJECT_DIR$/test projects/deeper projects/even deeper/project 3/jhydra.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test projects/deeper projects/even deeper/project 3/should not be picked up/jhydra.project" afterPath="$PROJECT_DIR$/test projects/deeper projects/even deeper/project 3/should not be picked up/jhydra.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/missingAppURI_project.properties" afterPath="$PROJECT_DIR$/test/test data/missingAppURI_project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/missingName_project.properties" afterPath="$PROJECT_DIR$/test/test data/missingName_project.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/spacedname_lexicon.properties" afterPath="$PROJECT_DIR$/test/test data/spacedname_lexicon.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test data/speccharvalues_lexicon.properties" afterPath="$PROJECT_DIR$/test/test data/speccharvalues_lexicon.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JHydra.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1385349121041" ignored="false" />
+    <file path="/Dummy.txt" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1399792486774" ignored="false" />
     <file path="/DynamicJavaCompiler.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268510102" ignored="false" />
     <file path="/a.dummy" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357268889882" ignored="false" />
     <file path="/.gitignore" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357270540085" ignored="false" />
@@ -370,7 +501,7 @@
     <file path="/NameNotInLexiconException.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976302882" ignored="false" />
     <file path="/IProperties.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976597392" ignored="false" />
     <file path="/Properties.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1357976626889" ignored="false" />
-    <file path="/ProgramConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358039689228" ignored="false" />
+    <file path="/ProgramConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1399791145055" ignored="false" />
     <file path="/ProjectConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362980349659" ignored="false" />
     <file path="/ConfigFieldInfo.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1358136727685" ignored="false" />
     <file path="/RuntimeConfigTest.java" changelist="7dc7f23d-2e2c-445b-b326-21c0ef198368" time="1362980423230" ignored="false" />
@@ -838,7 +969,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -875,6 +1005,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -884,48 +1015,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExcelTestCaseCollection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/excel/ExcelTestCaseCollection.java">
+      <file leaf-file-name="ProgramConfigTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="12" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+            <state line="42" column="52" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelApplication.cs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/ExcelApplication.cs">
+      <file leaf-file-name="LogTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="67" selection-start="5149" selection-end="5149" vertical-scroll-proportion="0.0">
+            <state line="45" column="0" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.33279485">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelWorkbook.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/excel/ExcelWorkbook.java">
+      <file leaf-file-name="ProgramConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1419" selection-end="1419" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExcelWorksheet.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/jhydra/core/excel/ExcelWorksheet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="55" selection-start="138" selection-end="138" vertical-scroll-proportion="0.3448276">
+            <state line="66" column="16" selection-start="1918" selection-end="1918" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcelWorkbook.cs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/ExcelWorkbook.cs">
+      <file leaf-file-name="IProgramConfig.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="83" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+            <state line="10" column="34" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -950,7 +1070,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/jhydra/core/scripting/scriptinfo/ScriptInfoFactory.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/config/ProjectConfigFactoryTest.java" />
         <option value="$PROJECT_DIR$/test/jhydra/core/scripting/ScriptInfoFactoryTests.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/scripting/java/JavaBaseScript.java" />
@@ -966,13 +1085,15 @@
         <option value="$PROJECT_DIR$/src/jhydra/core/excel/ExcelWorksheet.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/excel/ExcelApplication.java" />
         <option value="$PROJECT_DIR$/src/jhydra/core/excel/ExcelWorkbook.java" />
+        <option value="$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1440" />
-    <option name="height" value="808" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -981,6 +1102,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -1000,6 +1123,54 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JHydra" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Tests">
           <PATH>
@@ -1046,200 +1217,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project 4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project 1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project 1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Good Scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project 1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test projects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="project 1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alt scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JHydra" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testcase" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1255,12 +1232,12 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/test lib" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1298,34 +1275,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MasterScriptFactoryTests" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="jhydra.core.scripting.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JHydra" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jhydra.core.scripting" />
-      <option name="MAIN_CLASS_NAME" value="jhydra.core.scripting.MasterScriptFactoryTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1402,20 +1351,48 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ScriptInfoFactoryTests.getAllScriptInfos_proj1_java_size7" type="JUnit" factoryName="JUnit" temporary="true">
+    <configuration default="false" name="ProgramConfigTest.getProgramDirectory_CorrectValue" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="jhydra.core.scripting.*" />
+          <option name="PATTERN" value="jhydra.core.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="JHydra" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="jhydra.core.scripting" />
-      <option name="MAIN_CLASS_NAME" value="jhydra.core.scripting.ScriptInfoFactoryTests" />
-      <option name="METHOD_NAME" value="getAllScriptInfos_proj1_java_size7" />
+      <option name="PACKAGE_NAME" value="jhydra.core.config" />
+      <option name="MAIN_CLASS_NAME" value="jhydra.core.config.ProgramConfigTest" />
+      <option name="METHOD_NAME" value="getProgramDirectory_CorrectValue" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="jhydra.core in JHydra" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="jhydra.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="JHydra" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="jhydra.core" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1444,19 +1421,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1483,6 +1447,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1523,18 +1500,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MasterScriptFactoryTests" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_jython_size1" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_java_size7" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_jython_size1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ProgramConfigTest.getProgramDirectory_CorrectValue" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.jhydra.core in JHydra" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in JHydra" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_jython_size1" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_java_size7" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MasterScriptFactoryTests" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.jhydra.core in JHydra" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProgramConfigTest.getProgramDirectory_CorrectValue" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ScriptInfoFactoryTests.getAllScriptInfos_proj1_jython_size1" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1641,34 +1618,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="808" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20639534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3270349" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67083335" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67083335" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32267442" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32848838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23333333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30289534" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15528281" sideWeight="0.21875" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2553802" sideWeight="0.6729651" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28052327" sideWeight="0.9862562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18729989" sideWeight="0.7198661" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28013393" sideWeight="0.9862562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3270349" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27291667" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1755,11 +1732,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/excel/ExcelTestCaseCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/MasterScriptFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="62" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.15831663">
-          <folding />
-        </state>
+        <state line="26" column="62" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.15831663" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/RuntimeConfig.java">
@@ -1774,100 +1754,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/jhydra/core/testcase/TestCaseTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="1131" selection-end="1131" vertical-scroll-proportion="-5.5864196">
-          <folding />
-        </state>
+        <state line="34" column="13" selection-start="1131" selection-end="1131" vertical-scroll-proportion="-5.5864196" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/ITestDataAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="209" selection-end="209" vertical-scroll-proportion="0.24048096">
-          <folding />
-        </state>
+        <state line="11" column="17" selection-start="209" selection-end="209" vertical-scroll-proportion="0.24048096" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/TestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="29" column="13" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/ITestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="301" selection-end="301" vertical-scroll-proportion="0.33066133">
-          <folding />
-        </state>
+        <state line="14" column="17" selection-start="301" selection-end="301" vertical-scroll-proportion="0.33066133" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/ITestCaseCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/excel/ExcelTestCaseCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="30" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/scripting/CompileErrorReport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="0.27054107">
-          <folding />
-        </state>
+        <state line="14" column="13" selection-start="264" selection-end="264" vertical-scroll-proportion="0.27054107" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jhydra/core/valuemap/ValueMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="81" selection-start="686" selection-end="704" vertical-scroll-proportion="0.21042085">
+        <state line="23" column="81" selection-start="686" selection-end="704" vertical-scroll-proportion="0.21042085" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/testcase/excel/ExcelTestCaseCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="59" selection-start="287" selection-end="287" vertical-scroll-proportion="0.14214046" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/IProgramConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="34" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/ExcelWorkbook.cs">
+    <entry file="file://$PROJECT_DIR$/src/jhydra/core/config/ProgramConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="83" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
+        <state line="66" column="16" selection-start="1918" selection-end="1918" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/ExcelApplication.cs">
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/config/ProgramConfigTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="67" selection-start="5149" selection-end="5149" vertical-scroll-proportion="0.0">
+        <state line="42" column="52" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/excel/ExcelWorkbook.java">
+    <entry file="file://$PROJECT_DIR$/test/jhydra/core/logging/LogTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1419" selection-end="1419" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/poi-3.9/LICENSE">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="38" selection-start="11024" selection-end="11024" vertical-scroll-proportion="0.33164558">
+        <state line="45" column="0" selection-start="1440" selection-end="1440" vertical-scroll-proportion="0.33279485">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jhydra/core/excel/ExcelWorksheet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="55" selection-start="138" selection-end="138" vertical-scroll-proportion="0.3448276">
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

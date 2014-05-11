@@ -1,0 +1,32 @@
+Project.Name = Test Project 1
+
+Script.TimeoutSeconds = 65
+Script.MaxNumberOfTries = 4
+Script.WaitSecondsBetweenAttempts = 32
+
+TestCase.MaxNumberOfTries = 8
+TestCase.WaitSecondsBetweenAttempts = 64
+
+Email.FailureRecipients = a@a.a, b@b.b, c@c.c
+Email.SuccessRecipients = d@d.d, e@e.e
+Email.Sender = f@f.f
+
+Environment.Name.1 = Local
+Environment.Description.1 = Developer's computer
+Environment.AppURI.1 = http://localhost:7001/aex/login.jsp
+
+Environment.Name.2 = Dev
+Environment.Description.2 = Dev Environment
+Environment.AppURI.2 = http://vmdevapp2:7001/aex/login.jsp
+
+Environment.Name.3 = Test
+Environment.Description.3 = Test Environment
+Environment.AppURI.3 = http://test.arrowheadgrp.com
+
+Environment.Name.4 = Staging
+Environment.Description.4 = Staging Environment
+Environment.AppURI.4 = http://staging.arrowheadexchange.com
+
+Environment.Name.5 = Production
+Environment.Description.5 = Production Environment
+Environment.AppURI.5 = http://www.arrowheadexchange.com 
